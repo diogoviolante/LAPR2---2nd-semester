@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.administratorScenes.ReportUI">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.05;">
+         <image>
+            <Image url="@ImageOne.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="229.0" layoutY="7.0" prefHeight="39.0" prefWidth="141.0" text="Covid-19 Report" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Pane layoutY="54.0" prefHeight="346.0" prefWidth="601.0" style="-fx-background-color: C3FFC4; -fx-opacity: 0.8;">
+         <children>
+            <DatePicker fx:id="firstDate" layoutX="104.0" layoutY="37.0" onAction="#setFirstDate" promptText="First Date" />
+            <DatePicker fx:id="lastDate" layoutX="339.0" layoutY="37.0" onAction="#setLastDate" promptText="Last Date" />
+            <CheckBox fx:id="simpleLinearRegression" layoutX="102.0" layoutY="163.0" mnemonicParsing="false" onAction="#setSimpleLinearRegression" text="Simple Linear Regression" textFill="#fd009c" />
+            <CheckBox fx:id="multilinearRegression" layoutX="328.0" layoutY="163.0" mnemonicParsing="false" onAction="#setMultilinearRegression" prefWidth="197.0" text="Multilinear Regression" textFill="#1357f8" />
+            <ComboBox fx:id="historicalPointsNumber" layoutX="207.0" layoutY="95.0" prefHeight="25.0" prefWidth="189.0" promptText="Number of Historical Points" />
+            <Button fx:id="sendReport" layoutX="257.0" layoutY="293.0" mnemonicParsing="false" onAction="#setSendReport" prefHeight="25.0" prefWidth="90.0" style="-fx-border-color: FFFFFF; -fx-background-color: BCBCBC;" text="Send" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <CheckBox fx:id="numberTests" layoutX="140.0" layoutY="208.0" mnemonicParsing="false" onAction="#setNumberTests" text="Number of Tests" />
+            <CheckBox fx:id="averageAge" layoutX="142.0" layoutY="242.0" mnemonicParsing="false" onAction="#setAverageAge" text="Average Age" />
+         </children>
+      </Pane>
+      <Button fx:id="outButton" layoutX="571.0" layoutY="7.0" mnemonicParsing="false" onAction="#exitWindow" prefHeight="25.0" prefWidth="27.0" text="X" />
+   </children>
+</AnchorPane>

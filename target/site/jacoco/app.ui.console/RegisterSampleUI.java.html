@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterSampleUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">RegisterSampleUI.java</span></div><h1>RegisterSampleUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.RegisterSampleController;
+import app.domain.Store.TestStore;
+import java.util.Scanner;
+
+
+public class RegisterSampleUI implements Runnable {
+
+
+<span class="nc" id="L11">    private TestStore storeTest = new TestStore();</span>
+    private RegisterSampleController registSampleController;
+<span class="nc" id="L13">    Scanner ler = new Scanner(System.in);</span>
+
+
+
+<span class="nc" id="L17">    public RegisterSampleUI() {</span>
+<span class="nc" id="L18">        this.registSampleController = new RegisterSampleController();</span>
+<span class="nc" id="L19">    }</span>
+
+
+    public void run(){
+        try{
+<span class="nc" id="L24">            System.out.println(&quot;\n&quot;);</span>
+<span class="nc" id="L25">            System.out.println(&quot;---------------Medical Lab Technician Menu--------------&quot;);</span>
+<span class="nc" id="L26">            System.out.println();</span>
+<span class="nc" id="L27">            System.out.println(&quot;Existent tests in the system without samples:&quot;);</span>
+<span class="nc" id="L28">            System.out.println(this.storeTest.getTestList());</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">            if (this.storeTest.getTestList().isEmpty()){</span>
+<span class="nc" id="L30">                System.out.println(&quot;No test available!&quot;);</span>
+            }else {
+<span class="nc" id="L32">                System.out.println(&quot;Please select the code of the test:&quot;);</span>
+<span class="nc" id="L33">                String code = ler.next();</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">                if (this.registSampleController.getTestByCode(code) == null) {</span>
+<span class="nc" id="L35">                    System.out.println(&quot;There is no test with the inserted code.&quot;);</span>
+                } else {
+<span class="nc" id="L37">                    registSampleController.setTest(this.registSampleController.getTestByCode(code));</span>
+<span class="nc" id="L38">                    System.out.println(&quot;Test was selected with success!\n&quot;);</span>
+<span class="nc" id="L39">                    System.out.println(&quot;How many samples do you want to regist?&quot;);</span>
+<span class="nc" id="L40">                    int number = ler.nextInt();</span>
+<span class="nc" id="L41">                    System.out.println();</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">                    for (int i = 1; i &lt;= number; i++) {</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">                        if (this.registSampleController.saveSample(this.registSampleController.createSample(code))) {</span>
+<span class="nc" id="L44">                            System.out.println(&quot;The sample &quot; + i + &quot; was correctly created and associated with the selected test.\n&quot;);</span>
+                        } else {
+<span class="nc" id="L46">                            System.out.println(&quot;Failed to add the sample!\n&quot;);</span>
+                        }
+                    }
+                }
+            }
+<span class="nc" id="L51">        }catch (IllegalArgumentException | NullPointerException illegalArgumentException){</span>
+<span class="nc" id="L52">            System.out.println(illegalArgumentException.getMessage());</span>
+<span class="nc" id="L53">        } catch (Exception e) {</span>
+<span class="nc" id="L54">            e.printStackTrace();</span>
+<span class="nc" id="L55">        }</span>
+<span class="nc" id="L56">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

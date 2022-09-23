@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="884.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.PerformanceScenes.Graphs">
+   <children>
+      <LineChart prefHeight="224.0" prefWidth="822.0" title="Day">
+        <xAxis>
+          <CategoryAxis label="days" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="nº" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <LineChart layoutX="5.0" layoutY="224.0" prefHeight="224.0" prefWidth="822.0" title="Week">
+         <xAxis>
+            <CategoryAxis label="weeks" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="nº" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <LineChart layoutX="7.0" layoutY="434.0" prefHeight="224.0" prefWidth="822.0" title="Month">
+         <xAxis>
+            <CategoryAxis label="months" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="nº" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <LineChart layoutX="8.0" layoutY="658.0" prefHeight="224.0" prefWidth="822.0" title="Year">
+         <xAxis>
+            <CategoryAxis label="years" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="nº" side="LEFT" />
+         </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

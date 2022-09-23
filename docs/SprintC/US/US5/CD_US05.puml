@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class RegisterSampleUI{}
+
+hide RegisterSampleUI members
+
+
+class RegisterSampleController {
+getFullListOfTest()
+getTestByCode(code)
+creatSample()
+saveSample(sample)
+setTest(test)
+}
+
+
+class Company {
+getFullListOfTest()
+getTestByCode(code)
+getSampleList()
+saveSample(sample)
+validateSample(sample)
+addSample(sample)
+}
+
+
+class Sample {
+generareID(counter)
+barcode()
+generateEAN13BarcodeImage()
+setBarcodeTest(test)
+getBarcodeTest()
+}
+
+
+RegisterSampleUI ..> RegisterSampleController
+RegisterSampleController ...> Company
+Company ..> Sample
+RegisterSampleController ..> Sample
+
+@enduml

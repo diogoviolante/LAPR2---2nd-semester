@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">ParameterUI.java</span></div><h1>ParameterUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.ParameterCategoryController;
+import app.controller.ParameterController;
+import app.domain.model.Company;
+import app.domain.model.Parameter;
+import app.domain.model.ParameterCategory;
+import app.ui.console.utils.Utils;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class ParameterUI implements Runnable {
+<span class="nc" id="L14">    Company company = new Company(&quot;Many labs&quot;);</span>
+    private final ParameterController parameterController;
+    private final ParameterCategoryController parameterCategoryController;
+<span class="nc" id="L17">    Scanner ler = new Scanner(System.in);</span>
+<span class="nc" id="L18">    private boolean boo = false;</span>
+    private ParameterCategory parameterCategory;
+<span class="nc" id="L20">    public ParameterUI() {</span>
+
+<span class="nc" id="L22">        this.parameterController = new ParameterController();</span>
+<span class="nc" id="L23">        this.parameterCategoryController = new ParameterCategoryController();</span>
+<span class="nc" id="L24">    }</span>
+
+    @Override
+    public void run() {
+        try {
+<span class="nc" id="L29">            int size = parameterController.getParamterList().size();</span>
+<span class="nc" id="L30">            List&lt;ParameterCategory&gt; parameterCategories = parameterCategoryController.getParameterCategoryList();</span>
+<span class="nc" id="L31">            System.out.println(&quot;Existent parameters in the store :\n&quot;);</span>
+<span class="nc" id="L32">            System.out.println(parameterController.getParamterList());</span>
+<span class="nc" id="L33">            System.out.println(&quot;Insert the data nedded for the parameter&quot;);</span>
+<span class="nc" id="L34">            System.out.println(&quot;Insert name&quot;);</span>
+<span class="nc" id="L35">            String shortName = ler.nextLine();</span>
+<span class="nc" id="L36">            System.out.println(&quot;Insert description&quot;);</span>
+<span class="nc" id="L37">            String description = ler.nextLine();</span>
+<span class="nc" id="L38">            System.out.println(&quot;Chose category&quot;);</span>
+<span class="nc" id="L39">            System.out.println(parameterController.getControllerCategoryList());</span>
+<span class="nc" id="L40">            String name = ler.nextLine();</span>
+            do {
+                try {
+<span class="nc bnc" id="L43" title="All 2 branches missed.">                    if (this.parameterCategoryController.getParameterCategoryByName(name) == null) {</span>
+<span class="nc" id="L44">                        throw new IllegalArgumentException(&quot;There is no category with that code&quot;);</span>
+                    }
+<span class="nc" id="L46">                    boo = true;</span>
+<span class="nc" id="L47">                } catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L48">                    boo = false;</span>
+<span class="nc" id="L49">                    e.printStackTrace();</span>
+<span class="nc" id="L50">                }</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">            } while (!boo);</span>
+<span class="nc" id="L52">            this.parameterCategory=this.parameterCategoryController.getParameterCategoryByName(name) ;</span>
+<span class="nc" id="L53">            System.out.println(&quot;Insert code&quot;);</span>
+<span class="nc" id="L54">            String paramtercode = ler.next();</span>
+<span class="nc" id="L55">            ler.nextLine();</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">            if (this.parameterController.createParameter(paramtercode, shortName, description, name)) {</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">                if (this.parameterController.saveParameter()) {</span>
+<span class="nc" id="L58">                    System.out.println(&quot;The new paramter was saved&quot;);</span>
+                } else {
+<span class="nc" id="L60">                    System.out.println(&quot;The parameter wasnt saved&quot;);</span>
+                }
+
+            } else {
+<span class="nc" id="L64">                System.out.println(&quot;The  parameter wasnt saved&quot;);</span>
+            }
+<span class="nc bnc" id="L66" title="All 2 branches missed.">            if (parameterController.getParamterList().size() == size) {</span>
+<span class="nc" id="L67">                System.out.println(&quot;Error. It wasn't added any parameter to the list.\n&quot;);</span>
+            }
+
+
+<span class="nc" id="L71">        }catch (IllegalArgumentException iaex) {</span>
+<span class="nc" id="L72">            System.out.println(iaex.getMessage());</span>
+<span class="nc" id="L73">        } catch (NullPointerException nullPointerException){</span>
+<span class="nc" id="L74">            System.out.println(&quot;Invalid data(NULL)!&quot;);</span>
+<span class="nc" id="L75">        }</span>
+
+
+<span class="nc" id="L78">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

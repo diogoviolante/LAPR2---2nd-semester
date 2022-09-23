@@ -1,0 +1,119 @@
+@startuml
+autonumber
+'hide footbox
+actor "Recepcionist" as ADM
+
+participant ":RegisterTestUI" as UI
+participant ":RegisterTestController" as CTRL
+participant "Company" as COMP
+participant "TestStore" as STORE
+participant "Test" as TEST
+participant "Client" as CLIENT
+participant "ClientStore" as CLSTORE
+
+
+activate ADM
+ADM -> UI : asks to register a new test
+activate UI
+UI -> ADM : requests data(TIN number)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+UI -> COMP : client = getClient(TIN number))
+activate COMP
+
+COMP -> CLSTORE : getClient(taxNumber)
+activate CLSTORE
+deactivate CLSTORE
+COMP -> CLIENT : getTaxNumber()
+deactivate COMP
+
+UI -> CTRL : getTypeList()
+activate CTRL
+CTRL -> COMP : getNewTestContainer()
+activate COMP
+
+UI --> ADM : shows test type list
+deactivate CTRL
+deactivate UI
+deactivate COMP
+
+
+ADM -> UI : chooses test type
+activate UI
+loop while scanner!= 0
+UI -> CTRL : getCategoryList()
+activate CTRL
+CTRL -> COMP : getParameterCategoryList()
+activate COMP
+
+UI --> ADM: shows category list
+deactivate COMP
+deactivate CTRL
+deactivate UI
+
+
+ADM -> UI : chooses category
+activate UI
+end
+loop while scanner!= 0
+UI -> CTRL : getParameterList()
+activate CTRL
+CTRL -> COMP : getParametersList()
+activate COMP
+
+UI --> ADM : shows parameter list
+deactivate COMP
+deactivate CTRL
+deactivate UI
+
+
+ADM -> UI : chooses parameter
+activate UI
+end
+UI -> ADM : requestes data (nhs code)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+UI -> ADM : requestes data(labID)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : code = generateCode();
+activate CTRL
+CTRL -> STORE : generateCode()
+activate STORE
+deactivate STORE
+deactivate CTRL
+UI -> CTRL : registerTest(client, code, nhsCode, type, categories, parameters, labID, date)
+activate CTRL
+CTRL -> COMP : store = getTestStore()
+activate COMP
+deactivate COMP
+CTRL -> STORE : test = registerTest(client, code, nhsCode, type, categories, parameters, labID, date)
+activate STORE
+STORE -> TEST : Test(client, code, nhsCode, type, categories, parameters, labID, date)
+activate TEST
+deactivate TEST
+deactivate STORE
+deactivate CTRL
+
+UI -> CTRL : saveTest()
+activate CTRL
+CTRL -> STORE : saveTest(test)
+activate STORE
+STORE -> STORE : validateTest(test)
+STORE -> STORE : generateFile(test)
+
+CTRL -> UI : result
+UI -> ADM : informs operation success
+deactivate UI
+deactivate CTRL
+deactivate STORE
+
+
+deactivate ADM
+@enduml

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UpdateDataUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">UpdateDataUI.java</span></div><h1>UpdateDataUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.App;
+import app.domain.model.Client;
+import app.domain.model.Company;
+import auth.domain.model.Email;
+import java.util.List;
+import java.util.Scanner;
+
+<span class="nc" id="L10">public class UpdateDataUI implements Runnable {</span>
+<span class="nc" id="L11">    private Company company = App.getInstance().getCompany();</span>
+<span class="nc" id="L12">    private List&lt;Client&gt; clientList = company.getClientList();</span>
+    private Client client1;
+<span class="nc" id="L14">    private Scanner sc = new Scanner(System.in);</span>
+
+    @Override
+    public void run() {
+<span class="nc" id="L18">        Email email = this.company.getAuthFacade().getCurrentUserSession().getUserId();</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        for (Client client: clientList) {</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">            if (client.getEmail().equals(email)) {</span>
+<span class="nc" id="L21">                client1 = client;</span>
+            }
+<span class="nc" id="L23">        }</span>
+
+        int option2;
+        do {
+<span class="nc" id="L27">            System.out.println(client1.toString());</span>
+<span class="nc" id="L28">            System.out.println(&quot;What data do you wish to update?&quot; +</span>
+                    &quot;\n1-Name&quot; +
+                    &quot;\n2-Phone Number&quot; +
+                    &quot;\n3-Gender&quot; +
+                    &quot;\n4-Address&quot;);
+
+<span class="nc" id="L34">            int option = sc.nextInt();</span>
+
+<span class="nc bnc" id="L36" title="All 2 branches missed.">            if (option == 1) {</span>
+<span class="nc" id="L37">                System.out.println(&quot;Introduce the new Name&quot;);</span>
+<span class="nc" id="L38">                String name = sc.nextLine();</span>
+<span class="nc" id="L39">                this.client1.setName(name);</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">            }else if (option == 2) {</span>
+<span class="nc" id="L41">                System.out.println(&quot;Introduce the new Phone Number&quot;);</span>
+<span class="nc" id="L42">                Long phoneNumber = sc.nextLong();</span>
+<span class="nc" id="L43">                this.client1.setPhoneNumber(phoneNumber);</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">            }else if (option == 3) {</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">                if (this.client1.getGender() != null) {</span>
+<span class="nc" id="L46">                    System.out.println(&quot;Introduce the new Gender&quot;);</span>
+<span class="nc" id="L47">                    String gender = sc.next();</span>
+<span class="nc" id="L48">                    this.client1.setGender(gender);</span>
+<span class="nc" id="L49">                } else</span>
+<span class="nc" id="L50">                    System.out.println(&quot;The user has no gender attributed.&quot;);</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">            }else if (option ==4){</span>
+<span class="nc" id="L52">                System.out.println(&quot;Introduce the new Address&quot;);</span>
+<span class="nc" id="L53">                String address = sc.next();</span>
+<span class="nc" id="L54">                this.client1.setAddress(address);</span>
+            }
+
+<span class="nc" id="L57">            System.out.println(&quot;Do you wish to update more Data?&quot; +</span>
+                    &quot;\n1-Yes&quot; +
+                    &quot;\n0-No&quot;);
+<span class="nc" id="L60">            option2 = sc.nextInt();</span>
+<span class="nc bnc" id="L61" title="All 4 branches missed.">            if (option2 != 0 || option2 != 1) {</span>
+<span class="nc" id="L62">                System.out.println(&quot;Please insert a valid answer.&quot;);</span>
+            }
+
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        } while (option2 == 1);</span>
+
+<span class="nc" id="L67">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

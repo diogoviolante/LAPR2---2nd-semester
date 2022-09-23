@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterResultUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">RegisterResultUI.java</span></div><h1>RegisterResultUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.App;
+import app.controller.RegisterResultController;
+import app.domain.model.Company;
+import app.domain.model.Parameter;
+import app.domain.model.Test;
+import app.domain.model.TesteType;
+import app.domain.shared.Constants;
+import app.domain.shared.ListOfResults;
+import app.domain.shared.ListofTests;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class RegisterResultUI implements Runnable, ListOfResults, ListofTests {
+<span class="nc" id="L20">private Company company= App.getInstance().getCompany();</span>
+    /**
+     * Barcode String of the Sample
+     */
+    private static String barCodeString;
+    /**
+     * Test Type of the Sample
+     */
+    private static TesteType testType;
+    /**
+     * AccessKey to enter in record mode
+     */
+    private static int accessKey;
+    /**
+     * Array with the parameters
+     */
+<span class="nc" id="L36">    private static String[] parameters_External_2API = {&quot;HB000&quot;, &quot;WBC00&quot;, &quot;PLT00&quot;, &quot;RBC00&quot;, &quot;MCV00&quot;, &quot;MCH00&quot;, &quot;MCHC0&quot;, &quot;ESR00&quot;};</span>
+    /**
+     * Value of the parameters
+     */
+    private static double valueParameter;
+    /**
+     * IgGan string
+     */
+<span class="nc" id="L44">    private static String igGAN = &quot;IgGAN&quot;;</span>
+
+    /**
+     * Result of the test.
+     */
+    private String result;
+
+    /**
+     * Code of te test
+     */
+    private String code;
+
+<span class="nc" id="L56">    private Date test = new Date();</span>
+
+    /**
+     * Scanner to read the line
+     */
+<span class="nc" id="L61">    Scanner sc = new Scanner(System.in);</span>
+    /**
+     * Instance of recordResultsController
+     */
+    private RegisterResultController recordResultsController;
+
+<span class="nc" id="L67">    public RegisterResultUI() {</span>
+<span class="nc" id="L68">        this.recordResultsController = new RegisterResultController();</span>
+<span class="nc" id="L69">    }</span>
+
+
+<span class="nc" id="L72">    String erro = &quot;ERROR: Was not added&quot;;</span>
+<span class="nc" id="L73">    String access = &quot;Enter the accessKey:&quot;;</span>
+<span class="nc" id="L74">    String errAcces = &quot;Error in the accessKey&quot;;</span>
+<span class="nc" id="L75">    String success = &quot;Added successfully!&quot;;</span>
+
+    @Override
+    public void run() {
+
+
+        try {
+<span class="nc" id="L82">            System.out.println(&quot; Register Test Results Menu&quot;);</span>
+<span class="nc" id="L83">            System.out.println(&quot;Introduce the BarCode that you want to record:&quot;);</span>
+<span class="nc" id="L84">            barCodeString = sc.next();</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">            if (recordResultsController.validateBarcodeString(barCodeString)) {</span>
+<span class="nc" id="L86">                TesteType testType1 = recordResultsController.getTestType(barCodeString);</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">                for (Test uai: listOfTests){</span>
+<span class="nc" id="L88">                    System.out.println(uai);</span>
+<span class="nc" id="L89">                }</span>
+<span class="nc" id="L90">                String testType = testType1.getName();</span>
+
+<span class="nc" id="L92">                code = recordResultsController.getTest(barCodeString).getCode();</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">                if (testType.equalsIgnoreCase(&quot;Covid&quot;)) {</span>
+<span class="nc" id="L94">                    System.out.println(access);</span>
+<span class="nc" id="L95">                    accessKey = sc.nextInt();</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">                    if (accessKey == 12345) {</span>
+<span class="nc" id="L97">                        System.out.println(&quot;-----Parameter Category: Covid analysis(1234)-----&quot;);</span>
+<span class="nc" id="L98">                        System.out.println(&quot;Antibodies count(IgGAN):&quot;);</span>
+<span class="nc" id="L99">                        valueParameter = sc.nextDouble();</span>
+<span class="nc" id="L100">                        result = recordResultsController.covidAPI1(valueParameter, accessKey, igGAN);</span>
+<span class="nc" id="L101">                        resultsList.add(recordResultsController.createResult(testType, &quot;IgGAN&quot;, code, result, valueParameter));</span>
+<span class="nc" id="L102">                        System.out.println(success);</span>
+<span class="nc" id="L103">                        recordResultsController.setDateResultToTest(recordResultsController.getTest(barCodeString));</span>
+
+                    } else {
+
+<span class="nc" id="L107">                        System.out.println(errAcces);</span>
+                    }
+<span class="nc bnc" id="L109" title="All 2 branches missed.">                } else if (testType.equalsIgnoreCase(&quot;Blood&quot;)) {</span>
+<span class="nc" id="L110">                    System.out.println(access);</span>
+<span class="nc" id="L111">                    accessKey = sc.nextInt();</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">                    if (accessKey == 12345) {</span>
+<span class="nc" id="L113">                        System.out.println(&quot;-----Parameter Category: Blood analysis(1212)-----&quot;);</span>
+<span class="nc" id="L114">                        System.out.println(&quot;Available parameters:&quot; + Constants.RBC + &quot;/&quot; + Constants.WBC + &quot;/&quot; + Constants.PLT</span>
+                                + &quot;/&quot; + Constants.HB + &quot;/&quot; + Constants.MCV + &quot;/&quot; + Constants.MCH + &quot;/&quot; + Constants.MCHC + &quot;/&quot;
+                                + Constants.ESR);
+<span class="nc bnc" id="L117" title="All 2 branches missed.">                        for (int i = 0; i &lt; parameters_External_2API.length; i++) {</span>
+<span class="nc" id="L118">                            System.out.println(&quot;Insert the value of &quot; + parameters_External_2API[i] + &quot;:&quot;);</span>
+<span class="nc" id="L119">                            valueParameter = sc.nextDouble();</span>
+
+<span class="nc" id="L121">                            result = recordResultsController.bloodAPI3(valueParameter, parameters_External_2API[i], accessKey);</span>
+<span class="nc" id="L122">                            resultsList.add(recordResultsController.createResult(testType, parameters_External_2API[i], code, result, valueParameter));</span>
+<span class="nc" id="L123">                            System.out.println(success);</span>
+<span class="nc" id="L124">                            recordResultsController.setDateResultToTest(recordResultsController.getTest(barCodeString));</span>
+                        }
+                    } else {
+<span class="nc" id="L127">                        System.out.println(errAcces);</span>
+                    }
+                } else {
+<span class="nc" id="L130">                    List&lt;Parameter&gt; params = recordResultsController.getTest(barCodeString).getParameters();</span>
+<span class="nc" id="L131">                    System.out.println(access);</span>
+<span class="nc" id="L132">                    accessKey = sc.nextInt();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">                    if (accessKey == 12345) {</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">                        for (Parameter parameters : params) {</span>
+<span class="nc" id="L135">                            System.out.println(&quot;Value of &quot; + parameters + &quot;:&quot;);</span>
+<span class="nc" id="L136">                            valueParameter = sc.nextDouble();</span>
+
+<span class="nc" id="L138">                            result = recordResultsController.bloodAPI3(valueParameter, String.valueOf(parameters), accessKey);</span>
+<span class="nc" id="L139">                            resultsList.add(recordResultsController.createResult(testType, String.valueOf(parameters), code, result, valueParameter));</span>
+<span class="nc" id="L140">                            System.out.println(success);</span>
+<span class="nc" id="L141">                            recordResultsController.setDateResultToTest(recordResultsController.getTest(barCodeString));</span>
+<span class="nc" id="L142">                        }</span>
+                    } else {
+<span class="nc" id="L144">                        System.out.println(errAcces);</span>
+                    }
+                }
+<span class="nc" id="L147">            } else {</span>
+<span class="nc" id="L148">                System.out.println(&quot;The Barcode doesn't exits!&quot;);</span>
+            }
+<span class="nc" id="L150">        } catch (IllegalArgumentException illegalArgumentException) {</span>
+<span class="nc" id="L151">            System.out.println(illegalArgumentException.getMessage());</span>
+<span class="nc" id="L152">        } catch (Exception e) {</span>
+<span class="nc" id="L153">            System.out.println(&quot;Unkown Error recording the test Results:\n&quot; +</span>
+<span class="nc" id="L154">                    e.getMessage());</span>
+<span class="nc" id="L155">        }</span>
+<span class="nc" id="L156">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

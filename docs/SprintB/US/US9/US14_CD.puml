@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class DiagnosisUI{
+}
+class DiagnosisController{
++getDiagnosis(report,date)
++saveDiagnosis()
+
+}
+class DiagnosisStore{
++createDiagnosis(report,date)
++validateDiagnosis(diagnosis)
++saveDiagnosis(diagnosis)
+}
+class Diagnosis{
+-report
+-date
+--------
++Diagnosis(report,date)
+}
+DiagnosisUI..>DiagnosisController
+DiagnosisController..>DiagnosisStore
+DiagnosisController..>Diagnosis
+DiagnosisStore"1" --> "*" Diagnosis : adopts
+@enduml

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TestStore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.Store</a> &gt; <span class="el_source">TestStore.java</span></div><h1>TestStore.java</h1><pre class="source lang-java linenums">package app.domain.Store;
+
+import app.domain.model.*;
+import app.domain.shared.ListDates;
+import app.domain.shared.ListofTests;
+
+import java.util.Date;
+import java.util.List;
+
+<span class="fc" id="L10">public class TestStore implements ListofTests, ListDates {</span>
+
+    /**
+     * code to be generated to identify the tests.
+     */
+<span class="fc" id="L15">    private Long code = 0L;</span>
+
+    /**
+     * attribute from Date class.
+     */
+<span class="fc" id="L20">    private Date date = new Date();</span>
+    /**
+     * Date to be saved in the ArrayList dates.
+     */
+    private Long longDate;
+
+    /**
+     * Method to register a new test.
+     * @param client information of the client who is going to be tested.
+     * @param code code generated to identify the test.
+     * @param nhsCode NHS code used to identify the test.
+     * @param type type of test to be analysed.
+     * @param parameters parameters to be tested.
+     * @return a registered test.
+     */
+    public Test createTest(Client client, String code, String nhsCode, TesteType type, List&lt;Parameter&gt; parameters, String  labId, Date date) {
+<span class="fc" id="L36">        return new Test(client, code, nhsCode, type, parameters, labId, date);</span>
+    }
+
+    /**
+     * Method to validate a newly registered test.
+     * @param newTest newly registered test.
+     * @return if test is valid or not.
+     */
+    public boolean validateTest(Test newTest) {
+        try{
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (newTest == null) {</span>
+<span class="fc" id="L47">                return false;</span>
+            } else {
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                for (Test testCheck : listOfTests) {</span>
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">                    if (testCheck.getNhsCode().equals(newTest.getNhsCode()) &amp;&amp; listOfTests.size() &gt; 1) {</span>
+<span class="fc" id="L51">                        throw new IllegalArgumentException(&quot;The nhs code you entered already exists in our database, please verify the typed data.&quot;);</span>
+                    }
+<span class="fc" id="L53">                }</span>
+            }
+<span class="fc" id="L55">        }catch (IllegalArgumentException i){</span>
+<span class="fc" id="L56">            i.getMessage();</span>
+<span class="fc" id="L57">        }</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">        return !this.listOfTests.contains(newTest);</span>
+    }
+
+    /**
+     * Method to add the test to the ArrayList testList and to add the registration dates to the ArrayList dates.
+     * @param newTest newly registered tests.
+     */
+    public void saveTest(Test newTest) {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (validateTest(newTest)) {</span>
+<span class="fc" id="L67">            this.listOfTests.add(newTest);</span>
+<span class="fc" id="L68">            this.datesList.add( new AllDates(newTest.getCode(), new Date(), &quot;Register&quot;));</span>
+
+            /*try {
+                this.generateFile(newTest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+             */
+        }
+<span class="fc" id="L78">    }</span>
+
+    /**
+     * Method to generate the code which will identify the registered test.
+     * @return code of the test.
+     */
+    public String generateCode() {
+<span class="fc" id="L85">        this.code = this.code +1;</span>
+
+<span class="fc" id="L87">        return String.format(&quot;%012d&quot;,this.code);</span>
+    }
+
+    /**
+     * method to get the list of dates.
+     * @return dates List
+     */
+<span class="fc" id="L94">    public List&lt;AllDates&gt; getDates(){return datesList;}</span>
+
+    /**
+     * method to set the date for the Laboratory Coordinator.
+     * @param date date when action occured
+     */
+    public void setDateLaboratoryCoordinator(Date date) {
+<span class="nc" id="L101">        this.date = date;</span>
+<span class="nc" id="L102">    }</span>
+
+    /**
+     * method to get the list of tests.
+     * @return list of registered testes
+     */
+<span class="fc" id="L108">    public List&lt;Test&gt; getTestList() { return listOfTests;}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

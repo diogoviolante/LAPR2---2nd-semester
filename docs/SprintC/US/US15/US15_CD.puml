@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Company{
++ store=getAvailableTestStore()
++ store=getAvailableTestStore(dto)
+}
+
+
+
+class LabCoordinatorController{
++getTestList()
++validationCoordinator(dto)
++saveValidatedTests()
+}
+
+class AvailableTestStore{
++createValidationCoordinator(dto)
++validateValidationCoordinator(validationCoordinator val)
++addValidationCoordinator(validationCoordinator val)
++saveValidationCoordinator(validationCoordinator val)
+}
+
+class validationCoordinatorDto{
++getTest()
+}
+
+interface ListofTests{
++getTestTypes()
+}
+
+class validationCoordinator{
++create(dto)
+}
+
+
+
+Company ..> AvailableTestStore : calls
+AvailableTestStore ..> validationCoordinator: makes possible
+Company -> yau: selects
+ValidationLabCoordUI ..> LabCoordinatorController
+LabCoordinatorController ..> Company
+LabCoordinatorController ..>validationCoordinator
+AvailableTestStore ..> validationCoordinatorDto:requests
+@enduml

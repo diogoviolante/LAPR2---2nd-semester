@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LinearRegression.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">LinearRegression.java</span></div><h1>LinearRegression.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+/******************************************************************************
+ *  Compute least squares solution to y = beta * x + alpha.
+ *  Simple linear regression.
+ ******************************************************************************/
+
+/**
+ *  The code LinearRegression class performs a simple linear regression
+ *  on an set of n data points (y_i, x_i).
+ *  That is, it fits a straight line y = alpha + beta * x,
+ *  (where y is the response variable, x is the predictor variable,
+ *  alpha is the y-intercept, and beta is the slope)
+ *  that minimizes the sum of squared residuals of the linear regression model.
+ *  It also computes associated statistics, including the coefficient of
+ *  determination R^2 and the standard deviation of the
+ *  estimates for the slope and y-intercept.
+ *
+ */
+public class LinearRegression {
+    private final double intercept, slope;
+    private final double r2;
+    private final double svar0, svar1;
+
+    /**
+     * Performs a linear regression on the data points (y[i], x[i]).
+     *
+     * @param  x the values of the predictor variable
+     * @param  y the corresponding values of the response variable
+     * @throws IllegalArgumentException if the lengths of the two arrays are not equal
+     */
+<span class="fc" id="L32">    public LinearRegression(double[] x, double[] y) {</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if (x.length != y.length) {</span>
+<span class="nc" id="L34">            throw new IllegalArgumentException(&quot;array lengths are not equal&quot;);</span>
+        }
+<span class="fc" id="L36">        int n = x.length;</span>
+
+        // first pass
+<span class="fc" id="L39">        double sumx = 0.0, sumy = 0.0, sumx2 = 0.0;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="fc" id="L41">            sumx  += x[i];</span>
+<span class="fc" id="L42">            sumx2 += x[i]*x[i];</span>
+<span class="fc" id="L43">            sumy  += y[i];</span>
+        }
+<span class="fc" id="L45">        double xbar = sumx / n;</span>
+<span class="fc" id="L46">        double ybar = sumy / n;</span>
+
+        // second pass: compute summary statistics
+<span class="fc" id="L49">        double xxbar = 0.0, yybar = 0.0, xybar = 0.0;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="fc" id="L51">            xxbar += (x[i] - xbar) * (x[i] - xbar);</span>
+<span class="fc" id="L52">            yybar += (y[i] - ybar) * (y[i] - ybar);</span>
+<span class="fc" id="L53">            xybar += (x[i] - xbar) * (y[i] - ybar);</span>
+        }
+<span class="fc" id="L55">        slope  = xybar / xxbar;</span>
+<span class="fc" id="L56">        intercept = ybar - slope * xbar;</span>
+
+        // more statistical analysis
+<span class="fc" id="L59">        double rss = 0.0;      // residual sum of squares</span>
+<span class="fc" id="L60">        double ssr = 0.0;      // regression sum of squares</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="fc" id="L62">            double fit = slope*x[i] + intercept;</span>
+<span class="fc" id="L63">            rss += (fit - y[i]) * (fit - y[i]);</span>
+<span class="fc" id="L64">            ssr += (fit - ybar) * (fit - ybar);</span>
+        }
+
+<span class="fc" id="L67">        int degreesOfFreedom = n-2;</span>
+<span class="fc" id="L68">        r2    = ssr / yybar;</span>
+<span class="fc" id="L69">        double svar  = rss / degreesOfFreedom;</span>
+<span class="fc" id="L70">        svar1 = svar / xxbar;</span>
+<span class="fc" id="L71">        svar0 = svar/n + xbar*xbar*svar1;</span>
+<span class="fc" id="L72">    }</span>
+
+    /**
+     * Returns the y-intercept alpha of the best of the best-fit line y = alpha + beta * x.
+     *
+     * @return the y-intercept alpha of the best-fit line y = alpha + beta * x
+     */
+    public double intercept() {
+<span class="fc" id="L80">        return intercept;</span>
+    }
+
+    /**
+     * Returns the slope beta of the best of the best-fit line y = alpha + beta * x.
+     *
+     * @return the slope beta of the best-fit line y = alpha + beta * x
+     */
+    public double slope() {
+<span class="fc" id="L89">        return slope;</span>
+    }
+
+    /**
+     * Returns the coefficient of determination R^2.
+     *
+     * @return the coefficient of determination R^2,
+     *         which is a real number between 0 and 1
+     */
+    public double R2() {
+<span class="fc" id="L99">        return r2;</span>
+    }
+
+    /**
+     * Returns the standard error of the estimate for the intercept.
+     *
+     * @return the standard error of the estimate for the intercept
+     */
+    public double interceptStdErr() {
+<span class="fc" id="L108">        return Math.sqrt(svar0);</span>
+    }
+
+    /**
+     * Returns the standard error of the estimate for the slope.
+     *
+     * @return the standard error of the estimate for the slope
+     */
+    public double slopeStdErr() {
+<span class="fc" id="L117">        return Math.sqrt(svar1);</span>
+    }
+
+    /**
+     * Returns the expected response y given the value of the predictor
+     * variable x.
+     *
+     * @param  x the value of the predictor variable
+     * @return the expected response y given the value of the predictor
+     *         variable x
+     */
+    public double predict(double x) {
+<span class="fc" id="L129">        return slope*x + intercept;</span>
+    }
+
+    /**
+     * Returns a string representation of the simple linear regression model.
+     *
+     * @return a string representation of the simple linear regression model,
+     *         including the best-fit line and the coefficient of determination
+     *         R^2
+     */
+    public String toString() {
+<span class="fc" id="L140">        StringBuilder s = new StringBuilder();</span>
+<span class="fc" id="L141">        s.append(String.format(&quot;%.2f n + %.2f&quot;, slope(), intercept()));</span>
+<span class="fc" id="L142">        s.append(&quot;  (R^2 = &quot; + String.format(&quot;%.3f&quot;, R2()) + &quot;)&quot;);</span>
+<span class="fc" id="L143">        return s.toString();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

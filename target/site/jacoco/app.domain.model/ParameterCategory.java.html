@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterCategory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">ParameterCategory.java</span></div><h1>ParameterCategory.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+import org.apache.commons.lang3.StringUtils;
+
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class ParameterCategory implements Serializable {
+    private String name;
+    private String code;
+    private List&lt;Parameter&gt; parameterList;
+    //private List&lt;ParameterCategory&gt; parameterCategoryList;
+    /**
+     * this method call the methods and if it succeeds, the atributes change value
+     * @param code of the parameter
+     * @param name of the parameter
+     */
+<span class="fc" id="L21">    public ParameterCategory(String code, String name) {</span>
+<span class="fc" id="L22">        checkCodeRules(code);</span>
+<span class="fc" id="L23">        checkNameRules(name);</span>
+<span class="fc" id="L24">        this.code = code;</span>
+<span class="fc" id="L25">        this.name = name;</span>
+<span class="fc" id="L26">   this.parameterList= new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L27">    }</span>
+
+
+
+    /**
+     * gets the code
+     * @return the code of the parameter
+     */
+    public String getCode() {
+<span class="fc" id="L36">        return code;</span>
+    }
+
+    /**
+     * setts the code with a new value
+     * @param code to choose a different code
+     */
+    public void setCode(String code) {
+<span class="fc" id="L44">        this.code = code;</span>
+<span class="fc" id="L45">    }</span>
+
+    /**
+     * gets the name
+     * @return the name of the parameter
+     */
+    public String getName() {
+<span class="fc" id="L52">        return name;</span>
+    }
+
+    /**
+     * setts the name
+     * @param name to choose a different name
+     */
+    public void setName(String name) {
+<span class="fc" id="L60">        this.name = name;</span>
+<span class="fc" id="L61">    }</span>
+
+    /**
+     * validates code
+     * @param code to validate
+     */
+    public void checkCodeRules(String code) {
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        if (StringUtils.isBlank(code))</span>
+<span class="nc" id="L69">            throw new IllegalArgumentException(&quot;Code cannot be blank&quot;);</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if ((code.length() != 5))</span>
+<span class="fc" id="L71">            throw new IllegalArgumentException(&quot;Code must have 4 to 8 chars&quot;);</span>
+<span class="fc" id="L72">    }</span>
+
+    /**
+     * validates name
+     * @param name to validate
+     */
+    public void checkNameRules(String name) {
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        if (StringUtils.isBlank(name))</span>
+<span class="nc" id="L80">            throw new IllegalArgumentException(&quot;description cannot be blank&quot;);</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        if (name.length() &gt; 15)</span>
+<span class="fc" id="L82">            throw new IllegalArgumentException(&quot;description must to be shorter than 10 characters&quot;);</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">        if (name.length() &lt; 4)</span>
+<span class="nc" id="L84">            throw new IllegalArgumentException(&quot;description must have more than 4 characters&quot;);</span>
+<span class="fc" id="L85">    }</span>
+
+    public List&lt;Parameter&gt; getParameterList() {
+<span class="fc" id="L88">        return parameterList;</span>
+    }
+
+    public boolean addParameter(Parameter parameter){
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">        for (Parameter parameter1 : parameterList) {</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">            if (parameter1.getParameterCode().equals(parameter.getParameterCode())){</span>
+<span class="nc" id="L94">                return false;</span>
+            }
+<span class="nc" id="L96">        }</span>
+<span class="fc" id="L97">        parameterList.add(parameter);</span>
+<span class="fc" id="L98">        return true;</span>
+    }
+    public Parameter specifyParameter(String parameterCode, String shortName, String description,String category){
+<span class="fc" id="L101">        return new Parameter(parameterCode, shortName, description,category);</span>
+    }
+
+    @Override
+    public String toString(){
+<span class="fc" id="L106">        return ( &quot;name&quot;+&quot; &quot;+name+&quot;  &quot;+&quot;code&quot;+&quot; &quot;+code);</span>
+    }
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L111" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L112" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L113">        ParameterCategory that = (ParameterCategory) o;</span>
+<span class="nc bnc" id="L114" title="All 4 branches missed.">        return Objects.equals(code, that.code) &amp;&amp; Objects.equals(name, that.name)</span>
+                ;
+    }
+
+
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L122">        return Objects.hash(code, name);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

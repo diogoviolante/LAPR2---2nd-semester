@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Laboratory coordinatior" as LC
+activate LC
+participant ":CVSUI" as UI
+participant ":CVSController" as Controller
+participant ":CVSfile" as File
+participant ":Clientstore" as cStore
+participant ":testStore" as tStore
+participant ":RegisterResultController" as rController
+participant "Company" as comp
+participant "DiagnosisStore" as dStore
+activate LC
+LC->UI: selects the option to import files from the menu
+activate UI
+
+UI->LC :asks to chose the file to import
+deactivate UI
+LC->UI:Chose the file to do the import
+activate UI
+UI->Controller: ChooseOption(option)
+activate Controller
+deactivate UI
+Controller->File:ChooseOption((option)
+deactivate Controller
+alt if option=1
+File->File:LoadDataFileMATCPMDISC()
+activate File
+deactivate File
+else if option=2
+File->File:LoadDataFileMATCP()
+activate File
+deactivate File
+else if option=3
+File->File: LoadDataFileMDISC()
+activate File
+deactivate File
+end
+activate UI
+UI->Controller:AddTest(option)
+activate Controller
+deactivate UI
+Controller->File:AddTest(option)
+activate File
+File->File:CreateNewClient(option)
+File->cStore:createClient(name, citizenNumberString, phoneNumber, nhsNumber, taxNumber, birthDate, email, adress)
+activate cStore
+File->cStore:saveClient2(newClient)
+deactivate cStore
+File->tStore:createTest(clientForTest, code, nhsCode, type, parameters, labId, date);
+activate tStore
+File->tStore:saveTest(test)
+deactivate tStore
+File->comp:registSample(code)
+activate comp
+deactivate comp
+File->dStore: dStore.getDateList()
+activate dStore
+deactivate dStore
+File->File:AssociateCategoriesandParameters(option)
+File->rController: resultController.createResult(testType, parameter, code, result, parameterValue)
+alt if info2[i]= Covid
+activate rController
+deactivate rController
+File->rController: resultController.covidAPI11(parameterValue, accessKey, parameter);
+activate rController
+deactivate rController
+else if info2[i]= Hemogram
+File->rController :resultController.bloodAPI31(parameterValue, parameter, accessKey);
+activate rController
+deactivate rController
+else if info2[i]= Cholesterol
+File->rController :resultController.bloodAPI31(parameterValue, parameter, accessKey);
+activate rController
+deactivate rController
+end
+deactivate Controller
+UI->LC:Shows the number of clients registered , the number of tests registered in the system, and the number of tests with valid results
+activate UI
+deactivate UI
+deactivate File
+deactivate LC
+@enduml

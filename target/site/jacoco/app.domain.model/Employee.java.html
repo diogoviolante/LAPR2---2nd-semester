@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+
+import app.domain.shared.Constants;
+import auth.domain.model.Email;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+
+
+
+    /**
+     * O papel do Employee.
+     */
+    private String role;
+
+    /**
+     * A id do Employee.
+     */
+    private String employeeID;
+
+    /**
+     * O nome do Employee.
+     */
+    private String name;
+
+    /**
+     * A morada do Employee.
+     */
+    private String address;
+
+    /**
+     * O email do Employee.
+     */
+    private Email email;
+
+    /**
+     * O número de telefone do Employee.
+     */
+    private String phoneNumber;
+
+    /**
+     * O SOC do Employee.
+     */
+    private long soc;
+
+    /**
+     * O index number do Specialist Doctor.
+     */
+    private long indexNumber;
+
+
+    /**
+     * Constrói uma instância de Employee recebendo o papel, id, nome, morada, email, número de telefone e soc.
+     * @param role o papel do Employee
+     * @param employeeID a id do Employee
+     * @param name o nome do Employee
+     * @param address a morada do Employee
+     * @param email o email do Employee
+     * @param phoneNumber o número de telefone do Employee
+     * @param soc o SOC do Employee
+     */
+<span class="fc" id="L65">    public Employee(String role, String employeeID, String name, String address, Email email, String phoneNumber, long soc) {</span>
+<span class="fc" id="L66">        validateRole(role);</span>
+<span class="fc" id="L67">        this.role = role;</span>
+
+<span class="fc" id="L69">        validateName(name);</span>
+<span class="fc" id="L70">        this.name = name;</span>
+
+<span class="fc" id="L72">        this.employeeID = employeeID;</span>
+
+
+<span class="fc" id="L75">        validateAddress(address);</span>
+<span class="fc" id="L76">        this.address = address;</span>
+
+<span class="fc" id="L78">        validatePhoneNumber(phoneNumber);</span>
+<span class="fc" id="L79">        this.phoneNumber = phoneNumber;</span>
+
+<span class="fc" id="L81">        this.email = email;</span>
+
+<span class="fc" id="L83">        validateSoc(soc);</span>
+<span class="fc" id="L84">        this.soc = soc;</span>
+<span class="fc" id="L85">    }</span>
+
+
+    /**
+     * Constrói uma instância de Employee recebendo o papel, id, nome, morada, email, número de telefone, soc e index number.
+     * @param role o papel do Employee
+     * @param employeeID a id do Employee
+     * @param name o nome do Employee
+     * @param address a morada do Employee
+     * @param email o email do Employee
+     * @param phoneNumber o número de telefone do Employee
+     * @param soc o SOC do Employee
+     * @param indexNumber o index number do Specialist Doctor
+     */
+<span class="fc" id="L99">    public Employee(String role, String employeeID, String name, String address, Email email, String phoneNumber, long soc, long indexNumber) {</span>
+<span class="fc" id="L100">        validateRole(role);</span>
+<span class="fc" id="L101">        this.role = role;</span>
+
+<span class="fc" id="L103">        validateName(name);</span>
+<span class="fc" id="L104">        this.name = name;</span>
+
+
+<span class="fc" id="L107">        this.employeeID = employeeID;</span>
+
+
+<span class="fc" id="L110">        validateAddress(address);</span>
+<span class="fc" id="L111">        this.address = address;</span>
+
+<span class="fc" id="L113">        validatePhoneNumber(phoneNumber);</span>
+<span class="fc" id="L114">        this.phoneNumber = phoneNumber;</span>
+
+<span class="fc" id="L116">        this.email = email;</span>
+
+<span class="fc" id="L118">        validateSoc(soc);</span>
+<span class="fc" id="L119">        this.soc = soc;</span>
+
+<span class="fc" id="L121">        validateIndexNumber(indexNumber);</span>
+<span class="fc" id="L122">        this.indexNumber = indexNumber;</span>
+<span class="fc" id="L123">    }</span>
+
+
+    /**
+     * Devolve o papel do Employee.
+     *
+     * @return papel do Employee
+     */
+<span class="fc" id="L131">    public String getRole() { return role; }</span>
+
+
+    /**
+     * Devolve o ID do Employee.
+     *
+     * @return ID do Employee
+     * @param name o novo do Employee
+     */
+<span class="fc" id="L140">    public String getEmployeeID(String name) { return employeeID; }</span>
+
+
+    /**
+     * Devolve o nome do Employee.
+     *
+     * @return nome do Employee
+     */
+<span class="fc" id="L148">    public String getName() { return name; }</span>
+
+
+    /**
+     * Devolve a morada do Employee.
+     *
+     * @return morada do Employee
+     */
+<span class="fc" id="L156">    public String getAddress() { return address; }</span>
+
+
+    /**
+     * Devolve o email do Employee.
+     *
+     * @return email do Employee
+     */
+<span class="fc" id="L164">    public Email getEmail() { return email; }</span>
+
+
+
+    /**
+     * Devolve o numero de telefone do Employee.
+     *
+     * @return numero de telefone do Employee
+     */
+<span class="fc" id="L173">    public String getPhoneNumber() { return phoneNumber; }</span>
+
+
+    /**
+     * Devolve o soc do Employee.
+     *
+     * @return soc do Employee
+     */
+<span class="fc" id="L181">    public long getSoc() { return soc; }</span>
+
+
+    /**
+     * Devolve o index number do Employee.
+     *
+     * @return index number do Employee
+     */
+<span class="fc" id="L189">    public long getIndexNumber() { return indexNumber; }</span>
+
+
+
+    /**
+     * Valida o papel do Employee.
+     */
+    public void validateRole(String role){
+<span class="fc bfc" id="L197" title="All 2 branches covered.">        if (role.length() &gt; Constants.VAL_ROLE)</span>
+<span class="fc" id="L198">            throw new IllegalArgumentException(&quot;Role cannot exceed the limit&quot;);</span>
+<span class="fc bfc" id="L199" title="All 2 branches covered.">        if (StringUtils.isBlank(role))</span>
+<span class="fc" id="L200">            throw new IllegalArgumentException(&quot;Role cannot be blank.&quot;);</span>
+<span class="fc" id="L201">    }</span>
+
+    /**
+     * Valida o nome do Employee.
+     */
+    public void validateName(String name){
+<span class="fc bfc" id="L207" title="All 2 branches covered.">        if (name.length() &gt; Constants.VAL_NAME)</span>
+<span class="fc" id="L208">            throw new IllegalArgumentException(&quot;Employee must have less than 36 characters&quot;);</span>
+<span class="fc bfc" id="L209" title="All 2 branches covered.">        if (StringUtils.isBlank(name))</span>
+<span class="fc" id="L210">            throw new IllegalArgumentException(&quot;Employee must have a name&quot;);</span>
+<span class="fc" id="L211">    }</span>
+
+    /**
+     * Valida a morada do Employee.
+     */
+    public void validateAddress(String address) {
+<span class="fc bfc" id="L217" title="All 2 branches covered.">        if (address.length() &gt; Constants.VAL_ADDRESS)</span>
+<span class="fc" id="L218">            throw new IllegalArgumentException(&quot;Employee's address must have less than 91 characters&quot;);</span>
+<span class="fc bfc" id="L219" title="All 2 branches covered.">        if (StringUtils.isBlank(address))</span>
+<span class="fc" id="L220">            throw new IllegalArgumentException(&quot;Employee's address must have an address&quot;);</span>
+<span class="fc" id="L221">    }</span>
+
+    /**
+     * Valida o numero de telefone do Employee.
+     */
+    public void validatePhoneNumber(String phoneNumber) {
+<span class="fc bfc" id="L227" title="All 2 branches covered.">        if (phoneNumber.length() != Constants.VAL_PHONENUMBER) {</span>
+<span class="fc" id="L228">            throw new IllegalArgumentException(&quot;Employee's phone number must have 11 digits&quot;);</span>
+<span class="pc bpc" id="L229" title="1 of 2 branches missed.">        } else if (StringUtils.isBlank(phoneNumber)) {</span>
+<span class="nc" id="L230">            throw new IllegalArgumentException(&quot;Employee must have a phone number&quot;);</span>
+        }
+<span class="fc" id="L232">    }</span>
+
+    /**
+     * Valida o soc do Employee.
+     */
+    public void validateSoc (long soc) {
+<span class="fc bfc" id="L238" title="All 4 branches covered.">        if (soc &lt; Constants.VAL_SOC_MIN || soc &gt; Constants.VAL_SOC_MAX)</span>
+<span class="fc" id="L239">            throw new IllegalArgumentException(&quot;Employee's SOC must have 4 digits&quot;);</span>
+<span class="fc" id="L240">    }</span>
+
+    /**
+     * Valida o index number do Employee.
+     */
+    public void validateIndexNumber (long indexNumber) {
+<span class="fc bfc" id="L246" title="All 4 branches covered.">        if (indexNumber &lt; Constants.VAL_INDEXNUMBER_MIN || indexNumber &gt; Constants.VAL_INDEXNUMBER_MAX)</span>
+<span class="fc" id="L247">            throw new IllegalArgumentException(&quot;Employee's index number must have 6 digits&quot;);</span>
+<span class="fc" id="L248">    }</span>
+
+
+    /**
+     * Devolve os atributos do Employee.
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L256">        return (&quot;role- &quot; + role + &quot;employee Id- &quot; + employeeID + &quot;name- &quot; + name + &quot;address- &quot; + address + &quot;email- &quot; + email + &quot;phone number- &quot; + phoneNumber + &quot;SOC- &quot; + soc);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

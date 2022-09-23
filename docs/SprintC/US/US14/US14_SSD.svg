@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="316px" preserveAspectRatio="none" style="width:284px;height:316px;" version="1.1" viewBox="0 0 284 316" width="284px" zoomAndPan="magnify"><defs><filter height="300%" id="fawtq971zxjfr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="113.4063" style="stroke:#A80036;stroke-width:1.0;" width="10" x="57" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="182.6641"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="62" x2="62" y1="89.6094" y2="231.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="240" x2="240" y1="89.6094" y2="231.0156"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="9" y="86.5332">Specialist doctor</text><ellipse cx="62" cy="15" fill="#FEFECE" filter="url(#fawtq971zxjfr)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M62,23 L62,50 M49,31 L75,31 M62,50 L49,65 M62,50 L75,65 " fill="none" filter="url(#fawtq971zxjfr)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="9" y="244.5488">Specialist doctor</text><ellipse cx="62" cy="257.625" fill="#FEFECE" filter="url(#fawtq971zxjfr)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M62,265.625 L62,292.625 M49,273.625 L75,273.625 M62,292.625 L49,307.625 M62,292.625 L75,307.625 " fill="none" filter="url(#fawtq971zxjfr)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fawtq971zxjfr)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="206" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="213" y="74.5332">:System</text><rect fill="#FEFECE" filter="url(#fawtq971zxjfr)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="206" y="230.0156"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="213" y="251.5488">:System</text><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="113.4063" style="stroke:#A80036;stroke-width:1.0;" width="10" x="57" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fawtq971zxjfr)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="182.6641"/><polygon fill="#A80036" points="223,117.9609,233,121.9609,223,125.9609,227,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="67" x2="229" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="74" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="85" y="117.1045">asks to insert the report</text><polygon fill="#A80036" points="78,148.3125,68,152.3125,78,156.3125,74,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="72" x2="239" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="84" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="95" y="147.4561">request data</text><polygon fill="#A80036" points="223,178.6641,233,182.6641,223,186.6641,227,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="67" x2="229" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="74" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="85" y="177.8076">insert requested data</text><polygon fill="#A80036" points="73,209.0156,63,213.0156,73,217.0156,69,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="67" x2="239" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="79" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="90" y="208.1592">show the report</text><!--MD5=[3cb9abc43844a98669562b95e64e3ff8]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor " Specialist doctor" as OE
+activate OE
+
+OE -> ":System" : asks to insert the report
+activate ":System"
+":System" - -> OE : request data
+deactivate ":System"
+OE - -> ":System" :insert requested data
+activate ":System"
+":System"->OE :show the report
+deactivate OE
+deactivate ":System"
+@enduml
+
+@startuml
+
+autonumber
+actor " Specialist doctor" as OE
+activate OE
+
+OE -> ":System" : asks to insert the report
+activate ":System"
+":System" - -> OE : request data
+deactivate ":System"
+OE - -> ":System" :insert requested data
+activate ":System"
+":System"->OE :show the report
+deactivate OE
+deactivate ":System"
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 10:25:05 GMT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

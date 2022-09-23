@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Company{
++ getClinicalAnalysisLabStore()
++ getTypeOfTestStore()
+}
+
+
+
+class ClinicalAnalysisLabController{
++createClinicalAnalysisiLab(dto)
++saveClinicalAnalysisLab()
++getTestTypes()
+}
+
+class ClinicalAnalysisiLabStore{
++createClinicalAnalysisiLab(dto)
++validateClinicalAnalysisLab(Cal)
++addClinicalAnalysisLab(Cal)
+}
+
+class createAnalysisClinicallabDTO{
+- LaboratoryID
+- Name
+- Address
+- Phone Number
+- TIN Number
+}
+
+class TypeOfTestStore{
++getTestTypes()
+}
+
+class ClinicalAnalysisLab{
+
++create(dto)
+}
+
+class ClinicalAnalysisLabUI{
++ getTestTypes()
+}
+
+Company ..> ClinicalAnalysisiLabStore : calls
+ClinicalAnalysisiLabStore ..> ClinicalAnalysisLab: generates
+Company -> TypeOfTestStore: selects
+ClinicalAnalysisLabUI ..> ClinicalAnalysisLabController
+ClinicalAnalysisLabController ..> Company
+ClinicalAnalysisLabController ..>ClinicalAnalysisLab
+ClinicalAnalysisiLabStore ..> createAnalysisClinicallabDTO:requests
+@enduml

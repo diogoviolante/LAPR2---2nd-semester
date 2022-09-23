@@ -1,0 +1,20 @@
+@startuml
+autonumber
+actor "Clinical Chemistry Technogist" as OE
+
+activate OE
+OE -> ":System" : wants to check client's test history
+activate ":System"
+":System" --> OE : Asks what type of sort is intended
+deactivate ":System"
+OE -> ":System" : Insert the requested data
+activate ":System"
+":System" --> OE : presents the list of clients ordered by the preference
+deactivate ":System"
+OE -> ":System" : chooses one test (code) and consult details/results
+activate ":System"
+":System" -> OE: test is presented with all details/results with the reference values
+deactivate ":System"
+deactivate OE
+
+@enduml

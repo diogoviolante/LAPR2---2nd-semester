@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+import app.domain.shared.Constants;
+import auth.domain.model.Email;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Client implements Serializable {
+    /**
+     * Client's name.
+     */
+    private String name;
+    /**
+     * Client's citizen number.
+     */
+    private String citizenNumber;
+    /**
+     * Client's phone number.
+     */
+    private long phoneNumber;
+    /**
+     * Client's NHS number.
+     */
+    private long nhsNumber;
+    /**
+     * Client's Tax Identification number.
+     */
+    private long taxNumber;
+    /**
+     * Client's birthdate.
+     */
+    private Date birthDate;
+    /**
+     * Client's role.
+     */
+    private String role;
+    /**
+     * Client's gender.
+     */
+    private String gender;
+    /**
+     * Client's email.
+     */
+    private Email email;
+    private String address;
+    /**
+     * Constructor of Client Class.
+     * @param name name of the Client.
+     * @param citizenNumber Citizen number of the Client.
+     * @param phoneNumber Phone number of the client.
+     * @param nhsNumber NHS number of the Client.
+     * @param taxNumber Tax Identification number of the Client.
+     * @param birthDate Birthdate of the Client.
+
+     * @param gender Gender of the Client.
+     * @param email Email of the Client.
+     */
+<span class="fc" id="L61">    public Client(String name, String citizenNumber, long phoneNumber,  long nhsNumber, long taxNumber, Date birthDate, String gender, Email email,String address) {</span>
+
+<span class="fc" id="L63">        setName(name);</span>
+<span class="fc" id="L64">        setCitizen(citizenNumber);</span>
+<span class="fc" id="L65">        setPhoneNumber(phoneNumber);</span>
+<span class="fc" id="L66">        setNhs(nhsNumber);</span>
+<span class="fc" id="L67">        setTaxNumber(taxNumber);</span>
+<span class="fc" id="L68">        setBirthDate(birthDate);</span>
+<span class="fc" id="L69">        setGender(gender);</span>
+<span class="fc" id="L70">        setEmail(String.valueOf(email));</span>
+<span class="fc" id="L71">        setAddress(address);</span>
+<span class="fc" id="L72">    }</span>
+
+    /**
+     * Constructor of Client Class.
+     * @param name name of the Client.
+     * @param citizenNumber Citizen number of the Client.
+     * @param phoneNumber Phone number of the client.
+     * @param nhsNumber NHS number of the Client.
+     * @param taxNumber Tax Identification number of the Client.
+     * @param birthDate Birthdate of the Client.
+
+     * @param email Email of the Client.
+     */
+
+
+
+
+<span class="fc" id="L89">    public Client(String name, String citizenNumber, long phoneNumber,  long nhsNumber, long taxNumber, Date birthDate,  Email email,String address) {</span>
+
+<span class="fc" id="L91">        setName(name);</span>
+<span class="fc" id="L92">        setCitizen(citizenNumber);</span>
+<span class="fc" id="L93">        setPhoneNumber(phoneNumber);</span>
+<span class="fc" id="L94">        setNhs(nhsNumber);</span>
+<span class="fc" id="L95">        setTaxNumber(taxNumber);</span>
+<span class="fc" id="L96">        setBirthDate(birthDate);</span>
+<span class="fc" id="L97">        setEmail(String.valueOf(email));</span>
+<span class="fc" id="L98">        setAddress(address);</span>
+<span class="fc" id="L99">    }</span>
+
+    /**
+     * method to get the Client's name.
+     * @return Client's name.
+     */
+    public String getName() {
+<span class="fc" id="L106">        return name;</span>
+    }
+
+    /**
+     * method to get the Client's Citizen number.
+     * @return Client's citizen number.
+     */
+
+    public String getCitizenNumber() {
+<span class="fc" id="L115">        return citizenNumber;</span>
+    }
+
+    /**
+     * method to get the Client's phone number.
+     * @return Client's phone number.
+     */
+<span class="fc" id="L122">    public long getPhoneNumber() { return phoneNumber; }</span>
+
+    /**
+     * method to get the Client's NHS number.
+     * @return Client's NHS number.
+     */
+    public long getNhs() {
+<span class="fc" id="L129">        return nhsNumber;</span>
+    }
+
+    /**
+     * method to get the Client's Tax Identification number.
+     * @return Client's Tax Identification number.
+     */
+    public long getTaxNumber() {
+<span class="fc" id="L137">        return taxNumber;</span>
+    }
+
+    /**
+     * method to get the Client's birthdate.
+     * @return Client's birthdate.
+     */
+    public Date getBirthDate() {
+<span class="fc" id="L145">        return birthDate;</span>
+    }
+
+    /**
+     * method to get the Client's role.
+     * @return Client's role.
+     */
+    public String getRole() {
+<span class="nc" id="L153">        return role;</span>
+    }
+
+    /**
+     * method to get the Client's gender.
+     * @return Client's gender.
+     */
+    public String getGender() {
+<span class="fc" id="L161">        return gender;</span>
+    }
+
+    /**
+     * method to get the Client's email.
+     * @return Client's email.
+     */
+<span class="fc" id="L168">    public Email getEmail() {return email; }</span>
+
+    public String setName(String name) {
+<span class="fc" id="L171">        validateName(name);</span>
+<span class="fc" id="L172">        return this.name = name;</span>
+    }
+
+    /**
+     * method to set a new Client's citizen Number.
+     * @param citizenNumber new citizen Number.
+     * @return New client's Citizen number.
+     */
+    public String setCitizen(String citizenNumber) {
+<span class="fc" id="L181">        validateCitizenNumber((citizenNumber));</span>
+<span class="fc" id="L182">        return this.citizenNumber = citizenNumber; }</span>
+
+    /**
+     * method to set a new Client's phone number.
+     * @param phoneNumber new Client phone number.
+     * @return new Client phone number.
+     */
+    public long setPhoneNumber(Long phoneNumber) {
+<span class="fc" id="L190">        validatePhoneNumber(String.valueOf(phoneNumber));</span>
+<span class="fc" id="L191">        return this.phoneNumber = phoneNumber; }</span>
+
+    /**
+     * method to set a new Client's NHS number.
+     * @param nhsNumber new NHS Number.
+     * @return New client's NHS number.
+     */
+    public long setNhs(Long nhsNumber) {
+<span class="fc" id="L199">        validateNHSNumber(String.valueOf(nhsNumber));</span>
+<span class="fc" id="L200">        return this.nhsNumber = nhsNumber; }</span>
+
+    /**
+     * method to set a new Client's Tax Number.
+     * @param taxNumber new Tax Number.
+     * @return New client's Tax Number.
+     */
+    public long setTaxNumber(Long taxNumber) {
+<span class="fc" id="L208">        validateTIN(String.valueOf(taxNumber));</span>
+<span class="fc" id="L209">        return this.taxNumber = taxNumber;</span>
+    }
+
+    /**
+     * method to set a new Client's birthdate.
+     * @param birthDate new birthdate.
+     * @return New client's birthdate.
+     */
+    public Date setBirthDate(Date birthDate) {
+<span class="fc" id="L218">        validateDate(birthDate);</span>
+<span class="fc" id="L219">        return this.birthDate = birthDate;</span>
+    }
+
+    /**
+     * method to set a new Client's role.
+     * @param role new role.
+     * @return New client's email.
+     */
+    public String setRole(String role) {
+<span class="nc" id="L228">        return this.role = role;</span>
+    }
+
+    public String getAddress() {
+<span class="nc" id="L232">        return address;</span>
+    }
+
+    public String setAddress(String address) {
+<span class="fc" id="L236">        validateAdress(address);</span>
+<span class="fc" id="L237">        return this.address = address;</span>
+    }
+
+    /**
+     * method to set a new Client's gender.
+     * @param gender new gender.
+     * @return New client's gender.
+     */
+    public String setGender(String gender) {
+<span class="fc" id="L246">        validateGender(gender);</span>
+<span class="fc" id="L247">        return this.gender = gender;</span>
+    }
+
+    public Email setEmail(String email) {
+<span class="fc" id="L251">        Email email1 = new Email(email);</span>
+<span class="fc" id="L252">        return this.email = email1;</span>
+    }
+
+    /**
+     * Method to validate the Client's name.
+     * @param name Client's name.
+     */
+    public void validateName(String name) {
+<span class="fc bfc" id="L260" title="All 2 branches covered.">        if (StringUtils.isBlank(name)) {</span>
+<span class="fc" id="L261">            throw new IllegalArgumentException(&quot;Name cannot be blank.&quot;);</span>
+<span class="fc bfc" id="L262" title="All 2 branches covered.">        } else if (name.length() &gt; Constants.VAL_NAME)</span>
+<span class="fc" id="L263">            throw new IllegalArgumentException(&quot;Introduce a valid name.&quot;);</span>
+<span class="fc" id="L264">    }</span>
+
+    /**
+     * Method to validate the Client's Citizen number.
+     * @param citizenNumber Client's Citizen number.
+     */
+    public void validateCitizenNumber(String citizenNumber) {
+<span class="fc bfc" id="L271" title="All 2 branches covered.">        if (citizenNumber.length() != Constants.VAL_CITIZEN) {</span>
+<span class="fc" id="L272">            throw new IllegalArgumentException(&quot;Insert a valid citizen number.&quot;);</span>
+        }
+<span class="fc" id="L274">    }</span>
+
+    /**
+     * Method to validate the Client's phone number.
+     * @param phoneNumber Client's phone number.
+     */
+    public void validatePhoneNumber(String phoneNumber) {
+<span class="fc bfc" id="L281" title="All 2 branches covered.">        if (phoneNumber.length() != Constants.VAL_PHONENUMBER) {</span>
+<span class="fc" id="L282">            throw new IllegalArgumentException(&quot;Insert a valid phone number.&quot;);</span>
+        }
+<span class="fc" id="L284">    }</span>
+
+    /**
+     * Method to validate the Client's NHS number.
+     * @param nhsNumber Client's NHS number.
+     */
+    public void validateNHSNumber (String nhsNumber) {
+<span class="fc bfc" id="L291" title="All 2 branches covered.">        if (nhsNumber.length() != Constants.VAL_NHS)</span>
+<span class="fc" id="L292">            throw new IllegalArgumentException(&quot;Insert a valid NHS number.&quot;);</span>
+<span class="fc" id="L293">    }</span>
+
+    /**
+     * Method to validate the Client's Tax number.
+     * @param taxNumber Client's Tax number.
+     */
+    public void validateTIN (String taxNumber) {
+<span class="fc bfc" id="L300" title="All 2 branches covered.">        if (taxNumber.length() != Constants.VAL_NHS)</span>
+<span class="fc" id="L301">            throw new IllegalArgumentException(&quot;Insert a valid Tax number.&quot;);</span>
+<span class="fc" id="L302">    }</span>
+
+    /**
+     * Method to validate the Client's role.
+     * @param role Client's role.
+     */
+/*    public void validateRole (String role) {
+        if (StringUtils.isBlank(role))
+            throw new IllegalArgumentException(&quot;Role cannot be blank.&quot;);
+    }*/
+
+    /**
+     * Method to validate the Client's gender.
+     * @param gender Client's gender.
+     */
+    public void validateGender (String gender) {
+<span class="fc bfc" id="L318" title="All 2 branches covered.">        if (StringUtils.isBlank(gender))</span>
+<span class="fc" id="L319">            throw new IllegalArgumentException(&quot;Gender cannot be blank.&quot;);</span>
+<span class="fc" id="L320">    }</span>
+
+    /**
+     * Method to validate the Client's birthdate.
+     * @param birthDate Client's birthdate.
+     */
+    public void validateDate (Date birthDate) {
+<span class="fc" id="L327">        long year = birthDate.getYear()+1900;</span>
+<span class="fc" id="L328">        int currentYear = Calendar.getInstance().get(Calendar.YEAR);</span>
+
+<span class="fc bfc" id="L330" title="All 2 branches covered.">        if (currentYear - year &gt; Constants.VAL_BIRTH)</span>
+<span class="fc" id="L331">            throw new IllegalArgumentException(&quot;Insert a valid birthdate.&quot;);</span>
+
+<span class="fc" id="L333">    }</span>
+    public void validateAdress(String address) {
+<span class="pc bpc" id="L335" title="2 of 4 branches missed.">        if (StringUtils.isBlank(address) || address.length() &gt; Constants.VAL_ADDRESS) {</span>
+<span class="nc" id="L336">            throw new IllegalArgumentException(&quot;Adress cannot be larger than 90 characters&quot;);</span>
+        }
+<span class="fc" id="L338">    }</span>
+    @Override
+    public String toString(){
+<span class="fc" id="L341">        return &quot;Name: &quot; + name + &quot;  Citizen Number: &quot; + citizenNumber</span>
+                + &quot;  Phone Number:&quot; + phoneNumber + &quot;  NHS Number: &quot; + nhsNumber
+                + &quot;  Tax Identification Number: &quot; + taxNumber + &quot;  Birth Date: &quot; + birthDate +
+                &quot;  Email: &quot; + email
+                +&quot;  Address: &quot;+ address;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

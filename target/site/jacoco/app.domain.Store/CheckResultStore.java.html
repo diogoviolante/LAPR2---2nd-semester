@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckResultStore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.Store</a> &gt; <span class="el_source">CheckResultStore.java</span></div><h1>CheckResultStore.java</h1><pre class="source lang-java linenums">package app.domain.Store;
+
+import app.domain.model.AllDates;
+import app.domain.model.Client;
+import app.domain.model.Test;
+import auth.domain.model.Email;
+
+import java.util.Comparator;
+import java.util.List;
+
+<span class="fc" id="L11">public class CheckResultStore {</span>
+
+    /**
+     * method to get the client
+     * @param email client's email
+     * @param clientList list of clients registered
+     * @return client
+     */
+    public Client getClient(Email email, List&lt;Client&gt; clientList){
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        for (Client client: clientList) {</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">            if (client.getEmail().equals(email)) {</span>
+<span class="nc" id="L22">                return client;</span>
+            }
+<span class="nc" id="L24">        }</span>
+<span class="fc" id="L25">        return null;</span>
+    }
+
+    /**
+     * method to get the ordered list of dates.
+     * @param client client
+     * @param datesResult list to add the dates
+     * @param testList list of tests
+     * @param allDatesList list of all dates
+     * @return list of test dates ordered
+     */
+    public List&lt;AllDates&gt; getListOrdered(Client client, List&lt;AllDates&gt; datesResult, List&lt;Test&gt; testList, List&lt;AllDates&gt; allDatesList){
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        for (Test test: testList) {</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">            if (client.equals(test.getClient())){</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">                for (AllDates dates: allDatesList){</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">                    if (dates.getCode().equals(test.getCode())){</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">                        if (dates.getState().equals(&quot;Register&quot;))</span>
+<span class="nc" id="L42">                            datesResult.add(dates);</span>
+                    }
+<span class="nc" id="L44">                }</span>
+            }
+<span class="nc" id="L46">        }</span>
+
+<span class="fc" id="L48">        datesResult.sort(Comparator.comparing(AllDates::getDate));</span>
+<span class="fc" id="L49">        return datesResult;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

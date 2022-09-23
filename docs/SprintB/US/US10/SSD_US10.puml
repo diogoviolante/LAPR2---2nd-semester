@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as OE
+
+activate OE
+OE -> ":System" : asks to specify a new parameter
+activate ":System"
+":System" --> OE : requests data (short name, code, description, Category)
+deactivate ":System"
+
+OE -> ":System" : types requested data
+activate ":System"
+":System" --> OE : shows parameter categories list and ask to select one
+deactivate ":System"
+
+OE -> ":System" : selects a parameter category
+activate ":System"
+":System" --> OE : shows all data and requests confirmation
+deactivate ":System"
+
+OE -> ":System" : confirms the data
+activate ":System"
+":System" --> OE : informs operation success
+deactivate ":System"
+
+deactivate OE
+
+@enduml

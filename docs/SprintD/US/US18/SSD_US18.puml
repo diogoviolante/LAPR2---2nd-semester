@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Administrator" as OE
+
+activate OE
+OE -> System : selects the option to send a report
+activate System
+System -> OE: asks for two dates
+deactivate System
+OE -> System : choose the two dates
+activate System
+System -> OE : asks for historical points
+deactivate System
+OE -> System : selects the historical points
+activate System
+System -> OE : asks to select simple or multilinear Regression
+deactivate System
+OE -> System : choose one of the options
+alt if Administrator choose simple Linear Regression
+activate System
+System -> OE : asks to choose between positive tests or average age Linear Regression
+deactivate System
+OE -> System : choose between positive tests or average age Linear Regression
+activate System
+alt if Administrator choose Positive Tests
+System -> OE : sends the report to NHS with positive tests Linear Regression
+else if Administrator choose Average Age
+System -> OE : sends the report to NHS with average age Linear Regression
+end
+activate System
+else if Administrator choose multilinear Regression
+System -> OE : sends the report to NHS with average age and positive tests Linear Regression
+end
+deactivate System
+
+
+@enduml

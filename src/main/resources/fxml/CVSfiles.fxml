@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.importCvsFiles.CVSfilesFXUI">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: C3FFC4;">
+         <children>
+            <Button fx:id="file1Button" layoutX="110.0" layoutY="275.0" mnemonicParsing="false" onAction="#file1Button" prefHeight="38.0" prefWidth="56.0" text="File1" />
+            <Button fx:id="file2Button" layoutX="283.0" layoutY="275.0" mnemonicParsing="false" onAction="#file2Button" prefHeight="38.0" prefWidth="56.0" text="File2" />
+            <Button fx:id="file3Button" layoutX="453.0" layoutY="275.0" mnemonicParsing="false" onAction="#file3Button" prefHeight="38.0" prefWidth="56.0" text="File3" />
+            <AnchorPane layoutY="1.0" prefHeight="227.0" prefWidth="600.0" style="-fx-background-color: FFFFFF;">
+               <children>
+                  <Button fx:id="exitButton" layoutX="576.0" layoutY="2.0" mnemonicParsing="false" onAction="#exitWindow" style="-fx-background-color: F50B07;" text="X" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

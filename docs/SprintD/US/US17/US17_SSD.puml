@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Laboratory coordinator" as LC
+activate LC
+
+LC-> ":System": selects the option to import files from the menu
+activate ":System"
+":System" -->LC: asks to chose the file to import
+deactivate ":System"
+LC->":System":Chose the file to do the import
+activate ":System"
+":System"-->LC: Shows the number of clients registered , the number of tests registered in the system, and the number of tests with valid results
+deactivate ":System"
+@enduml

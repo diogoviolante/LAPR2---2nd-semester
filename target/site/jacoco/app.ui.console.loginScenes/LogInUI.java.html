@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LogInUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console.loginScenes</a> &gt; <span class="el_source">LogInUI.java</span></div><h1>LogInUI.java</h1><pre class="source lang-java linenums">package app.ui.console.loginScenes;
+
+import app.controller.AuthController;
+import app.domain.shared.Constants;
+import app.ui.console.*;
+import app.ui.console.utils.Utils;
+import auth.mappers.dto.UserRoleDTO;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.*;
+
+public class LogInUI implements Initializable {
+    private AuthController ctrl;
+    private Stage clientStage;
+    private Stage lcStage;
+
+    @FXML
+    private TextField textField;
+
+    @FXML
+    private PasswordField textField2;
+
+    @FXML
+    private Button loginButton;
+    @FXML
+    private Button xButton;
+
+
+    public LogInUI()
+<span class="nc" id="L45">    {</span>
+<span class="nc" id="L46">        ctrl = new AuthController();</span>
+<span class="nc" id="L47">    }</span>
+
+
+    private List&lt;MenuItem&gt; getMenuItemForRoles()
+    {
+<span class="nc" id="L52">        List&lt;MenuItem&gt; rolesUI = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L53">        rolesUI.add(new MenuItem(Constants.ROLE_ADMIN, new AdminUI()));</span>
+<span class="nc" id="L54">        rolesUI.add(new MenuItem(Constants.ROLE_LABORATORY_COORDINATOR, new LabCoordinatorUI()));</span>
+<span class="nc" id="L55">        rolesUI.add(new MenuItem(Constants.ROLE_RECEPTIONIST, new ReceptionistUI()));</span>
+<span class="nc" id="L56">        rolesUI.add(new MenuItem(Constants.ROLE_LAB_TECHNICIAN, new RegisterSampleUI()));</span>
+<span class="nc" id="L57">        rolesUI.add(new MenuItem(Constants.ROLE_CLINICAL_CHEMISTRY_TECHNOLOGIST, new ClinicalChemistryTechnologistUI()));</span>
+<span class="nc" id="L58">        rolesUI.add(new MenuItem(Constants.ROLE_SPECIALIST_DOCTOR,new SpecialistDoctorUI()));</span>
+<span class="nc" id="L59">        rolesUI.add(new MenuItem(Constants.ROLE_CLIENT, new ClientUI()));</span>
+<span class="nc" id="L60">        return rolesUI;</span>
+    }
+
+    private boolean doLogin()
+    {
+<span class="nc" id="L65">        boolean success = false;</span>
+
+<span class="nc" id="L67">        String id = textField.getText();</span>
+<span class="nc" id="L68">        String pwd = textField2.getText();</span>
+
+<span class="nc" id="L70">        success = ctrl.doLogin(id, pwd);</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">        if (!success) {</span>
+<span class="nc" id="L72">            Alert alert= new Alert(Alert.AlertType.CONFIRMATION);</span>
+
+<span class="nc" id="L74">            alert.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L75">            alert.setHeaderText(&quot;Error&quot;);</span>
+<span class="nc" id="L76">            alert.setContentText(&quot;Invalid UserId and/or Password.&quot;);</span>
+<span class="nc" id="L77">            alert.show();</span>
+        }
+
+<span class="nc" id="L80">        return success;</span>
+    }
+
+    private void logout()
+    {
+<span class="nc" id="L85">        ctrl.doLogout();</span>
+<span class="nc" id="L86">    }</span>
+
+    private void redirectToRoleUI(List&lt;MenuItem&gt; rolesUI, UserRoleDTO role)
+    {
+<span class="nc" id="L90">        boolean found = false;</span>
+<span class="nc" id="L91">        Iterator&lt;MenuItem&gt; it = rolesUI.iterator();</span>
+<span class="nc bnc" id="L92" title="All 4 branches missed.">        while (it.hasNext() &amp;&amp; !found)</span>
+        {
+<span class="nc" id="L94">            MenuItem item = it.next();</span>
+<span class="nc" id="L95">            found = item.hasDescription(role.getDescription());</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            if (found)</span>
+<span class="nc" id="L97">                item.run();</span>
+<span class="nc" id="L98">        }</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (!found)</span>
+<span class="nc" id="L100">            System.out.println(&quot;There is no UI for users with role '&quot; + role.getDescription() + &quot;'&quot;);</span>
+<span class="nc" id="L101">    }</span>
+
+    private UserRoleDTO selectsRole(List&lt;UserRoleDTO&gt; roles)
+    {
+<span class="nc bnc" id="L105" title="All 2 branches missed.">        if (roles.size() == 1)</span>
+<span class="nc" id="L106">            return roles.get(0);</span>
+        else
+<span class="nc" id="L108">            return (UserRoleDTO) Utils.showAndSelectOne(roles, &quot;Select the role you want to adopt in this session:&quot;);</span>
+    }
+
+
+
+
+    @FXML
+    void loginButton(ActionEvent event){
+<span class="nc" id="L116">        boolean success = doLogin();</span>
+
+<span class="nc bnc" id="L118" title="All 2 branches missed.">        if (success)</span>
+        {
+<span class="nc" id="L120">            List&lt;UserRoleDTO&gt; roles = this.ctrl.getUserRoles();</span>
+<span class="nc bnc" id="L121" title="All 4 branches missed.">            if ( (roles == null) || (roles.isEmpty()) )</span>
+            {
+<span class="nc" id="L123">                Alert alert= new Alert(Alert.AlertType.CONFIRMATION);</span>
+
+<span class="nc" id="L125">                alert.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L126">                alert.setHeaderText(&quot;Error&quot;);</span>
+<span class="nc" id="L127">                alert.setContentText(&quot;No role has been assigned to the user.&quot;);</span>
+<span class="nc" id="L128">                alert.show();</span>
+<span class="nc" id="L129">            }</span>
+            else
+            {
+<span class="nc" id="L132">                UserRoleDTO role = selectsRole(roles);</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">                if (!Objects.isNull(role))</span>
+                {
+<span class="nc" id="L135">                    System.out.println(role.getId());</span>
+<span class="nc bnc" id="L136" title="All 4 branches missed.">                   switch(role.getId()){</span>
+                       case Constants.ROLE_CLIENT:
+<span class="nc" id="L138">                           clientStage.show();</span>
+<span class="nc" id="L139">                           break;</span>
+                       case Constants.ROLE_LABORATORY_COORDINATOR:
+<span class="nc" id="L141">                           lcStage.show();</span>
+<span class="nc" id="L142">                           break;</span>
+                       case Constants.ROLE_CLINICAL_CHEMISTRY_TECHNOLOGIST:
+<span class="nc" id="L144">                           break;</span>
+                       case Constants.ROLE_ADMIN:
+<span class="nc" id="L146">                           break;</span>
+                   }
+
+                }
+                else
+                {
+<span class="nc" id="L152">                    Alert alert= new Alert(Alert.AlertType.CONFIRMATION);</span>
+
+<span class="nc" id="L154">                    alert.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L155">                    alert.setHeaderText(&quot;Error&quot;);</span>
+<span class="nc" id="L156">                    alert.setContentText(&quot;No role has been selected by the user.&quot;);</span>
+<span class="nc" id="L157">                    alert.show();</span>
+                }
+            }
+        }
+<span class="nc" id="L161">        this.logout();</span>
+<span class="nc" id="L162">    }</span>
+
+    @FXML
+    void exitWindow(ActionEvent event){
+<span class="nc" id="L166">        System.exit(0);</span>
+<span class="nc" id="L167">    }</span>
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+<span class="nc" id="L173">            FXMLLoader loader = new FXMLLoader(getClass().getResource(&quot;/fxml/ClientMenuScene.fxml&quot;));</span>
+<span class="nc" id="L174">            Parent root= loader.load();</span>
+
+<span class="nc" id="L176">            Scene scene = new Scene(root);</span>
+
+<span class="nc" id="L178">            clientStage = new Stage();</span>
+<span class="nc" id="L179">            clientStage.initStyle(StageStyle.TRANSPARENT);</span>
+<span class="nc" id="L180">            clientStage.initModality(Modality.APPLICATION_MODAL);</span>
+<span class="nc" id="L181">            clientStage.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L182">            clientStage.getIcons().add((new Image(&quot;/fxml/ImageOne.jpeg&quot;)));</span>
+<span class="nc" id="L183">            clientStage.setResizable(false);</span>
+<span class="nc" id="L184">            clientStage.setScene(scene);</span>
+
+            //////////////////////////////////////////////////////
+<span class="nc" id="L187">            FXMLLoader loader2 = new FXMLLoader(getClass().getResource(&quot;/fxml/LcScene.fxml&quot;));</span>
+<span class="nc" id="L188">            Parent root2= loader2.load();</span>
+
+<span class="nc" id="L190">            Scene scene2 = new Scene(root2);</span>
+
+<span class="nc" id="L192">            lcStage = new Stage();</span>
+<span class="nc" id="L193">            lcStage.initStyle(StageStyle.TRANSPARENT);</span>
+<span class="nc" id="L194">            lcStage.initModality(Modality.APPLICATION_MODAL);</span>
+<span class="nc" id="L195">            lcStage.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L196">            lcStage.getIcons().add((new Image(&quot;/fxml/ImageOne.jpeg&quot;)));</span>
+<span class="nc" id="L197">            lcStage.setResizable(false);</span>
+<span class="nc" id="L198">            lcStage.setScene(scene2);</span>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+
+<span class="nc" id="L202">        } catch (IOException e) {</span>
+<span class="nc" id="L203">            Alert alert= new Alert(Alert.AlertType.CONFIRMATION);</span>
+
+<span class="nc" id="L205">            alert.setTitle(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L206">            alert.setHeaderText(&quot;Error&quot;);</span>
+<span class="nc" id="L207">            alert.setContentText(e.getMessage());</span>
+<span class="nc" id="L208">            alert.show();</span>
+<span class="nc" id="L209">        }</span>
+<span class="nc" id="L210">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

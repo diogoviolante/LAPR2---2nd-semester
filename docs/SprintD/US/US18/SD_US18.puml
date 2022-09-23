@@ -1,0 +1,71 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor "Administrator" as ADM
+
+participant ":ReportUI" as UI
+participant ":ReportController" as CTRL
+participant ":LinearRegression" as SIM
+participant ":MultilinearRegression" as MUL
+
+
+
+activate ADM
+ADM -> UI : selects the option to send a report
+activate UI
+UI -> ADM : asks for two dates
+deactivate UI
+ADM -> UI : choose the two dates
+activate UI
+UI -> ADM : asks for historical points
+deactivate UI
+ADM -> UI : selects the historical points
+activate UI
+UI -> ADM : asks to select simple or multilinear Regression
+deactivate UI
+ADM -> UI : choose one of the options
+activate UI
+alt if Administrator choose simple Linear Regression
+UI -> ADM : asks to choose between tests or average age Linear Regression
+ADM -> UI : choose between tests or average age Linear Regression
+alt if Administrator choose Tests
+UI -> CTRL : creatLinearRegressionTests()
+activate CTRL
+CTRL -> SIM : creatLinearRegressionTests()
+deactivate CTRL
+activate SIM
+UI-> ADM : informs operation success / sends Report
+deactivate UI
+deactivate SIM
+else if Administrator choose average age
+UI -> CTRL : creatLinearRegressionAverageAge()
+activate CTRL
+activate UI
+CTRL -> SIM : creatLinearRegressionAverageAge()
+deactivate CTRL
+activate SIM
+UI-> ADM : informs operation success / sends Report
+deactivate UI
+deactivate SIM
+end
+else if Administrator choose multilinear Regression
+UI -> CTRL : creatMultilinearRegression()
+activate UI
+activate CTRL
+CTRL -> MUL : creatMultilinearRegression()
+deactivate CTRL
+activate MUL
+UI-> ADM : informs operation success / sends Report
+deactivate CTRL
+deactivate MUL
+deactivate UI
+end
+deactivate CTRL
+deactivate ADM
+
+
+
+@enduml

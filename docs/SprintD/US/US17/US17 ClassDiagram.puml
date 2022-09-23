@@ -1,0 +1,80 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface ListOfClients
+interface ListaCategorias
+
+class TestStore{
+-Client clientForTest
+-String code
+-String nhsCode
+-TestType type
+-List<parameters> parameters
+-String labId
+-Date date
+
++createTest(clientForTest, code, nhsCode, type, parameters, labId, date);
++testStore.saveTest(test);
+}
+class ClientStore{
+  -String name
+  -String citizenNumberString
+  -long phoneNumber
+  -long nhsNumber
+  -long taxNumber
+  -Date birthDate
+  -Email email
+  -String adress
+
+  +createClient(name, citizenNumberString, phoneNumber, nhsNumber, taxNumber, birthDate, email, adress)
+  +saveClient2(newClient);
+}
+class CVSfiles {
+-int option
++LoadDataFileMATCPMDISC()
++LoadDataFileMATCP()
++LoadDataFileMDISC()
++ChoseOption(int option)
++CreateNewClient(int option)
++AddTest(int option)
++AssociateCategoriesandParameters(int option)
+}
+class CVSfilesUI{
+
+}
+class CVSfilesController{
+-int option
++choseOption(option)
++AddTest(option)
+}
+class RegisterResultController{
+- Double parameterValue
+-String parameters
+-String parameter
+-int accessKey
+-String testType
+-String parameter
+-String testCode
+-String result
+-Double parameterValue
++bloodAPI31(parameterValue, parameters, accessKey)
++covidAPI11(parameterValue, accessKey, parameter)
++createResult(testType, parameter, testCode, result, parameterValue)
+}
+class Company{
+-String code
++registSample(code)
+}
+class DiagnosisStore{
+
++getDateList()
+}
+CVSfiles "1" -left-> "1" ListOfClients : implements >
+CVSfiles "1" -right-> "1" ListaCategorias : implements >
+CVSfiles "1" -down-> "*" RegisterResultController : knows >
+CVSfilesUI..>CVSfilesController
+CVSfilesController..>CVSfiles
+CVSfiles "1" -down-> "*" ClientStore : knows >
+CVSfiles "1" -down-> "*" TestStore : knows >
+CVSfiles "1" -down-> "*" Company : knows >
+CVSfiles "1" -down-> "*" DiagnosisStore : knows >
+@enduml

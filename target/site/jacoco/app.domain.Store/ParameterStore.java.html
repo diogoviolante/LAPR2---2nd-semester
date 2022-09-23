@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterStore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.Store</a> &gt; <span class="el_source">ParameterStore.java</span></div><h1>ParameterStore.java</h1><pre class="source lang-java linenums">package app.domain.Store;
+
+import app.domain.model.Parameter;
+import app.domain.model.TesteType;
+import app.domain.shared.ListOfParameters;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ParameterStore implements ListOfParameters {
+
+    /**
+     * Attribute from Parameter Class.
+     */
+    private Parameter parameter;
+
+    /**
+     * ArrayList to save the parameters created
+     */
+   // private List&lt;Parameter&gt; parameterList= new ArrayList&lt;&gt;();
+<span class="fc" id="L21">public ParameterStore(){</span>
+    //this.parameterList=new ArrayList&lt;&gt;();
+<span class="fc" id="L23">}</span>
+    /**
+     * Creates a new parameter with a chosen category.
+     * @param parameterCode code of the parameter.
+     * @param shortName short name to identify the parameter.
+     * @param description description to understand the parameter
+     * @param category parameter category
+     */
+    public Parameter createParameter(String parameterCode,String shortName, String description, String category) {
+<span class="nc" id="L32">       return new Parameter(parameterCode,shortName,description,category);</span>
+    }
+
+    /**
+     * Method to validate the parameter created.
+     * @param parameter paraeter created in createParameter.
+     * @return
+     */
+    public boolean validateParameter(Parameter parameter) {
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (parameter == null) {</span>
+<span class="nc" id="L42">           return false;</span>
+        }
+<span class="nc bnc" id="L44" title="All 2 branches missed.">      return !parameterList.contains(parameter);</span>
+    }
+
+    /**
+     * Method to save the parameter created.
+     * @param parameter parameter created in createParameter.
+     */
+    public boolean saveParameter(Parameter parameter) {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if(!validateParameter(parameter))</span>
+<span class="nc" id="L53">    return false;</span>
+<span class="nc" id="L54">        return parameterList.add(parameter);</span>
+    }
+
+    public List&lt;Parameter&gt; getParamterList () {
+
+<span class="fc" id="L59">        return parameterList ;</span>
+    }
+    public Parameter getParameterByCode(String paramterCode){
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        for(Parameter parameter : parameterList) {</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">            if(parameter.getParameterCode().equals(paramterCode)){</span>
+<span class="nc" id="L64">                return parameter;</span>
+            }
+<span class="nc" id="L66">        }</span>
+<span class="nc" id="L67">        return null;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,73 @@
+@startuml
+autonumber
+'hide footbox
+actor "Coordinator" as ADM
+
+participant ":PerformanceUI" as UI
+participant ":PerformanceController" as CTRL
+participant "PerformanceStore" as STORE
+participant "Company" as COMP
+participant "TestStore" as TEST
+participant "BruteForce" as BRUTE
+participant "OtherAlgorithm" as OTHER
+
+activate ADM
+ADM -> UI : asks to iniciate a new analyses to the companies performance
+activate UI
+loop while Coordinator wants to view several dates
+UI -> ADM : requests date of start and end
+deactivate UI
+
+ADM -> UI : types requested data (start, end)
+activate UI
+UI -> CTRL : getStatistics(start, end)
+activate CTRL
+CTRL -> STORE : getStatistics(start, end)
+activate STORE
+STORE -> COMP : list=getTestStore().getDates()
+activate COMP
+COMP -> TEST : getDates()
+activate TEST
+deactivate TEST
+STORE -> COMP : testList=getTestList()
+STORE -> COMP : clientList= getClientList()
+deactivate COMP
+deactivate STORE
+deactivate CTRL
+UI -> ADM : shows performance graphics
+loop while Coordinator wants to try different algorythms
+UI -> ADM : requestes the algorithm to be used
+deactivate UI
+
+ADM -> UI : chooses option
+activate UI
+alt if Coordinator wants Brute Force Algorithm
+UI -> CTRL : int[] subarray= getSubarray(bruteForce, start, end)
+activate CTRL
+CTRL -> STORE : getTests(bruteForce, start, end)
+activate STORE
+STORE -> STORE : int[] array = createArray(start, end)
+STORE -> BRUTE : maxSubarray(array)
+activate BRUTE
+deactivate BRUTE
+deactivate STORE
+deactivate CTRL
+else if Coordinator wants other algorithm
+UI -> CTRL : int[] subarray= getSubarray(other, start, end)
+activate CTRL
+CTRL -> STORE : getTests(other, start, end)
+activate STORE
+STORE -> STORE : int[] array = createArray(start, end)
+STORE -> OTHER : Max(array)
+activate OTHER
+deactivate OTHER
+deactivate STORE
+deactivate CTRL
+end
+end
+end
+UI -> ADM : informs operation success
+deactivate UI
+
+deactivate ADM
+@enduml

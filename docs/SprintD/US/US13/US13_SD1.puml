@@ -1,0 +1,100 @@
+@startuml
+autonumber
+'hide footbox
+actor "Clinical Chemistry Technologist" as ADM
+
+participant ":ConsultHistoryUI" as UI
+participant ":ConsultHistoryController" as CTRL
+participant "Company" as COMP
+participant "HistoryStore" as STORE
+participant "CovidReferenceValues1API" as AP1
+participant "CovidReferenceValues3API" as AP3
+participant "config.properties" as cfg
+
+
+
+activate ADM
+ADM -> cfg: chooses externally the path to the algorithm1
+ADM -> UI : wants to check the history tests of a client
+activate UI
+UI -> ADM : Presents list of clients and asks what type of sort is intended
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+alt if(client's previous external choice )
+UI -> CTRL :getAlgoritmo2()
+deactivate UI
+activate CTRL
+alt if (choice of sort=1 (sort by Tin)
+CTRL -> Algoritmo2:showTinList(clientList)
+else if(choice of sort=2 (sort by Name)
+CTRL -> Algoritmo2:showNameList(clientList)
+
+end
+CTRL -> STORE : getAlgoritmo2()
+deactivate CTRL
+activate STORE
+STORE -> STORE: checkAlgorithm2()
+STORE -> CTRL: checkAlgorithm2()
+deactivate STORE
+activate CTRL
+CTRL ->UI: checkAlgorithm2()
+deactivate CTRL
+activate UI
+UI -> CTRL: chooseTest()
+deactivate UI
+activate CTRL
+CTRL ->STORE: chooseTest()
+deactivate CTRL
+activate STORE
+STORE -> CTRL:
+deactivate STORE
+activate CTRL
+CTRL -> UI: tinNumber = ler.nextLong()
+activate UI
+CTRL -> UI: code = ler.next()
+deactivate CTRL
+UI -> ADM: requests Tax Number and code
+deactivate UI
+ADM -> UI: insert the requested data
+activate UI
+UI -> CTRL:chooseTest()
+deactivate UI
+activate CTRL
+CTRL -> STORE: chooseTest()
+deactivate CTRL
+activate STORE
+alt if (Covid Test)
+STORE -> AP1 : getMinReferenceValue()
+activate AP1
+STORE -> AP1 : getMaxReferencevalue()
+deactivate AP1
+else if(Blood Test)
+STORE -> AP3 : getMinReferenceValue()
+activate AP3
+STORE -> AP3 : getMaxReferencevalue()
+deactivate STORE
+deactivate AP3
+
+end
+
+
+
+
+
+
+
+
+
+
+
+@enduml
+
+
+
+
+
+
+
+@enduml

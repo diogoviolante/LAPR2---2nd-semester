@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="395px" preserveAspectRatio="none" style="width:538px;height:395px;" version="1.1" viewBox="0 0 538 395" width="538.75px" zoomAndPan="magnify"><defs><filter height="300%" id="f155gxtiwqs113" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="141.7578" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="64.375" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="478.125" y="152.4512"/><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="478.125" y="228.3301"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="70" x2="70" y1="112.0117" y2="288.7695"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="484.375" x2="484.375" y1="112.0117" y2="288.7695"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="121.25" x="6.25" y="108.1665">Lab Technician</text><ellipse cx="70.625" cy="18.75" fill="#FEFECE" filter="url(#f155gxtiwqs113)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M70.625,28.75 L70.625,62.5 M54.375,38.75 L86.875,38.75 M70.625,62.5 L54.375,81.25 M70.625,62.5 L86.875,81.25 " fill="none" filter="url(#f155gxtiwqs113)" style="stroke:#A80036;stroke-width:2.5;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="121.25" x="6.25" y="305.686">Lab Technician</text><ellipse cx="70.625" cy="322.0313" fill="#FEFECE" filter="url(#f155gxtiwqs113)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M70.625,332.0313 L70.625,365.7813 M54.375,342.0313 L86.875,342.0313 M70.625,365.7813 L54.375,384.5313 M70.625,365.7813 L86.875,384.5313 " fill="none" filter="url(#f155gxtiwqs113)" style="stroke:#A80036;stroke-width:2.5;"/><rect fill="#FEFECE" filter="url(#f155gxtiwqs113)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="80" x="441.875" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="62.5" x="450.625" y="93.1665">:System</text><rect fill="#FEFECE" filter="url(#f155gxtiwqs113)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="80" x="441.875" y="287.5195"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="62.5" x="450.625" y="314.436">:System</text><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="141.7578" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="64.375" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="478.125" y="152.4512"/><rect fill="#FFFFFF" filter="url(#f155gxtiwqs113)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="478.125" y="228.3301"/><polygon fill="#A80036" points="463.125,147.4512,475.625,152.4512,463.125,157.4512,468.125,152.4512" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="76.875" x2="470.625" y1="152.4512" y2="152.4512"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="85.625" y="146.3806">1</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="311.25" x="99.375" y="146.3806">selects the option to register a new sample</text><polygon fill="#A80036" points="90.625,185.3906,78.125,190.3906,90.625,195.3906,85.625,190.3906" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:2.0,2.0;" x1="83.125" x2="483.125" y1="190.3906" y2="190.3906"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="98.125" y="184.3201">2</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="301.25" x="111.875" y="184.3201">shows list of tests and asks to select one</text><polygon fill="#A80036" points="463.125,223.3301,475.625,228.3301,463.125,233.3301,468.125,228.3301" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="76.875" x2="470.625" y1="228.3301" y2="228.3301"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="85.625" y="222.2595">3</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="317.5" x="99.375" y="222.2595">selects one test and the number of samples</text><polygon fill="#A80036" points="84.375,261.2695,71.875,266.2695,84.375,271.2695,79.375,266.2695" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:2.0,2.0;" x1="76.875" x2="483.125" y1="266.2695" y2="266.2695"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="91.875" y="260.199">4</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="357.5" x="105.625" y="260.199">generate barcode / informs the operation success</text><!--MD5=[70a3226c772633a86323bcbb7377a263]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Lab Technician" as OE
+activate OE
+
+OE -> ":System" : selects the option to register a new sample
+activate ":System"
+":System" - -> OE : shows list of tests and asks to select one
+deactivate ":System"
+
+OE -> ":System" : selects one test and the number of samples
+activate ":System"
+":System" - -> OE : generate barcode / informs the operation success
+deactivate ":System"
+
+
+deactivate OE
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor "Lab Technician" as OE
+activate OE
+
+OE -> ":System" : selects the option to register a new sample
+activate ":System"
+":System" - -> OE : shows list of tests and asks to select one
+deactivate ":System"
+
+OE -> ":System" : selects one test and the number of samples
+activate ":System"
+":System" - -> OE : generate barcode / informs the operation success
+deactivate ":System"
+
+
+deactivate OE
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

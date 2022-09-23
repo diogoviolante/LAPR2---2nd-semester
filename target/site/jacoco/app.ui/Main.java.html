@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package app.ui;
+
+import app.controller.App;
+import app.domain.Store.ClientStore;
+import app.domain.Store.TestStore;
+import app.domain.model.*;
+import app.domain.shared.*;
+import app.ui.console.MainMenuUI;
+import auth.domain.model.Email;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+/**
+ *
+ * @author Paulo Maio &lt;pam@isep.ipp.pt&gt;
+ */
+<span class="nc" id="L31">public class Main implements ListOfClients, ListofTests, ListOfTypes, ListDates, ListOfResults, ListOfDiagnosis, ListOfParameters, ListaCategorias, ListOfSamples, PastTests{</span>
+
+
+    public static void main(String[] args) throws IOException {
+<span class="nc" id="L35">        List&lt;ParameterCategory&gt; lista= new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L36">        List&lt;Parameter&gt; param= new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L37">        TestStore testStore= new TestStore();</span>
+<span class="nc" id="L38">        ClientStore store = new ClientStore();</span>
+
+<span class="nc" id="L40">        lista.add(new ParameterCategory(&quot;12348&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L41">        param.add(new Parameter(&quot;12377&quot;,&quot;ESR00&quot;,&quot;cenas&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L42">        param.add(new Parameter(&quot;12378&quot;,&quot;MCH00&quot;,&quot;asdsa&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L43">        param.add(new Parameter(&quot;12379&quot;,&quot;MCHC0&quot;,&quot;adadadd&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L44">        param.add(new Parameter(&quot;12380&quot;,&quot;MCV00&quot;,&quot;dvvsvs&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L45">        param.add(new Parameter(&quot;12381&quot;,&quot;PLT00&quot;,&quot;vefefef&quot;, &quot;Hemogram&quot;));</span>
+<span class="nc" id="L46">        param.add(new Parameter(&quot;12382&quot;,&quot;RBC00&quot;, &quot;frbrrbr&quot;, &quot;Hemogram&quot;));</span>
+<span class="nc" id="L47">        param.add(new Parameter(&quot;12383&quot;,&quot;WBC00&quot;, &quot;aasdasda&quot;,&quot;Hemogram&quot;));</span>
+<span class="nc" id="L48">        TesteType tt= new TesteType(&quot;Blood&quot;,&quot;blood&quot;,&quot;swab&quot;,&quot;12345&quot;,lista);</span>
+
+<span class="nc" id="L50">        Client client= new Client(&quot;Rodrigo&quot;,&quot;1234567891234567&quot;,12345678911L,1234567891L,1234567891L,new Date(&quot;27/05/2002&quot;),&quot;Client&quot;, new Email(&quot;cliente1@isep.pt&quot;),&quot;yauuuu&quot;);</span>
+<span class="nc" id="L51">        store.saveClient(client);</span>
+<span class="nc" id="L52">        Test test= new Test(client,&quot;000000000001&quot;, &quot;123456789111&quot;, tt, param, &quot;12425&quot;, new Date());</span>
+<span class="nc" id="L53">        lista = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L54">        param = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L55">        lista.add(new ParameterCategory(&quot;12345&quot;,&quot;Covid&quot;));</span>
+<span class="nc" id="L56">        param.add(new Parameter(&quot;12344&quot;,&quot;b89&quot;,&quot;swab for covid19&quot;,&quot;Covid&quot;));</span>
+<span class="nc" id="L57">        TesteType tt1= new TesteType(&quot;Covid&quot;,&quot;blood&quot;,&quot;swab&quot;,&quot;54321&quot;,lista);</span>
+
+        //lista.add(new ParameterCategory(&quot;12345&quot;,&quot;blood&quot;));
+<span class="nc" id="L60">        param.add(new Parameter(&quot;12344&quot;,&quot;b89&quot;,&quot;bloddee&quot;,&quot;blood&quot;));</span>
+
+
+
+<span class="nc" id="L64">        ParameterCategory pc1= new ParameterCategory(&quot;12345&quot;,&quot;Covid&quot;);</span>
+<span class="nc" id="L65">        ParameterCategory pc2 = new ParameterCategory(&quot;98765&quot;,&quot;Hemogram&quot;);</span>
+<span class="nc" id="L66">        ParameterCategory pc3= new ParameterCategory(&quot;87323&quot;,&quot;Cholesterol&quot;);</span>
+<span class="nc" id="L67">        listacategorias.add(pc1);</span>
+<span class="nc" id="L68">        listacategorias.add(pc2);</span>
+
+<span class="nc" id="L70">        Client client2= new Client(&quot;Yau&quot;,&quot;1234567891234568&quot;,12345678912L,1234567891L,1234567892L,new Date(&quot;23/02/1997&quot;),&quot;Client&quot;, new Email(&quot;123@yauyau.com&quot;),&quot;yauuuu&quot;);</span>
+<span class="nc" id="L71">        clientList.add(client2);</span>
+<span class="nc" id="L72">        Client client3= new Client(&quot;Andre&quot;,&quot;1234567891234566&quot;,12345678922L,1234567852L,1234569871L,new Date(&quot;23/12/2002&quot;),&quot;yau&quot;,new Email(&quot;asdasda@zxcs.com&quot;),&quot;asdasdasdas&quot;);</span>
+<span class="nc" id="L73">        clientList.add(client3);</span>
+
+<span class="nc" id="L75">        Test test1= new Test(client,&quot;000000000002&quot;, &quot;123456789112&quot;, tt1, param, &quot;12425&quot;, new Date());</span>
+<span class="nc" id="L76">        Test test2= new Test(client,&quot;000000000003&quot;, &quot;123456789113&quot;, tt1, param, &quot;12425&quot;, new Date());</span>
+<span class="nc" id="L77">        pastTests.add(test);</span>
+<span class="nc" id="L78">        pastTests.add(test1);</span>
+<span class="nc" id="L79">        pastTests.add(test2);</span>
+
+
+
+<span class="nc" id="L83">        testStore.saveTest(test);</span>
+<span class="nc" id="L84">        listTypes.add(tt);</span>
+<span class="nc" id="L85">        listTypes.add(tt1);</span>
+<span class="nc" id="L86">        ArrayList&lt;TesteType&gt; type = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L87">        ArrayList&lt;ParameterCategory&gt; category = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L88">        ArrayList&lt;Parameter&gt; parameter = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L89">        ArrayList&lt;Client&gt; client13 = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L90">        ArrayList&lt;Test&gt; tests = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L91">        ArrayList&lt;Sample&gt; samples = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L92">        ArrayList&lt;Results&gt; results = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L93">        ArrayList&lt;Diagnosis&gt; diagnosis = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L94">        ArrayList&lt;AllDates&gt; allDates = new ArrayList&lt;&gt;();</span>
+
+
+        /*try{
+            FileInputStream fileIn = new FileInputStream(&quot;allData.dat&quot;);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+
+
+            try{
+                type = (ArrayList&lt;TesteType&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            listTypes.addAll(type);
+
+            try{
+                category = (ArrayList&lt;ParameterCategory&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            listacategorias.addAll(category);
+
+            try{
+                parameter = (ArrayList&lt;Parameter&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            parameterList.addAll(parameter);
+
+            try{
+                client13 = (ArrayList&lt;Client&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            clientList.addAll(client13);
+
+            try{
+                tests = (ArrayList&lt;Test&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            listOfTests.addAll(tests);
+
+            try{
+                samples = (ArrayList&lt;Sample&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            samplesList.addAll(samples);
+
+            try{
+                results = (ArrayList&lt;Results&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            resultsList.addAll(results);
+
+            try{
+                diagnosis = (ArrayList&lt;Diagnosis&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            diagnosisList.addAll(diagnosis);
+
+            try{
+                allDates = (ArrayList&lt;AllDates&gt;) in.readObject();
+            }catch (ClassNotFoundException c){
+                System.out.println(&quot;not found&quot;);
+                c.printStackTrace(); return;
+            }
+            datesList.addAll(allDates);
+
+            in.close();
+            fileIn.close();
+
+        }catch (IOException io){
+            io.printStackTrace(); return;
+        }
+
+
+         */
+
+
+
+
+
+
+
+
+
+
+
+        try
+        {
+<span class="nc" id="L196">            MainMenuUI menu = new MainMenuUI();</span>
+
+<span class="nc" id="L198">            menu.run();</span>
+        }
+<span class="nc" id="L200">        catch( Exception e )</span>
+        {
+<span class="nc" id="L202">            e.printStackTrace();</span>
+<span class="nc" id="L203">        }</span>
+
+<span class="nc" id="L205">        FileOutputStream fileOut=new FileOutputStream(&quot;allData.dat&quot;);</span>
+<span class="nc" id="L206">        ObjectOutputStream outStream= new ObjectOutputStream(fileOut);</span>
+        try{
+<span class="nc" id="L208">            type = new ArrayList&lt;&gt;(listTypes);</span>
+<span class="nc" id="L209">            outStream.writeObject(type);</span>
+
+<span class="nc" id="L211">            category = new ArrayList&lt;&gt;(listacategorias);</span>
+<span class="nc" id="L212">            outStream.writeObject(category);</span>
+
+<span class="nc" id="L214">            parameter = new ArrayList&lt;&gt;(parameterList);</span>
+<span class="nc" id="L215">            outStream.writeObject(parameter);</span>
+
+<span class="nc" id="L217">            client13 = new ArrayList&lt;&gt;(clientList);</span>
+<span class="nc" id="L218">            outStream.writeObject(client13);</span>
+
+<span class="nc" id="L220">            tests = new ArrayList&lt;&gt;(listOfTests);</span>
+<span class="nc" id="L221">            outStream.writeObject(tests);</span>
+
+<span class="nc" id="L223">            samples = new ArrayList&lt;&gt;(samplesList);</span>
+<span class="nc" id="L224">            outStream.writeObject(samples);</span>
+
+<span class="nc" id="L226">            results = new ArrayList&lt;&gt;(resultsList);</span>
+<span class="nc" id="L227">            outStream.writeObject(results);</span>
+
+<span class="nc" id="L229">            diagnosis = new ArrayList&lt;&gt;(diagnosisList);</span>
+<span class="nc" id="L230">            outStream.writeObject(diagnosis);</span>
+
+<span class="nc" id="L232">            allDates = new ArrayList&lt;&gt;(datesList);</span>
+<span class="nc" id="L233">            outStream.writeObject(allDates);</span>
+
+<span class="nc" id="L235">        }catch (IOException i){</span>
+<span class="nc" id="L236">            i.printStackTrace();</span>
+        }finally {
+<span class="nc" id="L238">            fileOut.close();</span>
+<span class="nc" id="L239">            outStream.close();</span>
+        }
+
+
+
+
+<span class="nc" id="L245">    }</span>
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

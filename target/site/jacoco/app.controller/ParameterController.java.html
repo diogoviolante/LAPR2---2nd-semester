@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.controller</a> &gt; <span class="el_source">ParameterController.java</span></div><h1>ParameterController.java</h1><pre class="source lang-java linenums">package app.controller;
+
+import app.domain.Store.ParameterStore;
+import app.domain.model.Company;
+import app.domain.model.Parameter;
+import app.domain.model.ParameterCategory;
+import app.domain.model.TesteType;
+
+import java.util.List;
+
+public class ParameterController {
+    private Company company;
+    private Parameter parameter;
+    private final ParameterStore store ;
+
+    public ParameterController() {
+<span class="nc" id="L17">        this(App.getInstance().getCompany());</span>
+<span class="nc" id="L18">    }</span>
+
+<span class="nc" id="L20">    public ParameterController(Company company) {</span>
+<span class="nc" id="L21">        this.company=company;</span>
+<span class="nc" id="L22">        this.parameter=null;</span>
+
+<span class="nc" id="L24">        store = new ParameterStore();</span>
+<span class="nc" id="L25">    }</span>
+
+    public List&lt;ParameterCategory&gt; getControllerCategoryList() {
+<span class="nc" id="L28">      return   this.company.getParameterCategoryList();</span>
+    }
+
+    public boolean createParameter(String parameterCode,String shortName, String description, String category) {
+<span class="nc" id="L32">       this.parameter= this.store.createParameter(parameterCode, shortName, description, category);</span>
+
+<span class="nc" id="L34">    return this.store.validateParameter(parameter);</span>
+    }
+
+    public boolean saveParameter() {
+<span class="nc" id="L38">        return this.store.saveParameter(parameter);</span>
+
+    }
+
+    public List&lt;Parameter&gt; getParamterList() {
+<span class="nc" id="L43">        return store.getParamterList();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

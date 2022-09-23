@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="734px" preserveAspectRatio="none" style="width:497px;height:734px;" version="1.1" viewBox="0 0 497 734" width="497px" zoomAndPan="magnify"><defs><filter height="300%" id="fcgd22ca45trr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="3" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="75.6719" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="168" x="7" y="281"/><ellipse cx="60.25" cy="297" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M62.25,293.5 Q62.4531,293 62.6875,292.75 Q62.9219,292.5 63.1875,292.5 Q63.6563,292.5 63.9531,292.7813 Q64.25,293.0625 64.25,293.7188 L64.25,295.2813 Q64.25,295.9375 63.9688,296.2188 Q63.6875,296.5 63.25,296.5 Q62.8594,296.5 62.6094,296.3281 Q62.3594,296.1563 62.25,295.7031 Q62.2031,295.3906 62.0313,295.2188 Q61.7188,294.8906 61.1563,294.7031 Q60.5938,294.5 60.0313,294.5 Q59.3281,294.5 58.7344,294.7813 Q58.1563,295.0625 57.7031,295.6875 Q57.25,296.3125 57.25,297.1719 L57.25,298.0938 Q57.25,299.125 58.0938,299.8125 Q58.9375,300.5 60.4375,300.5 Q61.3281,300.5 61.9531,300.2969 Q62.3125,300.1875 62.7188,299.8281 Q62.9844,299.625 63.125,299.5625 Q63.2656,299.5 63.4375,299.5 Q63.7656,299.5 64,299.7656 Q64.25,300.0156 64.25,300.375 Q64.25,300.7188 63.9063,301.125 Q63.4063,301.7188 62.6094,302.0469 Q61.5625,302.5 60.2813,302.5 Q58.7813,302.5 57.5781,301.9063 Q56.6094,301.4375 55.9219,300.4219 Q55.25,299.4063 55.25,298.2031 L55.25,297.1094 Q55.25,295.8594 55.8438,294.7656 Q56.4531,293.6719 57.5,293.0938 Q58.5625,292.5 59.75,292.5 Q60.4688,292.5 61.0938,292.75 Q61.7188,293 62.25,293.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="80.75" y="301.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="174" y1="313" y2="313"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="174" y1="321" y2="321"/><ellipse cx="18" cy="332" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="27" y="336.4189">getClinicalAnalysisLabStore()</text><ellipse cx="18" cy="345.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="27" y="350.2549">getTypeOfTestStore()</text><!--MD5=[f5f648e198ddb5c95afbb1c1a7e0eafe]
+class ClinicalAnalysisLabController--><rect codeLine="10" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="89.5078" id="ClinicalAnalysisLabController" style="stroke:#A80036;stroke-width:1.5;" width="194" x="163" y="130"/><ellipse cx="178" cy="146" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M180,142.5 Q180.2031,142 180.4375,141.75 Q180.6719,141.5 180.9375,141.5 Q181.4063,141.5 181.7031,141.7813 Q182,142.0625 182,142.7188 L182,144.2813 Q182,144.9375 181.7188,145.2188 Q181.4375,145.5 181,145.5 Q180.6094,145.5 180.3594,145.3281 Q180.1094,145.1563 180,144.7031 Q179.9531,144.3906 179.7813,144.2188 Q179.4688,143.8906 178.9063,143.7031 Q178.3438,143.5 177.7813,143.5 Q177.0781,143.5 176.4844,143.7813 Q175.9063,144.0625 175.4531,144.6875 Q175,145.3125 175,146.1719 L175,147.0938 Q175,148.125 175.8438,148.8125 Q176.6875,149.5 178.1875,149.5 Q179.0781,149.5 179.7031,149.2969 Q180.0625,149.1875 180.4688,148.8281 Q180.7344,148.625 180.875,148.5625 Q181.0156,148.5 181.1875,148.5 Q181.5156,148.5 181.75,148.7656 Q182,149.0156 182,149.375 Q182,149.7188 181.6563,150.125 Q181.1563,150.7188 180.3594,151.0469 Q179.3125,151.5 178.0313,151.5 Q176.5313,151.5 175.3281,150.9063 Q174.3594,150.4375 173.6719,149.4219 Q173,148.4063 173,147.2031 L173,146.1094 Q173,144.8594 173.5938,143.7656 Q174.2031,142.6719 175.25,142.0938 Q176.3125,141.5 177.5,141.5 Q178.2188,141.5 178.8438,141.75 Q179.4688,142 180,142.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="162" x="192" y="150.9102">ClinicalAnalysisLabController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="164" x2="356" y1="162" y2="162"/><line style="stroke:#A80036;stroke-width:1.5;" x1="164" x2="356" y1="170" y2="170"/><ellipse cx="174" cy="181" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="183" y="185.4189">createClinicalAnalysisiLab(dto)</text><ellipse cx="174" cy="194.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="183" y="199.2549">saveClinicalAnalysisLab()</text><ellipse cx="174" cy="208.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="183" y="213.0908">getTestTypes()</text><!--MD5=[769d2123a580a6c16b42ca88dd29508a]
+class ClinicalAnalysisiLabStore--><rect codeLine="16" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="89.5078" id="ClinicalAnalysisiLabStore" style="stroke:#A80036;stroke-width:1.5;" width="179" x="86.5" y="435"/><ellipse cx="104.65" cy="451" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M106.65,447.5 Q106.8531,447 107.0875,446.75 Q107.3219,446.5 107.5875,446.5 Q108.0563,446.5 108.3531,446.7813 Q108.65,447.0625 108.65,447.7188 L108.65,449.2813 Q108.65,449.9375 108.3688,450.2188 Q108.0875,450.5 107.65,450.5 Q107.2594,450.5 107.0094,450.3281 Q106.7594,450.1563 106.65,449.7031 Q106.6031,449.3906 106.4313,449.2188 Q106.1188,448.8906 105.5563,448.7031 Q104.9938,448.5 104.4313,448.5 Q103.7281,448.5 103.1344,448.7813 Q102.5563,449.0625 102.1031,449.6875 Q101.65,450.3125 101.65,451.1719 L101.65,452.0938 Q101.65,453.125 102.4938,453.8125 Q103.3375,454.5 104.8375,454.5 Q105.7281,454.5 106.3531,454.2969 Q106.7125,454.1875 107.1188,453.8281 Q107.3844,453.625 107.525,453.5625 Q107.6656,453.5 107.8375,453.5 Q108.1656,453.5 108.4,453.7656 Q108.65,454.0156 108.65,454.375 Q108.65,454.7188 108.3063,455.125 Q107.8063,455.7188 107.0094,456.0469 Q105.9625,456.5 104.6813,456.5 Q103.1813,456.5 101.9781,455.9063 Q101.0094,455.4375 100.3219,454.4219 Q99.65,453.4063 99.65,452.2031 L99.65,451.1094 Q99.65,449.8594 100.2438,448.7656 Q100.8531,447.6719 101.9,447.0938 Q102.9625,446.5 104.15,446.5 Q104.8688,446.5 105.4938,446.75 Q106.1188,447 106.65,447.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="140" x="119.35" y="455.9102">ClinicalAnalysisiLabStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="87.5" x2="264.5" y1="467" y2="467"/><line style="stroke:#A80036;stroke-width:1.5;" x1="87.5" x2="264.5" y1="475" y2="475"/><ellipse cx="97.5" cy="486" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="106.5" y="490.4189">createClinicalAnalysisiLab(dto)</text><ellipse cx="97.5" cy="499.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="106.5" y="504.2549">validateClinicalAnalysisLab(Cal)</text><ellipse cx="97.5" cy="513.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="106.5" y="518.0908">addClinicalAnalysisLab(Cal)</text><!--MD5=[1f4a854cac6e06f8d3792b44887aa072]
+class createAnalysisClinicallabDTO--><rect codeLine="22" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="117.1797" id="createAnalysisClinicallabDTO" style="stroke:#A80036;stroke-width:1.5;" width="195" x="78.5" y="603"/><ellipse cx="93.5" cy="619" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M95.5,615.5 Q95.7031,615 95.9375,614.75 Q96.1719,614.5 96.4375,614.5 Q96.9063,614.5 97.2031,614.7813 Q97.5,615.0625 97.5,615.7188 L97.5,617.2813 Q97.5,617.9375 97.2188,618.2188 Q96.9375,618.5 96.5,618.5 Q96.1094,618.5 95.8594,618.3281 Q95.6094,618.1563 95.5,617.7031 Q95.4531,617.3906 95.2813,617.2188 Q94.9688,616.8906 94.4063,616.7031 Q93.8438,616.5 93.2813,616.5 Q92.5781,616.5 91.9844,616.7813 Q91.4063,617.0625 90.9531,617.6875 Q90.5,618.3125 90.5,619.1719 L90.5,620.0938 Q90.5,621.125 91.3438,621.8125 Q92.1875,622.5 93.6875,622.5 Q94.5781,622.5 95.2031,622.2969 Q95.5625,622.1875 95.9688,621.8281 Q96.2344,621.625 96.375,621.5625 Q96.5156,621.5 96.6875,621.5 Q97.0156,621.5 97.25,621.7656 Q97.5,622.0156 97.5,622.375 Q97.5,622.7188 97.1563,623.125 Q96.6563,623.7188 95.8594,624.0469 Q94.8125,624.5 93.5313,624.5 Q92.0313,624.5 90.8281,623.9063 Q89.8594,623.4375 89.1719,622.4219 Q88.5,621.4063 88.5,620.2031 L88.5,619.1094 Q88.5,617.8594 89.0938,616.7656 Q89.7031,615.6719 90.75,615.0938 Q91.8125,614.5 93,614.5 Q93.7188,614.5 94.3438,614.75 Q94.9688,615 95.5,615.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="163" x="107.5" y="623.9102">createAnalysisClinicallabDTO</text><line style="stroke:#A80036;stroke-width:1.5;" x1="79.5" x2="272.5" y1="635" y2="635"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="86.5" y="643"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="98.5" y="650.4189">LaboratoryID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="86.5" y="656.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="98.5" y="664.2549">Name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="86.5" y="670.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="98.5" y="678.0908">Address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="86.5" y="684.5078"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="98.5" y="691.9268">Phone Number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="86.5" y="698.3438"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="98.5" y="705.7627">TIN Number</text><line style="stroke:#A80036;stroke-width:1.5;" x1="79.5" x2="272.5" y1="712.1797" y2="712.1797"/><!--MD5=[b9cabbedd84757019d72e276cc5bea1e]
+class TypeOfTestStore--><rect codeLine="30" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="61.8359" id="TypeOfTestStore" style="stroke:#A80036;stroke-width:1.5;" width="123" x="253.5" y="288"/><ellipse cx="268.5" cy="304" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M270.5,300.5 Q270.7031,300 270.9375,299.75 Q271.1719,299.5 271.4375,299.5 Q271.9063,299.5 272.2031,299.7813 Q272.5,300.0625 272.5,300.7188 L272.5,302.2813 Q272.5,302.9375 272.2188,303.2188 Q271.9375,303.5 271.5,303.5 Q271.1094,303.5 270.8594,303.3281 Q270.6094,303.1563 270.5,302.7031 Q270.4531,302.3906 270.2813,302.2188 Q269.9688,301.8906 269.4063,301.7031 Q268.8438,301.5 268.2813,301.5 Q267.5781,301.5 266.9844,301.7813 Q266.4063,302.0625 265.9531,302.6875 Q265.5,303.3125 265.5,304.1719 L265.5,305.0938 Q265.5,306.125 266.3438,306.8125 Q267.1875,307.5 268.6875,307.5 Q269.5781,307.5 270.2031,307.2969 Q270.5625,307.1875 270.9688,306.8281 Q271.2344,306.625 271.375,306.5625 Q271.5156,306.5 271.6875,306.5 Q272.0156,306.5 272.25,306.7656 Q272.5,307.0156 272.5,307.375 Q272.5,307.7188 272.1563,308.125 Q271.6563,308.7188 270.8594,309.0469 Q269.8125,309.5 268.5313,309.5 Q267.0313,309.5 265.8281,308.9063 Q264.8594,308.4375 264.1719,307.4219 Q263.5,306.4063 263.5,305.2031 L263.5,304.1094 Q263.5,302.8594 264.0938,301.7656 Q264.7031,300.6719 265.75,300.0938 Q266.8125,299.5 268,299.5 Q268.7188,299.5 269.3438,299.75 Q269.9688,300 270.5,300.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="91" x="282.5" y="308.9102">TypeOfTestStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="254.5" x2="375.5" y1="320" y2="320"/><line style="stroke:#A80036;stroke-width:1.5;" x1="254.5" x2="375.5" y1="328" y2="328"/><ellipse cx="264.5" cy="339" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="273.5" y="343.4189">getTestTypes()</text><!--MD5=[28d9d7ef96b34fdc6ab3814c5cef79ce]
+class ClinicalAnalysisLab--><rect codeLine="34" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="61.8359" id="ClinicalAnalysisLab" style="stroke:#A80036;stroke-width:1.5;" width="140" x="343" y="630.5"/><ellipse cx="358" cy="646.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M360,643 Q360.2031,642.5 360.4375,642.25 Q360.6719,642 360.9375,642 Q361.4063,642 361.7031,642.2813 Q362,642.5625 362,643.2188 L362,644.7813 Q362,645.4375 361.7188,645.7188 Q361.4375,646 361,646 Q360.6094,646 360.3594,645.8281 Q360.1094,645.6563 360,645.2031 Q359.9531,644.8906 359.7813,644.7188 Q359.4688,644.3906 358.9063,644.2031 Q358.3438,644 357.7813,644 Q357.0781,644 356.4844,644.2813 Q355.9063,644.5625 355.4531,645.1875 Q355,645.8125 355,646.6719 L355,647.5938 Q355,648.625 355.8438,649.3125 Q356.6875,650 358.1875,650 Q359.0781,650 359.7031,649.7969 Q360.0625,649.6875 360.4688,649.3281 Q360.7344,649.125 360.875,649.0625 Q361.0156,649 361.1875,649 Q361.5156,649 361.75,649.2656 Q362,649.5156 362,649.875 Q362,650.2188 361.6563,650.625 Q361.1563,651.2188 360.3594,651.5469 Q359.3125,652 358.0313,652 Q356.5313,652 355.3281,651.4063 Q354.3594,650.9375 353.6719,649.9219 Q353,648.9063 353,647.7031 L353,646.6094 Q353,645.3594 353.5938,644.2656 Q354.2031,643.1719 355.25,642.5938 Q356.3125,642 357.5,642 Q358.2188,642 358.8438,642.25 Q359.4688,642.5 360,643 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="108" x="372" y="651.4102">ClinicalAnalysisLab</text><line style="stroke:#A80036;stroke-width:1.5;" x1="344" x2="482" y1="662.5" y2="662.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="344" x2="482" y1="670.5" y2="670.5"/><ellipse cx="354" cy="681.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="363" y="685.9189">create(dto)</text><!--MD5=[a668d105e28126a8a307039af7b7a426]
+class ClinicalAnalysisLabUI--><rect codeLine="39" fill="#FEFECE" filter="url(#fcgd22ca45trr)" height="61.8359" id="ClinicalAnalysisLabUI" style="stroke:#A80036;stroke-width:1.5;" width="152" x="184" y="7"/><ellipse cx="199" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M201,19.5 Q201.2031,19 201.4375,18.75 Q201.6719,18.5 201.9375,18.5 Q202.4063,18.5 202.7031,18.7813 Q203,19.0625 203,19.7188 L203,21.2813 Q203,21.9375 202.7188,22.2188 Q202.4375,22.5 202,22.5 Q201.6094,22.5 201.3594,22.3281 Q201.1094,22.1563 201,21.7031 Q200.9531,21.3906 200.7813,21.2188 Q200.4688,20.8906 199.9063,20.7031 Q199.3438,20.5 198.7813,20.5 Q198.0781,20.5 197.4844,20.7813 Q196.9063,21.0625 196.4531,21.6875 Q196,22.3125 196,23.1719 L196,24.0938 Q196,25.125 196.8438,25.8125 Q197.6875,26.5 199.1875,26.5 Q200.0781,26.5 200.7031,26.2969 Q201.0625,26.1875 201.4688,25.8281 Q201.7344,25.625 201.875,25.5625 Q202.0156,25.5 202.1875,25.5 Q202.5156,25.5 202.75,25.7656 Q203,26.0156 203,26.375 Q203,26.7188 202.6563,27.125 Q202.1563,27.7188 201.3594,28.0469 Q200.3125,28.5 199.0313,28.5 Q197.5313,28.5 196.3281,27.9063 Q195.3594,27.4375 194.6719,26.4219 Q194,25.4063 194,24.2031 L194,23.1094 Q194,21.8594 194.5938,20.7656 Q195.2031,19.6719 196.25,19.0938 Q197.3125,18.5 198.5,18.5 Q199.2188,18.5 199.8438,18.75 Q200.4688,19 201,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="120" x="213" y="27.9102">ClinicalAnalysisLabUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="185" x2="335" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="185" x2="335" y1="47" y2="47"/><ellipse cx="195" cy="58" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="204" y="62.4189">getTestTypes()</text><!--MD5=[5060ebdcdbe201571e63c4363b323cb8]
+link Company to ClinicalAnalysisiLabStore--><path codeLine="43" d="M110.93,357.28 C122.57,379.05 137.39,406.77 149.94,430.26 " fill="none" id="Company-to-ClinicalAnalysisiLabStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="152.42,434.9,151.7092,425.0768,150.0648,430.4894,144.6522,428.8451,152.42,434.9" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="27" x="138" y="401.4951">calls</text><!--MD5=[21f8911280825a1ec0d8c5120dc60243]
+link ClinicalAnalysisiLabStore to ClinicalAnalysisLab--><path codeLine="44" d="M234.28,525.14 C275.94,556.69 331.11,598.48 369.08,627.24 " fill="none" id="ClinicalAnalysisiLabStore-to-ClinicalAnalysisLab" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="373.16,630.33,368.3945,621.7109,369.172,627.314,363.5689,628.0916,373.16,630.33" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="296" y="569.4951">generates</text><!--MD5=[d7936936df9ef919cf4d565dcbb77636]
+link Company to TypeOfTestStore--><path codeLine="45" d="M175.05,319 C199.17,319 225.14,319 248.08,319 " fill="none" id="Company-to-TypeOfTestStore" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="253.23,319,244.23,315,248.23,319,244.23,323,253.23,319" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="193.25" y="312.4951">selects</text><!--MD5=[23b6e24d8cc2f7709747493192e9f812]
+link ClinicalAnalysisLabUI to ClinicalAnalysisLabController--><path codeLine="46" d="M260,69.3 C260,85.64 260,106.22 260,124.79 " fill="none" id="ClinicalAnalysisLabUI-to-ClinicalAnalysisLabController" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="260,129.97,264,120.97,260,124.97,256,120.97,260,129.97" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ff87b1ee5499f5d8ffbf601f161a6b7b]
+link ClinicalAnalysisLabController to Company--><path codeLine="47" d="M207.45,220.15 C185.65,238.47 160.52,259.58 139.2,277.5 " fill="none" id="ClinicalAnalysisLabController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="135.27,280.81,144.7348,278.0866,139.0994,277.595,139.5909,271.9596,135.27,280.81" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2bf69c4b8357bb87803e4d64e9d9f3ca]
+link ClinicalAnalysisLabController to ClinicalAnalysisLab--><path codeLine="48" d="M338.77,220.08 C360.44,236.29 381.42,256.73 394,281 C453.01,394.88 433.34,554.69 420.47,624.97 " fill="none" id="ClinicalAnalysisLabController-to-ClinicalAnalysisLab" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="419.48,630.28,425.0587,622.1635,420.3945,625.3643,417.1937,620.7002,419.48,630.28" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d0ff24dd71c3b0f2b9e805716ae88a61]
+link ClinicalAnalysisiLabStore to createAnalysisClinicallabDTO--><path codeLine="49" d="M176,525.37 C176,547.18 176,573.84 176,597.7 " fill="none" id="ClinicalAnalysisiLabStore-to-createAnalysisClinicallabDTO" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="176,602.74,180,593.74,176,597.74,172,593.74,176,602.74" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="177" y="569.4951">requests</text><!--MD5=[c9d2d1e6cb149029b5bc30ea2ffeef0a]
+@startuml
+'https://plantuml.com/class-diagram
+
+class Company{
++ getClinicalAnalysisLabStore()
++ getTypeOfTestStore()
+}
+
+
+
+class ClinicalAnalysisLabController{
++createClinicalAnalysisiLab(dto)
++saveClinicalAnalysisLab()
++getTestTypes()
+}
+
+class ClinicalAnalysisiLabStore{
++createClinicalAnalysisiLab(dto)
++validateClinicalAnalysisLab(Cal)
++addClinicalAnalysisLab(Cal)
+}
+
+class createAnalysisClinicallabDTO{
+- LaboratoryID
+- Name
+- Address
+- Phone Number
+- TIN Number
+}
+
+class TypeOfTestStore{
++getTestTypes()
+}
+
+class ClinicalAnalysisLab{
+
++create(dto)
+}
+
+class ClinicalAnalysisLabUI{
++ getTestTypes()
+}
+
+Company ..> ClinicalAnalysisiLabStore : calls
+ClinicalAnalysisiLabStore ..> ClinicalAnalysisLab: generates
+Company -> TypeOfTestStore: selects
+ClinicalAnalysisLabUI ..> ClinicalAnalysisLabController
+ClinicalAnalysisLabController ..> Company
+ClinicalAnalysisLabController ..>ClinicalAnalysisLab
+ClinicalAnalysisiLabStore ..> createAnalysisClinicallabDTO:requests
+@enduml
+
+@startuml
+
+class Company{
++ getClinicalAnalysisLabStore()
++ getTypeOfTestStore()
+}
+
+
+
+class ClinicalAnalysisLabController{
++createClinicalAnalysisiLab(dto)
++saveClinicalAnalysisLab()
++getTestTypes()
+}
+
+class ClinicalAnalysisiLabStore{
++createClinicalAnalysisiLab(dto)
++validateClinicalAnalysisLab(Cal)
++addClinicalAnalysisLab(Cal)
+}
+
+class createAnalysisClinicallabDTO{
+- LaboratoryID
+- Name
+- Address
+- Phone Number
+- TIN Number
+}
+
+class TypeOfTestStore{
++getTestTypes()
+}
+
+class ClinicalAnalysisLab{
+
++create(dto)
+}
+
+class ClinicalAnalysisLabUI{
++ getTestTypes()
+}
+
+Company ..> ClinicalAnalysisiLabStore : calls
+ClinicalAnalysisiLabStore ..> ClinicalAnalysisLab: generates
+Company -> TypeOfTestStore: selects
+ClinicalAnalysisLabUI ..> ClinicalAnalysisLabController
+ClinicalAnalysisLabController ..> Company
+ClinicalAnalysisLabController ..>ClinicalAnalysisLab
+ClinicalAnalysisiLabStore ..> createAnalysisClinicallabDTO:requests
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

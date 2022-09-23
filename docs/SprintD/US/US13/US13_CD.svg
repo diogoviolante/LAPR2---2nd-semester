@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="999px" preserveAspectRatio="none" style="width:953px;height:999px;background:#FFFFFF;" version="1.1" viewBox="0 0 953 999" width="953px" zoomAndPan="magnify"><defs><filter height="300%" id="fb972dh9dnwa5" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[0ba40d52db6a21deafbd91fd13277b13]
+class PastTests--><rect codeLine="3" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="48" id="PastTests" style="stroke:#A80036;stroke-width:1.5;" width="85" x="146.38" y="7"/><ellipse cx="161.38" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M162.38,20 L162.38,26 L164.38,26 L164.8644,26 L165.38,26.625 L165.38,27 L165.38,27.375 L164.8644,28 L164.38,28 L158.38,28 L157.8956,28 L157.38,27.375 L157.38,27 L157.38,26.625 L157.8956,26 L158.38,26 L160.38,26 L160.38,20 L158.38,20 L157.8956,20 L157.38,19.375 L157.38,19 L157.38,18.625 L157.8956,18 L158.38,18 L164.38,18 L164.8644,18 L165.38,18.625 L165.38,19 L165.38,19.375 L164.8644,20 L164.38,20 L162.38,20 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="175.38" y="27.9102">PastTests</text><line style="stroke:#A80036;stroke-width:1.5;" x1="147.38" x2="230.38" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="147.38" x2="230.38" y1="47" y2="47"/><!--MD5=[fce3d33288f3decbcb1a05192f19f98a]
+class ListOfClients--><rect codeLine="4" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="48" id="ListOfClients" style="stroke:#A80036;stroke-width:1.5;" width="101" x="315.38" y="7"/><ellipse cx="330.38" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M331.38,20 L331.38,26 L333.38,26 L333.8644,26 L334.38,26.625 L334.38,27 L334.38,27.375 L333.8644,28 L333.38,28 L327.38,28 L326.8956,28 L326.38,27.375 L326.38,27 L326.38,26.625 L326.8956,26 L327.38,26 L329.38,26 L329.38,20 L327.38,20 L326.8956,20 L326.38,19.375 L326.38,19 L326.38,18.625 L326.8956,18 L327.38,18 L333.38,18 L333.8644,18 L334.38,18.625 L334.38,19 L334.38,19.375 L333.8644,20 L333.38,20 L331.38,20 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="344.38" y="27.9102">ListOfClients</text><line style="stroke:#A80036;stroke-width:1.5;" x1="316.38" x2="415.38" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="316.38" x2="415.38" y1="47" y2="47"/><!--MD5=[58311934e25ae3e54e46e6f33a20d705]
+class ListOfResults--><rect codeLine="5" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="48" id="ListOfResults" style="stroke:#A80036;stroke-width:1.5;" width="104" x="557.88" y="416.5"/><ellipse cx="572.88" cy="432.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M573.88,429.5 L573.88,435.5 L575.88,435.5 L576.3644,435.5 L576.88,436.125 L576.88,436.5 L576.88,436.875 L576.3644,437.5 L575.88,437.5 L569.88,437.5 L569.3956,437.5 L568.88,436.875 L568.88,436.5 L568.88,436.125 L569.3956,435.5 L569.88,435.5 L571.88,435.5 L571.88,429.5 L569.88,429.5 L569.3956,429.5 L568.88,428.875 L568.88,428.5 L568.88,428.125 L569.3956,427.5 L569.88,427.5 L575.88,427.5 L576.3644,427.5 L576.88,428.125 L576.88,428.5 L576.88,428.875 L576.3644,429.5 L575.88,429.5 L573.88,429.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="586.88" y="437.4102">ListOfResults</text><line style="stroke:#A80036;stroke-width:1.5;" x1="558.88" x2="660.88" y1="448.5" y2="448.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="558.88" x2="660.88" y1="456.5" y2="456.5"/><!--MD5=[664638b59a631db5baaa3de387ba16b8]
+class ListaCategorias--><rect codeLine="6" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="48" id="ListaCategorias" style="stroke:#A80036;stroke-width:1.5;" width="118" x="696.88" y="416.5"/><ellipse cx="711.88" cy="432.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M712.88,429.5 L712.88,435.5 L714.88,435.5 L715.3644,435.5 L715.88,436.125 L715.88,436.5 L715.88,436.875 L715.3644,437.5 L714.88,437.5 L708.88,437.5 L708.3956,437.5 L707.88,436.875 L707.88,436.5 L707.88,436.125 L708.3956,435.5 L708.88,435.5 L710.88,435.5 L710.88,429.5 L708.88,429.5 L708.3956,429.5 L707.88,428.875 L707.88,428.5 L707.88,428.125 L708.3956,427.5 L708.88,427.5 L714.88,427.5 L715.3644,427.5 L715.88,428.125 L715.88,428.5 L715.88,428.875 L715.3644,429.5 L714.88,429.5 L712.88,429.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="725.88" y="437.4102">ListaCategorias</text><line style="stroke:#A80036;stroke-width:1.5;" x1="697.88" x2="813.88" y1="448.5" y2="448.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="697.88" x2="813.88" y1="456.5" y2="456.5"/><!--MD5=[345d6868a3a22f8211aab94d20727fbe]
+class ListofTests--><rect codeLine="7" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="48" id="ListofTests" style="stroke:#A80036;stroke-width:1.5;" width="90" x="849.88" y="416.5"/><ellipse cx="864.88" cy="432.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M865.88,429.5 L865.88,435.5 L867.88,435.5 L868.3644,435.5 L868.88,436.125 L868.88,436.5 L868.88,436.875 L868.3644,437.5 L867.88,437.5 L861.88,437.5 L861.3956,437.5 L860.88,436.875 L860.88,436.5 L860.88,436.125 L861.3956,435.5 L861.88,435.5 L863.88,435.5 L863.88,429.5 L861.88,429.5 L861.3956,429.5 L860.88,428.875 L860.88,428.5 L860.88,428.125 L861.3956,427.5 L861.88,427.5 L867.88,427.5 L868.3644,427.5 L868.88,428.125 L868.88,428.5 L868.88,428.875 L868.3644,429.5 L867.88,429.5 L865.88,429.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="878.88" y="437.4102">ListofTests</text><line style="stroke:#A80036;stroke-width:1.5;" x1="850.88" x2="938.88" y1="448.5" y2="448.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="850.88" x2="938.88" y1="456.5" y2="456.5"/><!--MD5=[efe93e4a31355a41e291bd81edc8e475]
+class ConsultHistoryUI--><rect codeLine="11" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="186.3594" id="ConsultHistoryUI" style="stroke:#A80036;stroke-width:1.5;" width="348" x="103.88" y="115"/><ellipse cx="227.13" cy="131" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M229.13,127.5 Q229.3331,127 229.5675,126.75 Q229.8019,126.5 230.0675,126.5 Q230.5363,126.5 230.8331,126.7813 Q231.13,127.0625 231.13,127.7188 L231.13,129.2813 Q231.13,129.9375 230.8488,130.2188 Q230.5675,130.5 230.13,130.5 Q229.7394,130.5 229.4894,130.3281 Q229.2394,130.1563 229.13,129.7031 Q229.0831,129.3906 228.9113,129.2188 Q228.5988,128.8906 228.0363,128.7031 Q227.4738,128.5 226.9113,128.5 Q226.2081,128.5 225.6144,128.7813 Q225.0363,129.0625 224.5831,129.6875 Q224.13,130.3125 224.13,131.1719 L224.13,132.0938 Q224.13,133.125 224.9738,133.8125 Q225.8175,134.5 227.3175,134.5 Q228.2081,134.5 228.8331,134.2969 Q229.1925,134.1875 229.5988,133.8281 Q229.8644,133.625 230.005,133.5625 Q230.1456,133.5 230.3175,133.5 Q230.6456,133.5 230.88,133.7656 Q231.13,134.0156 231.13,134.375 Q231.13,134.7188 230.7863,135.125 Q230.2863,135.7188 229.4894,136.0469 Q228.4425,136.5 227.1613,136.5 Q225.6613,136.5 224.4581,135.9063 Q223.4894,135.4375 222.8019,134.4219 Q222.13,133.4063 222.13,132.2031 L222.13,131.1094 Q222.13,129.8594 222.7238,128.7656 Q223.3331,127.6719 224.38,127.0938 Q225.4425,126.5 226.63,126.5 Q227.3488,126.5 227.9738,126.75 Q228.5988,127 229.13,127.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="247.63" y="135.9102">ConsultHistoryUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="104.88" x2="450.88" y1="147" y2="147"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="155"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="123.88" y="162.4189">Long TinNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="168.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="123.88" y="176.2549">String code</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="182.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="123.88" y="190.0908">int index</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="196.5078"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="123.88" y="203.9268">Algoritmo1 algoritmo1</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="210.3438"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="123.88" y="217.7627">Algoritmo2 algoritmo2</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="224.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="123.88" y="231.5986">Company company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="104.88" x2="450.88" y1="238.0156" y2="238.0156"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="111.88" y="246.0156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="322" x="123.88" y="253.4346">ConsultHistoryController controller= new ConsultHistoryController()</text><ellipse cx="114.88" cy="262.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="123.88" y="267.2705">controller.getAlgoritmo2()</text><ellipse cx="114.88" cy="276.6875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="123.88" y="281.1064">controller.getAlgoritmo1()</text><ellipse cx="114.88" cy="290.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="123.88" y="294.9424">controller.chooseTest()</text><!--MD5=[1790e3fa091ed123f75a521de2356138]
+class HistoryStore--><rect codeLine="25" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="255.5391" id="HistoryStore" style="stroke:#A80036;stroke-width:1.5;" width="291" x="411.38" y="580"/><ellipse cx="519.13" cy="596" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M521.13,592.5 Q521.3331,592 521.5675,591.75 Q521.8019,591.5 522.0675,591.5 Q522.5363,591.5 522.8331,591.7813 Q523.13,592.0625 523.13,592.7188 L523.13,594.2813 Q523.13,594.9375 522.8488,595.2188 Q522.5675,595.5 522.13,595.5 Q521.7394,595.5 521.4894,595.3281 Q521.2394,595.1563 521.13,594.7031 Q521.0831,594.3906 520.9113,594.2188 Q520.5988,593.8906 520.0363,593.7031 Q519.4738,593.5 518.9113,593.5 Q518.2081,593.5 517.6144,593.7813 Q517.0363,594.0625 516.5831,594.6875 Q516.13,595.3125 516.13,596.1719 L516.13,597.0938 Q516.13,598.125 516.9738,598.8125 Q517.8175,599.5 519.3175,599.5 Q520.2081,599.5 520.8331,599.2969 Q521.1925,599.1875 521.5988,598.8281 Q521.8644,598.625 522.005,598.5625 Q522.1456,598.5 522.3175,598.5 Q522.6456,598.5 522.88,598.7656 Q523.13,599.0156 523.13,599.375 Q523.13,599.7188 522.7863,600.125 Q522.2863,600.7188 521.4894,601.0469 Q520.4425,601.5 519.1613,601.5 Q517.6613,601.5 516.4581,600.9063 Q515.4894,600.4375 514.8019,599.4219 Q514.13,598.4063 514.13,597.2031 L514.13,596.1094 Q514.13,594.8594 514.7238,593.7656 Q515.3331,592.6719 516.38,592.0938 Q517.4425,591.5 518.63,591.5 Q519.3488,591.5 519.9738,591.75 Q520.5988,592 521.13,592.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="67" x="539.63" y="600.9102">HistoryStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="412.38" x2="701.38" y1="612" y2="612"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="620"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="431.38" y="627.4189">CLient client</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="633.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="431.38" y="641.2549">InputStream input</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="647.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="431.38" y="655.0908">Long TinNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="661.5078"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="431.38" y="668.9268">String code</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="675.3438"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="431.38" y="682.7627">Results results</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="689.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="431.38" y="696.5986">Long lim1</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="703.0156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="431.38" y="710.4346">Long lim2</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="716.8516"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="41" x="431.38" y="724.2705">int count</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="730.6875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="431.38" y="738.1064">int count1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="412.38" x2="701.38" y1="744.5234" y2="744.5234"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="419.38" y="752.5234"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="265" x="431.38" y="759.9424">Company company = App.getInstance().getCompany();</text><ellipse cx="422.38" cy="769.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="431.38" y="773.7783">checkAlgorithm1()</text><ellipse cx="422.38" cy="783.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="431.38" y="787.6143">getAlgoritmo1()</text><ellipse cx="422.38" cy="797.0313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="431.38" y="801.4502">checkAlgorithm2()</text><ellipse cx="422.38" cy="810.8672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="431.38" y="815.2861">getAlgoritmo2()</text><ellipse cx="422.38" cy="824.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="431.38" y="829.1221">chooseTest()</text><!--MD5=[88ba7ada9cc730e0924e80095cf42a9b]
+class ConsultHistoryController--><rect codeLine="43" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="158.6875" id="ConsultHistoryController" style="stroke:#A80036;stroke-width:1.5;" width="219" x="200.38" y="361"/><ellipse cx="238.78" cy="377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M240.78,373.5 Q240.9831,373 241.2175,372.75 Q241.4519,372.5 241.7175,372.5 Q242.1863,372.5 242.4831,372.7813 Q242.78,373.0625 242.78,373.7188 L242.78,375.2813 Q242.78,375.9375 242.4988,376.2188 Q242.2175,376.5 241.78,376.5 Q241.3894,376.5 241.1394,376.3281 Q240.8894,376.1563 240.78,375.7031 Q240.7331,375.3906 240.5613,375.2188 Q240.2488,374.8906 239.6863,374.7031 Q239.1238,374.5 238.5613,374.5 Q237.8581,374.5 237.2644,374.7813 Q236.6863,375.0625 236.2331,375.6875 Q235.78,376.3125 235.78,377.1719 L235.78,378.0938 Q235.78,379.125 236.6238,379.8125 Q237.4675,380.5 238.9675,380.5 Q239.8581,380.5 240.4831,380.2969 Q240.8425,380.1875 241.2488,379.8281 Q241.5144,379.625 241.655,379.5625 Q241.7956,379.5 241.9675,379.5 Q242.2956,379.5 242.53,379.7656 Q242.78,380.0156 242.78,380.375 Q242.78,380.7188 242.4363,381.125 Q241.9363,381.7188 241.1394,382.0469 Q240.0925,382.5 238.8113,382.5 Q237.3113,382.5 236.1081,381.9063 Q235.1394,381.4375 234.4519,380.4219 Q233.78,379.4063 233.78,378.2031 L233.78,377.1094 Q233.78,375.8594 234.3738,374.7656 Q234.9831,373.6719 236.03,373.0938 Q237.0925,372.5 238.28,372.5 Q238.9988,372.5 239.6238,372.75 Q240.2488,373 240.78,373.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="135" x="257.98" y="381.9102">ConsultHistoryController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="201.38" x2="418.38" y1="393" y2="393"/><line style="stroke:#A80036;stroke-width:1.5;" x1="201.38" x2="418.38" y1="401" y2="401"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="208.38" y="409"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="220.38" y="416.4189">HistoryStore store= new HistoryStore()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="208.38" y="422.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="220.38" y="430.2549">Algoritmo1 algoritmo1=new Algoritmo1()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="208.38" y="436.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="220.38" y="444.0908">Algoritmo2 algoritmo2=new Algoritmo2()</text><ellipse cx="211.38" cy="453.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="220.38" y="457.9268">getAlgoritmo1()</text><ellipse cx="211.38" cy="467.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="220.38" y="471.7627">getAlgoritmo2()</text><ellipse cx="211.38" cy="481.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="220.38" y="485.5986">chooseTest()</text><ellipse cx="211.38" cy="495.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="220.38" y="499.4346">checkAlgorithm1()</text><ellipse cx="211.38" cy="508.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="220.38" y="513.2705">checkAlgorithm2()</text><!--MD5=[6398e33ddb491aeaae97b743a3b89e05]
+class Algoritmo2--><rect codeLine="54" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="89.5078" id="Algoritmo2" style="stroke:#A80036;stroke-width:1.5;" width="212" x="327.88" y="896"/><ellipse cx="400.13" cy="912" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M402.13,908.5 Q402.3331,908 402.5675,907.75 Q402.8019,907.5 403.0675,907.5 Q403.5363,907.5 403.8331,907.7813 Q404.13,908.0625 404.13,908.7188 L404.13,910.2813 Q404.13,910.9375 403.8488,911.2188 Q403.5675,911.5 403.13,911.5 Q402.7394,911.5 402.4894,911.3281 Q402.2394,911.1563 402.13,910.7031 Q402.0831,910.3906 401.9113,910.2188 Q401.5988,909.8906 401.0363,909.7031 Q400.4738,909.5 399.9113,909.5 Q399.2081,909.5 398.6144,909.7813 Q398.0363,910.0625 397.5831,910.6875 Q397.13,911.3125 397.13,912.1719 L397.13,913.0938 Q397.13,914.125 397.9738,914.8125 Q398.8175,915.5 400.3175,915.5 Q401.2081,915.5 401.8331,915.2969 Q402.1925,915.1875 402.5988,914.8281 Q402.8644,914.625 403.005,914.5625 Q403.1456,914.5 403.3175,914.5 Q403.6456,914.5 403.88,914.7656 Q404.13,915.0156 404.13,915.375 Q404.13,915.7188 403.7863,916.125 Q403.2863,916.7188 402.4894,917.0469 Q401.4425,917.5 400.1613,917.5 Q398.6613,917.5 397.4581,916.9063 Q396.4894,916.4375 395.8019,915.4219 Q395.13,914.4063 395.13,913.2031 L395.13,912.1094 Q395.13,910.8594 395.7238,909.7656 Q396.3331,908.6719 397.38,908.0938 Q398.4425,907.5 399.63,907.5 Q400.3488,907.5 400.9738,907.75 Q401.5988,908 402.13,908.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="59" x="420.63" y="916.9102">Algoritmo2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="328.88" x2="538.88" y1="928" y2="928"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="335.88" y="936"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="347.88" y="943.4189">Test test</text><line style="stroke:#A80036;stroke-width:1.5;" x1="328.88" x2="538.88" y1="949.8359" y2="949.8359"/><ellipse cx="338.88" cy="960.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="347.88" y="965.2549">showNameList1(List&lt;Client&gt; clientList)</text><ellipse cx="338.88" cy="974.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="173" x="347.88" y="979.0908">showTinList1(List&lt;Client&gt; clientList)</text><!--MD5=[2e94c35fe6226a51d517a348a2b1376b]
+class Algoritmo1--><rect codeLine="60" fill="#FEFECE" filter="url(#fb972dh9dnwa5)" height="75.6719" id="Algoritmo1" style="stroke:#A80036;stroke-width:1.5;" width="210" x="574.88" y="903"/><ellipse cx="646.13" cy="919" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M648.13,915.5 Q648.3331,915 648.5675,914.75 Q648.8019,914.5 649.0675,914.5 Q649.5363,914.5 649.8331,914.7813 Q650.13,915.0625 650.13,915.7188 L650.13,917.2813 Q650.13,917.9375 649.8488,918.2188 Q649.5675,918.5 649.13,918.5 Q648.7394,918.5 648.4894,918.3281 Q648.2394,918.1563 648.13,917.7031 Q648.0831,917.3906 647.9113,917.2188 Q647.5988,916.8906 647.0363,916.7031 Q646.4738,916.5 645.9113,916.5 Q645.2081,916.5 644.6144,916.7813 Q644.0363,917.0625 643.5831,917.6875 Q643.13,918.3125 643.13,919.1719 L643.13,920.0938 Q643.13,921.125 643.9738,921.8125 Q644.8175,922.5 646.3175,922.5 Q647.2081,922.5 647.8331,922.2969 Q648.1925,922.1875 648.5988,921.8281 Q648.8644,921.625 649.005,921.5625 Q649.1456,921.5 649.3175,921.5 Q649.6456,921.5 649.88,921.7656 Q650.13,922.0156 650.13,922.375 Q650.13,922.7188 649.7863,923.125 Q649.2863,923.7188 648.4894,924.0469 Q647.4425,924.5 646.1613,924.5 Q644.6613,924.5 643.4581,923.9063 Q642.4894,923.4375 641.8019,922.4219 Q641.13,921.4063 641.13,920.2031 L641.13,919.1094 Q641.13,917.8594 641.7238,916.7656 Q642.3331,915.6719 643.38,915.0938 Q644.4425,914.5 645.63,914.5 Q646.3488,914.5 646.9738,914.75 Q647.5988,915 648.13,915.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="59" x="666.63" y="923.9102">Algoritmo1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="575.88" x2="783.88" y1="935" y2="935"/><line style="stroke:#A80036;stroke-width:1.5;" x1="575.88" x2="783.88" y1="943" y2="943"/><ellipse cx="585.88" cy="954" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184" x="594.88" y="958.4189">showNameList(List&lt;CLient&gt; clientList)</text><ellipse cx="585.88" cy="967.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="594.88" y="972.2549">showTinList(List&lt;Client&gt; clientList)</text><!--MD5=[8e52afd5580de01249d4f4f6b4b29a55]
+reverse link PastTests to ConsultHistoryUI--><path d="M209.87,73.27 C216.26,85.83 223.55,100.17 230.93,114.69 " fill="none" id="PastTests-backto-ConsultHistoryUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="203.53,76.24,200.7,55.24,216,69.89,203.53,76.24" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[655f941d1e5c4439e65facfc59177986]
+reverse link ListOfClients to ConsultHistoryUI--><path d="M345.12,73.27 C338.81,85.83 331.6,100.17 324.3,114.69 " fill="none" id="ListOfClients-backto-ConsultHistoryUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="338.96,69.96,354.19,55.24,351.46,76.25,338.96,69.96" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[01a05875543495cb6422a740c8cdb056]
+reverse link PastTests to HistoryStore--><path d="M129.75,65.33 C112.34,78.38 95.42,95.06 85.88,115 C6,281.96 55.09,386.1 182.88,520 C245.15,585.25 335.08,631.21 411.15,661.24 " fill="none" id="PastTests-backto-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="125.91,59.48,146.37,53.94,133.83,71.03,125.91,59.48" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[765071d13f50ef4cb54e5f8f8bb0c5da]
+reverse link ListOfClients to HistoryStore--><path d="M424,66.73 C441.06,79.76 458.04,96.07 468.88,115 C491.53,154.56 524.49,418.11 542.97,579.94 " fill="none" id="ListOfClients-backto-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="419.76,72.31,407.46,55.05,427.84,60.87,419.76,72.31" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ea3eb802b03f7f66f4e772e06e4598c5]
+reverse link ListOfResults to HistoryStore--><path d="M601.34,484.3 C596.12,510.45 589.14,545.41 582.26,579.86 " fill="none" id="ListOfResults-backto-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="594.49,482.84,605.27,464.6,608.22,485.58,594.49,482.84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[587b43db0740423b3e7e0cefd51c9472]
+reverse link ListaCategorias to HistoryStore--><path d="M726.41,480.82 C706.56,507.31 679.16,543.86 652.17,579.86 " fill="none" id="ListaCategorias-backto-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="720.97,476.4,738.57,464.6,732.17,484.8,720.97,476.4" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8069aed6f73d216d822703bf9705fd79]
+reverse link ListofTests to HistoryStore--><path d="M867.44,481.04 C857.36,494.18 845.35,508.41 832.88,520 C793.56,556.55 746.5,591.16 702.48,620.44 " fill="none" id="ListofTests-backto-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="861.96,476.67,879.44,464.7,873.24,484.96,861.96,476.67" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8a92cb21ebdc12bd1d10aae6034f900f]
+link ConsultHistoryUI to ConsultHistoryController--><path codeLine="65" d="M290.67,301.09 C293.18,319.2 295.8,338.11 298.28,355.92 " fill="none" id="ConsultHistoryUI-to-ConsultHistoryController" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="298.97,360.91,301.6991,351.4468,298.2849,355.9572,293.7745,352.543,298.97,360.91" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[93402c995ab641c5d4b8fbe5b08193ac]
+link ConsultHistoryController to HistoryStore--><path codeLine="66" d="M382.99,520.08 C399.39,537.71 417.22,556.88 435.02,576.01 " fill="none" id="ConsultHistoryController-to-HistoryStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="438.57,579.83,435.3715,570.515,435.1656,576.1681,429.5124,575.9621,438.57,579.83" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2f64c13c06ff73e6a367915156f5952a]
+link HistoryStore to Algoritmo1--><path codeLine="67" d="M624.68,836.32 C636.59,858.69 648.18,880.47 657.64,898.24 " fill="none" id="HistoryStore-to-Algoritmo1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="660,902.67,659.3139,892.8451,657.656,898.2535,652.2475,896.5955,660,902.67" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[79813f81dc29f74e89790d24b5e25433]
+link HistoryStore to Algoritmo2--><path codeLine="68" d="M489.08,836.32 C478.7,855.83 468.56,874.88 459.86,891.21 " fill="none" id="HistoryStore-to-Algoritmo2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="457.44,895.75,465.2078,889.6951,459.7952,891.3394,458.1508,885.9268,457.44,895.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8f1652b07c651a65bdbf34136dcea754]
+@startuml
+'https://plantuml.com/class-diagram
+
+interface PastTests
+interface ListOfClients
+interface ListOfResults
+interface ListaCategorias
+interface ListofTests
+
+
+
+class ConsultHistoryUI implements PastTests, ListOfClients{
+-ConsultHistoryController controller= new ConsultHistoryController()
+-Long TinNumber
+-String code
+-int index
+-Algoritmo1 algoritmo1
+-Algoritmo2 algoritmo2
+-Company company
++controller.getAlgoritmo2()
++controller.getAlgoritmo1()
++controller.chooseTest()
+
+}
+
+class HistoryStore implements PastTests,ListOfClients,ListOfResults,ListaCategorias,ListofTests{
+-CLient client
+-InputStream input
+-Company company = App.getInstance().getCompany();
+-Long TinNumber
+-String code
+-Results results
+-Long lim1
+-Long lim2
+-int count
+-int count1
++checkAlgorithm1()
++getAlgoritmo1()
++checkAlgorithm2()
++getAlgoritmo2()
++chooseTest()
+}
+
+class ConsultHistoryController{
+-HistoryStore store= new HistoryStore()
+-Algoritmo1 algoritmo1=new Algoritmo1()
+-Algoritmo2 algoritmo2=new Algoritmo2()
++getAlgoritmo1()
++getAlgoritmo2()
++chooseTest()
++checkAlgorithm1()
++checkAlgorithm2()
+}
+
+class Algoritmo2{
+-Test test
++showNameList1(List<Client> clientList)
++showTinList1(List<Client> clientList)
+}
+
+class Algoritmo1{
++showNameList(List<CLient> clientList)
++showTinList(List<Client> clientList)
+}
+
+ConsultHistoryUI ..> ConsultHistoryController
+ConsultHistoryController ..> HistoryStore
+HistoryStore ..> Algoritmo1
+HistoryStore ..> Algoritmo2
+@enduml
+
+@startuml
+
+interface PastTests
+interface ListOfClients
+interface ListOfResults
+interface ListaCategorias
+interface ListofTests
+
+
+
+class ConsultHistoryUI implements PastTests, ListOfClients{
+-ConsultHistoryController controller= new ConsultHistoryController()
+-Long TinNumber
+-String code
+-int index
+-Algoritmo1 algoritmo1
+-Algoritmo2 algoritmo2
+-Company company
++controller.getAlgoritmo2()
++controller.getAlgoritmo1()
++controller.chooseTest()
+
+}
+
+class HistoryStore implements PastTests,ListOfClients,ListOfResults,ListaCategorias,ListofTests{
+-CLient client
+-InputStream input
+-Company company = App.getInstance().getCompany();
+-Long TinNumber
+-String code
+-Results results
+-Long lim1
+-Long lim2
+-int count
+-int count1
++checkAlgorithm1()
++getAlgoritmo1()
++checkAlgorithm2()
++getAlgoritmo2()
++chooseTest()
+}
+
+class ConsultHistoryController{
+-HistoryStore store= new HistoryStore()
+-Algoritmo1 algoritmo1=new Algoritmo1()
+-Algoritmo2 algoritmo2=new Algoritmo2()
++getAlgoritmo1()
++getAlgoritmo2()
++chooseTest()
++checkAlgorithm1()
++checkAlgorithm2()
+}
+
+class Algoritmo2{
+-Test test
++showNameList1(List<Client> clientList)
++showTinList1(List<Client> clientList)
+}
+
+class Algoritmo1{
++showNameList(List<CLient> clientList)
++showTinList(List<Client> clientList)
+}
+
+ConsultHistoryUI ..> ConsultHistoryController
+ConsultHistoryController ..> HistoryStore
+HistoryStore ..> Algoritmo1
+HistoryStore ..> Algoritmo2
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

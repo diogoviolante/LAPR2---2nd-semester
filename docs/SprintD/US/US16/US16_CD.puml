@@ -1,0 +1,68 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface ListOfTests
+interface ListOfDates
+interface ListOfClients
+
+class PerformanceController {
+  -int algorithm
+  -Date startDate
+  -Date endDate
+
+  +getStatistics()
+  +getSubarray(algorithm, startDate, endDate)
+}
+
+class PerformanceUI {
+
+}
+
+class TestStore {
+    +getDates()
+}
+
+class PerformanceStore {
+   -int algorithm
+   -Date startDate
+   -Date endDate
+
+
+  +getTests(algorithm, startDate, endDate)
+  +getStatistics(startDate, endDate)
+}
+
+class BruteForce {
+  -int[] array
+
+  +masSubarray(array)
+}
+
+class Company {
+
+  +getTestList()
+  +getClientList()
+  +getTestStore()
+}
+
+class OtherAlgorithm {
+    -int[] array
+
+    +MAX(array)
+}
+
+PerformanceUI ..> PerformanceController
+PerformanceController ..> PerformanceStore
+PerformanceStore ..> Company
+PerformanceStore ..> BruteForce
+PerformanceStore ..> OtherAlgorithm
+Company "1" -> "1" TestStore : uses
+Company "1" -left-> "1" ListOfDates : implements >
+Company "1" -up-> "1" ListOfTests : implements >
+Company "1" -down-> "1" ListOfClients : implements >
+
+
+
+
+
+@enduml

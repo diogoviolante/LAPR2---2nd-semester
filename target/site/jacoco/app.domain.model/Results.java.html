@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Results.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Results.java</span></div><h1>Results.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+
+import org.apache.commons.math3.linear.MatrixUtils;
+import org.apache.commons.math3.linear.RealMatrix;
+
+import java.io.Serializable;
+
+public class Results implements Serializable {
+
+
+    /**
+     * TestType of the results
+     */
+    private String testType;
+    /**
+     * Parameter of the result
+     */
+    private String parameter;
+
+    /**
+     * Metric of the Results
+     */
+    private String metric;
+    /**
+     * Min Value of the result
+     */
+    private double minValue;
+    /**
+     * Max Value of the result
+     */
+    private double maxValue;
+
+    /**
+     * Result of the test
+     */
+    private String result;
+
+    /**
+     * code of the test
+     */
+    private String code;
+
+
+
+    private double value;
+
+
+    /**
+     * Results Constructor
+     *
+     * @param testeType test type
+     * @param parameter analysed parameter
+     * @param code code of the test
+     */
+<span class="fc" id="L56">    public Results(String testeType, String parameter, String code, String result, double value) {</span>
+<span class="fc" id="L57">        setTestType(testeType);</span>
+<span class="fc" id="L58">        setParameter(parameter);</span>
+<span class="fc" id="L59">        setCode(code);</span>
+<span class="fc" id="L60">        setResult(result);</span>
+<span class="fc" id="L61">        setValue(value);</span>
+<span class="fc" id="L62">    }</span>
+
+
+<span class="fc" id="L65">    public double getValue() { return value; }</span>
+
+<span class="fc" id="L67">    public void setValue(double value) { this.value = value; }</span>
+
+    public String getTestType() {
+<span class="fc" id="L70">        return testType;</span>
+    }
+
+<span class="fc" id="L73">    public void setTestType(String testType) { this.testType = testType; }</span>
+
+    public String getParameter() {
+<span class="fc" id="L76">        return parameter;</span>
+    }
+
+    public void setParameter(String parameter) {
+<span class="fc" id="L80">        this.parameter = parameter;</span>
+<span class="fc" id="L81">    }</span>
+
+    public String isResult() {
+<span class="fc" id="L84">        return result;</span>
+    }
+
+<span class="fc" id="L87">    public void setResult(String result) { this.result = result; }</span>
+
+    public String getCode() {
+<span class="fc" id="L90">        return code;</span>
+    }
+
+    public void setCode(String code) {
+<span class="fc" id="L94">        this.code = code;</span>
+<span class="fc" id="L95">    }</span>
+
+    @Override
+     public String toString() {
+<span class="fc" id="L99">        return &quot;Test type: &quot; + testType + &quot;\nParameter: &quot; + parameter + &quot;\nCode: &quot; + code + &quot;\nResult: &quot; + result+ &quot;\nValue: &quot; + value;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

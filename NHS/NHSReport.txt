@@ -1,0 +1,169 @@
+
+
+
+
+--------------------------------------------------------------------------------
+Automatically report 1 made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report 1 made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Automatically report made at 6am
+
+The regression model fitted using data from the interval
+R2 = 
+R2 adjusted = 
+R = 
+
+
+Hypothesis tests for regression coefficients
+t_obs = 
+
+
+Significance model with Anova
+               df	SS		MS		F
+Regression               
+Residual                 
+Total                    
+
+Date           Number of OBSERVED positive cases          Number of ESTIMATED positive cases       95% intervals
+--------------------------------------------------------------------------------

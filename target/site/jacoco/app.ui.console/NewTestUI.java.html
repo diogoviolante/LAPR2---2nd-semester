@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewTestUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">NewTestUI.java</span></div><h1>NewTestUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.NewTestController;
+import app.controller.ParameterCategoryController;
+import app.domain.Store.ParameterStore;
+import app.domain.model.Company;
+import app.domain.model.ParameterCategory;
+import app.domain.model.TesteType;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+<span class="nc" id="L15">public class NewTestUI implements Runnable {</span>
+    private ParameterCategory pc;
+    //Company company = new Company(&quot;Many labs&quot;);
+    //NewTestController controller = new NewTestController();
+    //private final ParameterStore store= new ParameterStore();
+    private List&lt;ParameterCategory&gt; categories ;
+
+
+
+<span class="nc" id="L24">    Scanner ler = new Scanner(System.in);</span>
+    private NewTestController newTestController;
+
+    @Override
+    public void run() {
+
+        try {
+<span class="nc" id="L31">             newTestController=new NewTestController();</span>
+
+<span class="nc" id="L33">             categories=new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L34">            int size = newTestController.getNewTestContainer().size();</span>
+<span class="nc" id="L35">            System.out.println(&quot;Existent types of test in the company :\n&quot;);</span>
+<span class="nc" id="L36">            System.out.println(newTestController.getNewTestContainer());</span>
+<span class="nc" id="L37">            System.out.println(&quot;Insert the data needed for the new type of Test&quot;);</span>
+<span class="nc" id="L38">            System.out.println(&quot;Name-&quot;);</span>
+<span class="nc" id="L39">            String name = ler.nextLine();</span>
+<span class="nc" id="L40">            System.out.println(&quot;Description-&quot;);</span>
+<span class="nc" id="L41">            String descriptionTest = ler.nextLine();</span>
+<span class="nc" id="L42">            System.out.println(&quot;Collecting Methods-&quot;);</span>
+<span class="nc" id="L43">            String collectingMethods = ler.nextLine();</span>
+<span class="nc" id="L44">            System.out.println(&quot;Code-&quot;);</span>
+<span class="nc" id="L45">            String codee = ler.nextLine();</span>
+
+
+<span class="nc" id="L48">            System.out.println(&quot;Existent categories :\n&quot;);</span>
+<span class="nc" id="L49">            System.out.println(newTestController.getCategoryList());</span>
+<span class="nc" id="L50">            System.out.println(&quot;\nPlease select the name of the categories that you want to associate to your new type of test or enter 'done' to stop: &quot;);</span>
+<span class="nc" id="L51">            String code = ler.nextLine();</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            while (!code.equalsIgnoreCase(&quot;done&quot;)) {</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">                if (newTestController.getCategoryByCode(code) == null) {</span>
+<span class="nc" id="L54">                    System.out.printf(&quot;The category [%s] doesn't exist!\n&quot;, code);</span>
+<span class="nc" id="L55">                    System.out.println(&quot;\nPlease select another category code from the list above or enter 'done' to stop: &quot;);</span>
+                } else {
+<span class="nc" id="L57">                    pc=newTestController.getCategoryByCode(code);</span>
+<span class="nc" id="L58">                    categories.add(pc);</span>
+                }
+<span class="nc" id="L60">                code = ler.nextLine();</span>
+            }
+
+
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            if (newTestController.saveNewTest(newTestController.addNewTest(name, descriptionTest, collectingMethods, codee, categories))) {</span>
+<span class="nc" id="L65">                System.out.println(&quot;The new test type was saved.&quot;);</span>
+<span class="nc" id="L66">                } else { System.out.println(&quot;The test wasn't saved bop.&quot;); }</span>
+
+
+<span class="nc" id="L69">            System.out.println(&quot;\n\t\t|Actualized list of test types|\n&quot;);</span>
+<span class="nc" id="L70">            System.out.println(this.newTestController.getNewTestContainer());</span>
+<span class="nc" id="L71">            System.out.println();</span>
+
+
+<span class="nc" id="L74">        } catch (IllegalArgumentException iaex) {</span>
+<span class="nc" id="L75">            System.out.println(iaex.getMessage());</span>
+<span class="nc" id="L76">        } catch (NullPointerException nullPointerException) {</span>
+<span class="nc" id="L77">            System.out.println(&quot;Invalid data(NULL)!&quot;);</span>
+<span class="nc" id="L78">        }</span>
+
+<span class="nc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckResultsUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">CheckResultsUI.java</span></div><h1>CheckResultsUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.App;
+import app.controller.CheckResultController;
+import app.domain.model.*;
+import app.domain.shared.*;
+import auth.UserSession;
+import auth.domain.model.Email;
+
+import java.util.*;
+
+<span class="nc" id="L12">public class CheckResultsUI implements Runnable {</span>
+    private Email email;
+    private Client client1;
+    private String code;
+<span class="nc" id="L16">    private Scanner sc = new Scanner(System.in);</span>
+<span class="nc" id="L17">    private int option = 1;</span>
+<span class="nc" id="L18">    private List&lt;AllDates&gt; datesResult = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L19">    private CheckResultController controller = new CheckResultController();</span>
+<span class="nc" id="L20">    private Company company = App.getInstance().getCompany();</span>
+
+    @Override
+    public void run() {
+<span class="nc" id="L24">        email = this.company.getAuthFacade().getCurrentUserSession().getUserId();</span>
+<span class="nc" id="L25">        client1 = controller.getClient(email);</span>
+
+<span class="nc" id="L27">        datesResult = controller.getListOrdered(client1, datesResult);</span>
+
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        for (AllDates date: datesResult) {</span>
+<span class="nc" id="L30">            System.out.println(date);</span>
+<span class="nc" id="L31">        }</span>
+
+        do {
+<span class="nc" id="L34">            System.out.println(&quot;Please insert the code of the test that has the results you want to check.&quot;);</span>
+<span class="nc" id="L35">            code = sc.next();</span>
+
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            for (Results result: controller.getResultList()) {</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">                if (code.equals(result.getCode())) {</span>
+<span class="nc" id="L39">                    System.out.println(&quot;\n&quot;+result.toString());</span>
+                }
+<span class="nc" id="L41">            }</span>
+
+<span class="nc bnc" id="L43" title="All 2 branches missed.">            for (Diagnosis diagnosis: controller.getDiagnosisList()){</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">                if (code.equals(diagnosis.getCode())){</span>
+<span class="nc" id="L45">                    System.out.println(diagnosis.toString());</span>
+                }
+<span class="nc" id="L47">            }</span>
+
+<span class="nc" id="L49">            System.out.println(&quot;Do you wish to continue?&quot; +</span>
+                    &quot;\n1-Yes&quot; +
+                    &quot;\n0-No&quot;);
+<span class="nc" id="L52">            option = sc.nextInt();</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            if (option != 0){</span>
+<span class="nc" id="L54">                System.out.println(&quot;Please insert a valid answer.&quot;);</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">            } else if (option != 1) System.out.println(&quot;Please insert a valid answer.&quot;);</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        }while (option == 0);</span>
+
+
+<span class="nc" id="L59">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,66 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterEmployeeUI" as UI
+participant ":RegisterEmployeeUIController" as CTRL
+participant ":Company" as Ltd
+participant "Employee" as Emp
+
+
+
+activate ADM
+ADM -> UI : starts registering a new employee
+activate UI
+UI --> ADM: ask to select the employee role
+deactivate UI
+
+ADM -> UI : selects the intended role
+activate UI
+UI --> ADM: request data (id, name, address, phoneNumber, email, SOC)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI-> CTRL : creatEmployee(id, name, address, phoneNumber, email, SOC)
+activate CTRL
+CTRL -> Ltd: emp = creatEmployee(id, name, address, phoneNumber, email, SOC)
+activate Ltd
+deactivate CTRL
+Ltd -> Emp: creat(id, name, address, phoneNumber, email, SOC)
+deactivate Ltd
+
+UI-> CTRL : creatSpecialistDoctor(id, name, address, phoneNumber, email, SOC, indexNumber)
+activate CTRL
+CTRL -> Ltd: emp = creatSpecialistDoctor(id, name, address, phoneNumber, email, SOC, indexNumber)
+activate Ltd
+deactivate CTRL
+Ltd -> Emp: creat(id, name, address, phoneNumber, email, SOC, indexNumber)
+deactivate Ltd
+
+UI --> ADM: show the data and requests a confirmation
+deactivate UI
+
+ADM --> UI: confirms the data
+activate UI
+
+UI -> CTRL: saveEmployee()
+activate CTRL
+
+CTRL -> Ltd: saveEmployee(emp)
+activate Ltd
+
+Ltd -> Ltd: validateEmployee(emp)
+activate Ltd
+deactivate Ltd
+
+Ltd -> Ltd: addEmployee(emp)
+activate Ltd
+deactivate Ltd
+
+UI --> ADM: informs operation success
+deactivate UI
+
+@enduml

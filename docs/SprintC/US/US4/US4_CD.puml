@@ -1,0 +1,110 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface ListOfTests
+interface ListOfDates
+interface ListOfSamples
+interface ListOfResults
+
+class RegisterTestController {
+  -Client client
+  -Long code
+  -String nhsCode
+  -String type
+  -List<String> categories
+  -List<String> parameters
+  -Long labID
+  -Date date
+
+
+  +getTypeList()
+  +getCategoryList()
+  +getParametersList()
+  +generateCode()
+  +registerTest(client, code, nhsCode, type, categories, parameters, labID, date)
+  +saveTest(test)
+}
+
+class RegisterTestUI {
+
+}
+
+class TestStore {
+  -Client client
+  -Long code
+  -String nhsCode
+  -String type
+  -List<String> categories
+  -List<String> parameters
+  -Long labID
+  -Date date
+
+
+  +createTest(client, code, nhsCode, type, categories, parameters, labID, date)
+  +validateTest(test)
+  +saveTest(test)
+  +generateCode()
+  +generateFile()
+}
+
+class Test {
+  -Client client
+  -Long code
+  -String nhsCode
+  -String type
+  -List<String> categories
+  -List<String> parameters
+  -Long labID
+  -Date date
+
+  +Test(client, code, nhsCode, type, categories, parameters, labID, date)
+  +getClient()
+  +getType()
+  +getCategories ()
+  +getParameters()
+  +getNhsCode ()
+  +getLabId()
+  +getDate()
+  +validateNHSCode (nhsCode)
+  +validateClient(Client)
+}
+
+class Company {
+  -taxNumber
+  +getClientList(taxNumber)
+  +getNewTestContainer()
+  +getParameterCategoryList()
+  +getParametersList()
+  +getTestStore()
+  +getTestList()
+}
+
+class Client {
+    +getTaxNumber()
+}
+
+class ClientStore {
+    -taxNumber
+    +getClient(taxNumber)
+}
+
+RegisterTestUI ..> RegisterTestController
+RegisterTestUI ..> Company
+RegisterTestController ..> Company
+RegisterTestController ..> TestStore
+RegisterTestController .right.> Test
+Company "1" -> "1" TestStore : uses
+TestStore ..> Test
+TestStore "1" -left-> "1" ListOfTests : implements >
+TestStore "1" -down-> "1" ListOfDates : implements >
+TestStore "1" -up-> "*" Test : knows >
+Company ..> ClientStore
+ClientStore .right.> Client
+Company "1" -right-> "1" ListOfDates : implements >
+Company "1" -down-> "1" ListOfResults : implements >
+Company "1" -left-> "1" ListOfSamples : implements >
+Company "1" -right-> "1" ListOfTests : implements >
+
+
+
+@enduml

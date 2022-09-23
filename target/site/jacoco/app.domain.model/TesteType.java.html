@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TesteType.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">TesteType.java</span></div><h1>TesteType.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TesteType implements Serializable {
+
+
+    private  String collectingMethods;
+    private  String code;
+    private  String descriptionTest;
+    private String name;
+    private List&lt;ParameterCategory&gt; parameterCategoryList ;
+    private List &lt;Parameter&gt; parameterList;
+    /**
+     * Constroy an instance  of TestType receiving  name, descriptionTest , code e collectingMethods
+     *  @param name the name of the test
+     * @param  descriptionTest the discrption of the test
+     * @param  collectingMethods collecting method
+     * @param  code the code of the test
+     * @param parameterCategoryList
+     */
+
+<span class="fc" id="L27">    public TesteType(String name, String descriptionTest , String collectingMethods, String code, List&lt;ParameterCategory&gt; parameterCategoryList) {</span>
+<span class="fc" id="L28">        validateCode(code);</span>
+<span class="fc" id="L29">        validateCollectingMethods(collectingMethods);</span>
+<span class="fc" id="L30">        validateDescriptionOfTheTest(descriptionTest);</span>
+<span class="fc" id="L31">        validateName(name);</span>
+<span class="fc" id="L32">        this.name=name;</span>
+<span class="fc" id="L33">        this.descriptionTest=descriptionTest;</span>
+<span class="fc" id="L34">        this.code=code;</span>
+<span class="fc" id="L35">        this.collectingMethods=collectingMethods;</span>
+<span class="fc" id="L36">        this.parameterCategoryList=parameterCategoryList;</span>
+<span class="fc" id="L37">        this.parameterList=new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L39">    }</span>
+
+    /**
+
+     @return collecting method
+     */
+    public String getCollectingMethods() {
+<span class="fc" id="L46">        return collectingMethods;</span>
+    }
+    /**
+     @return code
+     */
+    public String getCode() {
+<span class="fc" id="L52">        return code;</span>
+    }
+
+
+    public List&lt;ParameterCategory&gt; getParameterCategoryList(){
+<span class="nc" id="L57">        return parameterCategoryList;</span>
+    }
+
+
+    /**
+
+     @return test description
+     */
+    public String getDescriptionTest() {
+<span class="fc" id="L66">        return descriptionTest;</span>
+    }
+    /**
+
+     @return test name
+     */
+    public  String getName() {
+<span class="fc" id="L73">        return name;</span>
+    }
+
+
+
+
+    /**
+     validate collecting method, if the validation is successful change the collecting method
+     @param collectingMethods new collecting method
+     */
+
+    public final void validateCollectingMethods(String collectingMethods) {
+<span class="pc bpc" id="L85" title="2 of 6 branches missed.">        if (StringUtils.isBlank(collectingMethods) || collectingMethods.trim().isEmpty() || collectingMethods.trim().length() &gt; 20) {</span>
+<span class="fc" id="L86">            throw new IllegalArgumentException(&quot;Collecting Methods, please insert a name with less than 20 characters&quot;);</span>
+        }
+<span class="fc" id="L88">    }</span>
+    /**
+     validate code, if the validation is successful change the code
+     @param code new code
+     */
+    public final void validateCode(String code) {
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        if (code.length()&gt;5) {</span>
+<span class="fc" id="L95">            throw new IllegalArgumentException(&quot;Invalid code, please use a code with 5 numbers&quot;);</span>
+
+        }
+<span class="fc" id="L98">    }</span>
+    /**
+     validate descriptionTest, if the validation is successful change the description of the test
+     @param descriptionTest new description test
+     */
+    public final void validateDescriptionOfTheTest(String descriptionTest){
+<span class="pc bpc" id="L104" title="2 of 6 branches missed.">        if(StringUtils.isBlank(descriptionTest) || descriptionTest.trim().isEmpty() || descriptionTest.trim().length() &gt; 15) {</span>
+<span class="fc" id="L105">            throw new IllegalArgumentException(&quot;Invalid description, please use a description with  15 characters or less&quot;);</span>
+        }
+<span class="fc" id="L107">    }</span>
+
+    /**
+     validate name, if the validation is successful change the name
+     @param name new name
+     */
+    public final void validateName(String name){
+<span class="pc bpc" id="L114" title="2 of 6 branches missed.">        if(StringUtils.isBlank(name)|| name.trim().isEmpty()|| name.trim().length()&gt;10){</span>
+<span class="fc" id="L115">            throw new IllegalArgumentException(&quot;Invalid name, please use a name with 10 characters or less&quot;);</span>
+        }
+<span class="fc" id="L117">    }</span>
+
+    /**
+     method that decides how will the test information bew showed
+     */
+   // public String String(){
+     //   return ( name + &quot;name-&quot; +descriptionTest +&quot;description of the test-&quot;+ collectingMethods+&quot;Collecting methods-&quot; + code +&quot;Test code-&quot;);
+    //}
+    @Override
+    public String toString() {
+<span class="nc" id="L127">        return ( &quot;name-&quot; + name+&quot;  &quot; + &quot;description of the test-&quot; + descriptionTest+&quot;  &quot; + &quot;Collecting methods-&quot; + collectingMethods+&quot;  &quot; + &quot;Test code-&quot;+code+&quot;  &quot;+&quot;Categories&quot; +parameterCategoryList);</span>
+    }
+        /*public boolean associateNewCategory(ParameterCategory category){
+        for (ParameterCategory category1 : parameterCategoryList){
+            if (category1.getCode().equalsIgnoreCase(category.getCode())){
+                return false;
+            }
+        }
+        parameterCategoryList.add(category);
+        return true;
+    }
+
+         */
+    public boolean associateNewParameter(Parameter parameter){
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        for(Parameter parameter1 : parameterList){</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">            if(parameter1.getParameterCode()==parameter.getParameterCode()){</span>
+<span class="nc" id="L143">                return false;</span>
+            }
+<span class="nc" id="L145">        }</span>
+<span class="nc" id="L146">    parameterList.add(parameter);</span>
+<span class="nc" id="L147">    return true;</span>
+    }
+
+
+   // @Override
+    //public boolean equals(Object o) {
+      //  if (this == o) return true;
+       // if (o == null || getClass() != o.getClass()) return false;
+        //TesteType newTest = (TesteType) o;
+        //return Objects.equals(name, TesteType.name) &amp;&amp; Objects.equals(descriptionTest, TesteType.descriptionTest) &amp;&amp; Objects.equals(collectingMethods, TesteType.collectingMethods) &amp;&amp; Objects.equals(code,TesteType.code);
+    //}
+
+   //@Override
+    //public int hashCode() {
+      //  return Objects.hash(name, descriptionTest, collectingMethods,code);
+    //}
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

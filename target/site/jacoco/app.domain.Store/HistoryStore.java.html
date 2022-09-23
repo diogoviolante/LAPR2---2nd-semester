@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HistoryStore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.Store</a> &gt; <span class="el_source">HistoryStore.java</span></div><h1>HistoryStore.java</h1><pre class="source lang-java linenums">package app.domain.Store;
+import app.controller.App;
+import app.domain.model.*;
+import app.domain.shared.*;
+import com.example1.ExternalModule3API;
+import com.example3.CovidReferenceValues1API;
+
+import java.io.*;
+import java.util.*;
+
+<span class="fc" id="L11">public class HistoryStore implements PastTests, ListOfClients, ListOfResults, ListaCategorias, ListofTests {</span>
+<span class="fc" id="L12">    private Scanner ler = new Scanner(System.in);</span>
+    private Client client;
+    private InputStream input;
+<span class="fc" id="L15">    private Company company = App.getInstance().getCompany();</span>
+    private Long tinNumber;
+    private String code;
+    private Results results;
+<span class="fc" id="L19">    private Long lim1 = 1000000000L;</span>
+<span class="fc" id="L20">    private Long lim2 = 9999999999L;</span>
+<span class="fc" id="L21">    private int count = 0;</span>
+<span class="fc" id="L22">    private int count1 = 0;</span>
+
+    public Algoritmo1 checkAlgorithm1() {
+<span class="fc" id="L25">        File configFile = new File(&quot;config.properties&quot;);</span>
+<span class="fc" id="L26">        InputStream inputStream = null;</span>
+        try {
+<span class="fc" id="L28">            inputStream = new FileInputStream(configFile);</span>
+<span class="nc" id="L29">        } catch (FileNotFoundException e) {</span>
+<span class="nc" id="L30">            e.printStackTrace();</span>
+<span class="fc" id="L31">        }</span>
+<span class="fc" id="L32">        Properties properties = new Properties();</span>
+        try {
+<span class="fc" id="L34">            properties.load(inputStream);</span>
+<span class="nc" id="L35">        } catch (IOException e) {</span>
+<span class="nc" id="L36">            e.printStackTrace();</span>
+<span class="fc" id="L37">        }</span>
+<span class="fc" id="L38">        String key = properties.getProperty(&quot;algoritmo1&quot;);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        if (key==null){</span>
+<span class="fc" id="L40">            return null;</span>
+        }else {
+<span class="nc" id="L42">            Class&lt; ? &gt; class1 = null;</span>
+
+            try {
+<span class="nc" id="L45">                class1 = Class.forName(key);</span>
+<span class="nc" id="L46">            } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L47">                e.printStackTrace();</span>
+<span class="nc" id="L48">            }</span>
+
+<span class="nc" id="L50">            Algoritmo1 algoritmo1 = null;</span>
+
+            try {
+<span class="nc" id="L53">                algoritmo1 = (Algoritmo1) class1.newInstance();</span>
+<span class="nc" id="L54">            } catch (InstantiationException | IllegalAccessException e) {</span>
+<span class="nc" id="L55">                e.printStackTrace();</span>
+<span class="nc" id="L56">            }</span>
+<span class="nc" id="L57">            return algoritmo1;</span>
+        }
+    }
+
+
+    public void getAlgoritmo1() throws IOException {
+<span class="nc" id="L63">        Algoritmo1 algoritmo = checkAlgorithm1();</span>
+<span class="nc" id="L64">        System.out.println(&quot;1-Order by Tax Number&quot;);</span>
+<span class="nc" id="L65">        System.out.println(&quot;2-Order by Name&quot;);</span>
+<span class="nc" id="L66">        int index =ler.nextInt();</span>
+
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (index==1){</span>
+<span class="nc" id="L69">            algoritmo.showTinList(clientList);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">        }else if (index==2){</span>
+<span class="nc" id="L71">            algoritmo.showNameList(clientList);</span>
+        }else {
+<span class="nc" id="L73">            System.out.println(&quot;Insert a valid answer.&quot;);</span>
+        }
+<span class="nc" id="L75">    }</span>
+
+
+    public Algoritmo2 checkAlgorithm2() {
+<span class="fc" id="L79">        File configFile = new File(&quot;config.properties&quot;);</span>
+<span class="fc" id="L80">        InputStream inputStream = null;</span>
+        try {
+<span class="fc" id="L82">            inputStream = new FileInputStream(configFile);</span>
+<span class="nc" id="L83">        } catch (FileNotFoundException e) {</span>
+<span class="nc" id="L84">            e.printStackTrace();</span>
+<span class="fc" id="L85">        }</span>
+<span class="fc" id="L86">        Properties properties = new Properties();</span>
+        try {
+<span class="fc" id="L88">            properties.load(inputStream);</span>
+<span class="nc" id="L89">        } catch (IOException e) {</span>
+<span class="nc" id="L90">            e.printStackTrace();</span>
+<span class="fc" id="L91">        }</span>
+<span class="fc" id="L92">        String key = properties.getProperty(&quot;algoritmo2&quot;);</span>
+
+<span class="pc bpc" id="L94" title="1 of 2 branches missed.">        if (key==null){</span>
+<span class="nc" id="L95">            return null;</span>
+        }else {
+<span class="fc" id="L97">            Class&lt; ? &gt; class2 = null;</span>
+            try {
+<span class="fc" id="L99">                class2 = Class.forName(key);</span>
+<span class="nc" id="L100">            } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L101">                e.printStackTrace();</span>
+<span class="fc" id="L102">            }</span>
+<span class="fc" id="L103">            Algoritmo2 algoritmo2 = null;</span>
+            try {
+<span class="fc" id="L105">                algoritmo2 = (Algoritmo2) class2.newInstance();</span>
+<span class="nc" id="L106">            } catch (InstantiationException | IllegalAccessException e) {</span>
+<span class="nc" id="L107">                e.printStackTrace();</span>
+<span class="fc" id="L108">            }</span>
+<span class="fc" id="L109">            return algoritmo2;</span>
+        }
+
+    }
+
+    public void getAlgoritmo2() throws IOException {
+<span class="nc" id="L115">        Algoritmo2 algoritmo = checkAlgorithm2();</span>
+<span class="nc" id="L116">        System.out.println(&quot;1-Order by Tax Number&quot;);</span>
+<span class="nc" id="L117">        System.out.println(&quot;2-Order by Name&quot;);</span>
+<span class="nc" id="L118">        int index =ler.nextInt();</span>
+
+<span class="nc bnc" id="L120" title="All 2 branches missed.">        if (index==1){</span>
+<span class="nc" id="L121">            algoritmo.showTINList(clientList);</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">        }else if (index==2){</span>
+<span class="nc" id="L123">            algoritmo.showNameList1(clientList);</span>
+        }else {
+<span class="nc" id="L125">            System.out.println(&quot;Insert a valid answer.&quot;);</span>
+        }
+
+<span class="nc" id="L128">    }</span>
+
+    public void chooseTest() {
+        do {
+<span class="nc" id="L132">            System.out.println(&quot;Insert Tax Number(10 digits):&quot;);</span>
+<span class="nc" id="L133">            tinNumber = ler.nextLong();</span>
+<span class="nc bnc" id="L134" title="All 4 branches missed.">        } while (tinNumber &lt; lim1 || tinNumber &gt; lim2);</span>
+
+<span class="nc bnc" id="L136" title="All 2 branches missed.">        for (Client list : clientList) {</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">            if (tinNumber.equals(list.getTaxNumber())) {</span>
+<span class="nc" id="L138">                count++;</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">                for (Test yau : pastTests) {</span>
+<span class="nc bnc" id="L140" title="All 2 branches missed.">                    if (yau.getClient().equals(list)) {</span>
+<span class="nc" id="L141">                        System.out.println(yau.toString());</span>
+                    }
+<span class="nc" id="L143">                }</span>
+            }
+<span class="nc" id="L145">        }</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">        if (count == 0) {</span>
+<span class="nc" id="L147">            System.out.println(&quot;There's no client with the inserted Tax Number!&quot;);</span>
+        } else {
+<span class="nc" id="L149">            System.out.println(&quot;What test you want to consult?(insert test code)&quot;);</span>
+<span class="nc" id="L150">            code = ler.next();</span>
+<span class="nc bnc" id="L151" title="All 2 branches missed.">            for (Results details : resultsList) {</span>
+<span class="nc bnc" id="L152" title="All 2 branches missed.">                if (details.getCode().equals(code)) {</span>
+<span class="nc" id="L153">                    count1++;</span>
+<span class="nc" id="L154">                    System.out.println();</span>
+<span class="nc" id="L155">                    System.out.println(&quot;\n&quot; + details.toString());</span>
+<span class="nc" id="L156">                    ExternalModule3API blood = new ExternalModule3API();</span>
+
+<span class="nc bnc" id="L158" title="All 2 branches missed.">                    if (details.getParameter().equals(&quot;IgGAN&quot;)) {</span>
+<span class="nc" id="L159">                        CovidReferenceValues1API covid = new CovidReferenceValues1API();</span>
+<span class="nc" id="L160">                        System.out.println();</span>
+<span class="nc" id="L161">                        System.out.printf(&quot;Minimum value(IgGAN)=%s \nMaximum Value(IgGAN)=%s&quot;, covid.getMinReferenceValue(&quot;IgGAN&quot;, 12345), covid.getMaxReferenceValue(&quot;IgGAN&quot;, 12345));</span>
+<span class="nc bnc" id="L162" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;ESR00&quot;)) {</span>
+<span class="nc" id="L163">                        System.out.printf(&quot;Minimum Value(ESR00)=%s \nMaximum Value(ESR00)=%s&quot;, blood.getMinReferenceValue(&quot;ESR00&quot;, 12345), blood.getMaxReferenceValue(&quot;ESR00&quot;, 12345));</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;HB000&quot;)) {</span>
+<span class="nc" id="L165">                        System.out.printf(&quot;Minimum Value(HB000)=%s \nMaximum Value(HB000)=%s&quot;, blood.getMinReferenceValue(&quot;HB000&quot;, 12345), blood.getMaxReferenceValue(&quot;HB000&quot;, 12345));</span>
+<span class="nc bnc" id="L166" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;MCH00&quot;)) {</span>
+<span class="nc" id="L167">                        System.out.printf(&quot;Minimum Value(MCH00)=%s \nMaximum Value(MCH00)=%s&quot;, blood.getMinReferenceValue(&quot;MCH00&quot;, 12345), blood.getMaxReferenceValue(&quot;MCH00&quot;, 12345));</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;MCHC0&quot;)) {</span>
+<span class="nc" id="L169">                        System.out.printf(&quot;Minimum Value(MCHC0)=%s \nMaximum Value(MCHC0)=%s&quot;, blood.getMinReferenceValue(&quot;MCHC0&quot;, 12345), blood.getMaxReferenceValue(&quot;MCHC0&quot;, 12345));</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;MCV00&quot;)) {</span>
+<span class="nc" id="L171">                        System.out.printf(&quot;Minimum Value(MCV00)=%s \nMaximum Value(MCV00)=%s&quot;, blood.getMinReferenceValue(&quot;MCV00&quot;, 12345), blood.getMaxReferenceValue(&quot;MCV00&quot;, 12345));</span>
+<span class="nc bnc" id="L172" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;PLT00&quot;)) {</span>
+<span class="nc" id="L173">                        System.out.printf(&quot;Minimum Value(PLT00)=%s \nMaximum Value(PLT00)=%s&quot;, blood.getMinReferenceValue(&quot;PLT00&quot;, 12345), blood.getMaxReferenceValue(&quot;PLT00&quot;, 12345));</span>
+<span class="nc bnc" id="L174" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;RBC00&quot;)) {</span>
+<span class="nc" id="L175">                        System.out.printf(&quot;Minimum Value(RBC00)=%s \nMaximum Value(RBC00)=%s&quot;, blood.getMinReferenceValue(&quot;RBC00&quot;, 12345), blood.getMaxReferenceValue(&quot;RBC00&quot;, 12345));</span>
+<span class="nc bnc" id="L176" title="All 2 branches missed.">                    } else if (details.getParameter().equals(&quot;WBC00&quot;)) {</span>
+<span class="nc" id="L177">                        System.out.printf(&quot;Minimum Value(WBC00)=%s \nMaximum Value(WBC00)=%s&quot;, blood.getMinReferenceValue(&quot;WBC00&quot;, 12345), blood.getMaxReferenceValue(&quot;WBC00&quot;, 12345));</span>
+                    }
+                }
+<span class="nc" id="L180">            }</span>
+        }
+<span class="nc" id="L182">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

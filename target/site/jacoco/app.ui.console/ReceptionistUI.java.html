@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReceptionistUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">ReceptionistUI.java</span></div><h1>ReceptionistUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.domain.Store.ClinicalAnalysisLabStore;
+import app.domain.model.ClinicalAnalysisLaboratory.ClinicalAnalysisLaboratory;
+import app.domain.shared.ClinicalAnalysisLaboratories;
+import app.domain.shared.Constants;
+import app.ui.console.utils.Utils;
+import auth.UserSession;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+<span class="nc" id="L15">public class ReceptionistUI implements Runnable {</span>
+<span class="nc" id="L16">    private UserSession sessao = new UserSession();</span>
+<span class="nc" id="L17">    private MainMenuUI main = new MainMenuUI();</span>
+<span class="nc" id="L18">    private Long lab = 0L;</span>
+    private ClinicalAnalysisLabStore labs;
+<span class="nc" id="L20">    private List&lt;ClinicalAnalysisLaboratory&gt; labsList = new ArrayList&lt;&gt;();</span>
+
+
+
+    @Override
+    public void run()
+    {
+        /*if (!sessao.isLoggedInWithRole(Constants.ROLE_RECEPTIONIST)) {
+            System.out.println(&quot;Login as a Receptionist to proceed.&quot;);
+            sessao.doLogout();
+            try {
+                main.run();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        while (sessao.isLoggedInWithRole(Constants.ROLE_RECEPTIONIST)) {
+
+         */
+
+<span class="nc" id="L41">        Scanner sc = new Scanner(System.in);</span>
+
+<span class="nc" id="L43">        System.out.println(&quot;Choose the Laboratory Id of your place of work.&quot;);</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        for (ClinicalAnalysisLaboratory labs1 : labsList) {</span>
+<span class="nc" id="L45">            System.out.println(labs1);</span>
+<span class="nc" id="L46">        }</span>
+
+<span class="nc" id="L48">        this.lab = sc.nextLong();</span>
+
+<span class="nc bnc" id="L50" title="All 2 branches missed.">       if (lab == 0L) {</span>
+<span class="nc" id="L51">            System.out.println(&quot;Insert the Laboratory ID of your place of work!&quot;);</span>
+
+        } else {
+
+
+<span class="nc" id="L56">            List&lt;MenuItem&gt; options = new ArrayList&lt;MenuItem&gt;();</span>
+<span class="nc" id="L57">            options.add(new MenuItem(&quot;Register new client&quot;, new CreateClientUI()));</span>
+<span class="nc" id="L58">            options.add(new MenuItem(&quot;Register test to be performed&quot;, new RegisterTestUI()));</span>
+<span class="nc" id="L59">            int option = 0;</span>
+            do {
+<span class="nc" id="L61">                option = Utils.showAndSelectIndex(options, &quot;\n\nReceptionist Menu&quot;);</span>
+
+<span class="nc bnc" id="L63" title="All 4 branches missed.">                if ((option &gt;= 0) &amp;&amp; (option &lt; options.size())) {</span>
+<span class="nc" id="L64">                    options.get(option).run();</span>
+                }
+            }
+<span class="nc bnc" id="L67" title="All 2 branches missed.">            while (option != -1);</span>
+       }
+       //}
+<span class="nc" id="L70">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

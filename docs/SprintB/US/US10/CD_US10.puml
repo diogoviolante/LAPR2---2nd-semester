@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class CreateParameterUI{}
+
+
+class CreateParameterController {
+getParameterCategoryList()
+CreateParameter(category, code, short_name, description)
+saveParameter()
+}
+
+
+
+class Company {
+getParameterCategoryList()
+:Store= getParameterStore()
+}
+
+
+
+class ParameterStore {
+cp= createParameter(category, code, short_name, description)
+validateParameter(cp)
+saveParameter(cp)
+validateParameter(cp)
+addParameter(cp)
+}
+
+
+
+class Parameter {
+creat(category, code, description, short_name)
+}
+
+
+CreateParameterUI ..> CreateParameterController
+CreateParameterController ..> ParameterStore
+ParameterStore ..> Parameter
+CreateParameterController ..> Company
+
+
+
+@enduml

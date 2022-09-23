@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PerformanceStore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.Store</a> &gt; <span class="el_source">PerformanceStore.java</span></div><h1>PerformanceStore.java</h1><pre class="source lang-java linenums">package app.domain.Store;
+
+import app.controller.App;
+import app.domain.model.*;
+import com.isep.mdis.Sum;
+import com.nhs.report.Report2NHS;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.*;
+
+<span class="fc" id="L14">public class PerformanceStore {</span>
+<span class="fc" id="L15">    private BruteForce bruteForce= new BruteForce();</span>
+<span class="fc" id="L16">    private Company company= App.getInstance().getCompany();</span>
+<span class="fc" id="L17">    private List&lt;AllDates&gt; list= company.getTestStore().getDates();</span>
+<span class="fc" id="L18">    private List&lt;Test&gt; testList = company.getTestList();</span>
+<span class="fc" id="L19">    private List&lt;Client&gt; clientList= company.getClientList();</span>
+
+
+    public int[] getTests(int option, Date start, Date end){
+<span class="fc" id="L23">        int[] array = createArray(start, end);</span>
+<span class="fc" id="L24">        System.out.println(Arrays.toString(array));</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (option==1){</span>
+<span class="fc" id="L26">            return bruteForce.maxSubArray(array);</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        }else if (option==2){</span>
+
+<span class="fc" id="L29">           return Sum.Max(array);</span>
+        }
+<span class="nc" id="L31">        return null;</span>
+    }
+
+    public void getStatistics(Date start, Date end){
+<span class="fc" id="L35">        Calendar cal= Calendar.getInstance();</span>
+<span class="fc" id="L36">        cal.setTime(start);</span>
+<span class="fc" id="L37">        int years=cal.get(Calendar.YEAR);</span>
+<span class="fc" id="L38">        Calendar cal1 = Calendar.getInstance();</span>
+<span class="fc" id="L39">        cal1.setTime(end);</span>
+<span class="fc" id="L40">        int years1=cal1.get(Calendar.YEAR);</span>
+<span class="fc" id="L41">        int count =0;</span>
+
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        for (Client client: clientList){</span>
+<span class="fc" id="L44">            count++;</span>
+<span class="fc" id="L45">        }</span>
+<span class="fc" id="L46">        System.out.println(&quot;Number of registered clients in the system: &quot; + count);</span>
+<span class="fc" id="L47">        count=0;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            if (years==dates.getDate().getYear()+1900){</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">                if (dates.getState().equals(&quot;Register&quot;)){</span>
+<span class="fc" id="L51">                    count++;</span>
+                }
+            }
+<span class="fc" id="L54">        }</span>
+<span class="fc" id="L55">        System.out.println(&quot;Number of registered tests in a year: &quot; + count);</span>
+<span class="fc" id="L56">        count=0;</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">            if (cal.get(Calendar.DAY_OF_MONTH)==dates.getDate().getDay()){</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">                if (dates.getState().equals(&quot;Register&quot;)){</span>
+<span class="nc" id="L60">                    count++;</span>
+                }
+            }
+<span class="fc" id="L63">        }</span>
+<span class="fc" id="L64">        System.out.println(&quot;Number of tests registered in &quot;+ start.toString() +&quot;: &quot; + count);</span>
+<span class="fc" id="L65">        count=0;</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">            if (cal1.get(Calendar.DAY_OF_MONTH)==dates.getDate().getDay()){</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">                if (dates.getState().equals(&quot;Register&quot;)){</span>
+<span class="nc" id="L69">                    count++;</span>
+                }
+            }
+<span class="fc" id="L72">        }</span>
+<span class="fc" id="L73">        System.out.println(&quot;Number of tests registered in &quot;+end.toString()+&quot;: &quot;+ count);</span>
+<span class="fc" id="L74">        count=0;</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">            if (dates.getState().equals(&quot;Result&quot;)){</span>
+<span class="fc" id="L77">                count++;</span>
+            }
+<span class="fc" id="L79">        }</span>
+<span class="fc" id="L80">        System.out.println(&quot;Number of tests with results: &quot; + count);</span>
+<span class="fc" id="L81">        count=0;</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">            if (cal.get(Calendar.DAY_OF_MONTH)==dates.getDate().getDay()){</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">                if (dates.getState().equals(&quot;Result&quot;)){</span>
+<span class="nc" id="L85">                    count++;</span>
+                }
+            }
+<span class="fc" id="L88">        }</span>
+<span class="fc" id="L89">        System.out.println(&quot;Number of results in &quot;+ start.toString() +&quot;: &quot; + count);</span>
+<span class="fc" id="L90">        count=0;</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        for (AllDates dates: list){</span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">            if (cal1.get(Calendar.DAY_OF_MONTH)==dates.getDate().getDay()){</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">                if (dates.getState().equals(&quot;Result&quot;)){</span>
+<span class="nc" id="L94">                    count++;</span>
+                }
+            }
+<span class="fc" id="L97">        }</span>
+<span class="fc" id="L98">        System.out.println(&quot;Number of results in &quot;+ start.toString() +&quot;: &quot; + count);</span>
+<span class="fc" id="L99">    }</span>
+
+    public int[] createArray(Date start, Date end){
+        int[] arrayToAnalyse;
+<span class="fc" id="L103">        LocalDate startDate = start.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();</span>
+<span class="fc" id="L104">        LocalDate endDate = end.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();</span>
+
+<span class="fc" id="L106">        int gap = 30;</span>
+<span class="fc" id="L107">        int halfHours = (int) Duration.ofHours(12).toMinutes();</span>
+<span class="fc" id="L108">        LocalDateTime time = LocalDate.now().atTime(8, 0);</span>
+
+<span class="fc" id="L110">        ArrayList&lt;Integer&gt; registers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L111">        ArrayList&lt;Integer&gt; result = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L112">        int registeredTests=0;</span>
+<span class="fc" id="L113">        int results = 0;</span>
+
+<span class="fc bfc" id="L115" title="All 2 branches covered.">        for (LocalDate date=startDate; date.isBefore(endDate); date =date.plusDays(1)){</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">            for (AllDates date1: list){</span>
+<span class="pc bpc" id="L117" title="1 of 2 branches missed.">                if (date.getDayOfMonth()==date1.getDate().getDay()){</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">                    for (int i=1; i&lt;=halfHours; i++){</span>
+                        /*if (date1.getDate().){
+
+                        }
+
+                         */
+                    }
+<span class="nc bnc" id="L125" title="All 2 branches missed.">                    if (date1.getState().equals(&quot;Register&quot;)){</span>
+<span class="nc" id="L126">                        registeredTests++;</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">                    }else if (date1.getState().equals(&quot;Result&quot;)){</span>
+<span class="nc" id="L128">                        results++;</span>
+                    }
+<span class="nc" id="L130">                    registers.add(registeredTests);</span>
+<span class="nc" id="L131">                    result.add(results);</span>
+<span class="nc" id="L132">                    registeredTests=0;</span>
+<span class="nc" id="L133">                    results=0;</span>
+                }
+<span class="fc" id="L135">            }</span>
+
+        }
+
+<span class="fc" id="L139">        int[] registerArray = new int[registers.size()];</span>
+<span class="fc" id="L140">        int[] resultArray = new int[result.size()];</span>
+
+<span class="pc bpc" id="L142" title="1 of 2 branches missed.">        for (int i=0; i&lt; registers.size(); i++){</span>
+<span class="nc" id="L143">            registerArray[i]=registers.get(i);</span>
+        }
+
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">        for (int i=0; i&lt; result.size(); i++){</span>
+<span class="nc" id="L147">            resultArray[i]=result.get(i);</span>
+        }
+
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">        if (registerArray.length&gt;resultArray.length){</span>
+<span class="nc" id="L151">            arrayToAnalyse = new int[registerArray.length];</span>
+<span class="fc" id="L152">        }else arrayToAnalyse = new int[resultArray.length];</span>
+
+<span class="pc bpc" id="L154" title="1 of 2 branches missed.">        for (int i=0; i&lt; arrayToAnalyse.length; i++){</span>
+<span class="nc" id="L155">            arrayToAnalyse[i]=registerArray[i]-resultArray[i];</span>
+        }
+
+<span class="fc" id="L158">        return arrayToAnalyse;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

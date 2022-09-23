@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Lab Technician" as OE
+activate OE
+
+OE -> ":System" : selects the option to register a new sample
+activate ":System"
+":System" --> OE : shows list of tests and asks to select one
+deactivate ":System"
+
+OE -> ":System" : selects one test and the number of samples
+activate ":System"
+":System" --> OE : generate barcode / informs the operation success
+deactivate ":System"
+
+
+deactivate OE
+
+@enduml

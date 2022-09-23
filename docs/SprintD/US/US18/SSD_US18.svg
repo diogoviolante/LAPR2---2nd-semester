@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="818.75px" preserveAspectRatio="none" style="width:806px;height:818px;background:#FFFFFF;" version="1.1" viewBox="0 0 806 818" width="806.25px" zoomAndPan="magnify"><defs><filter height="300%" id="f1nyqqalgkrs77" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="576.9922" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="86.875" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="152.4512"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="228.3301"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="304.209"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="69.6289" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="380.0879"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="212.5977" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="487.6563"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="292.666" style="stroke:#000000;stroke-width:2.5;" width="776.875" x="12.5" y="398.8379"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="118.6133" style="stroke:#000000;stroke-width:2.5;" width="751.875" x="25" y="506.4063"/><rect fill="#FFFFFF" height="57.7344" style="stroke:none;stroke-width:1.25;" width="751.875" x="25" y="567.2852"/><rect fill="#FFFFFF" height="57.7344" style="stroke:none;stroke-width:1.25;" width="776.875" x="12.5" y="633.7695"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="92.5" x2="92.5" y1="112.0117" y2="712.7539"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="724.375" x2="724.375" y1="112.0117" y2="712.7539"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="103.75" x="37.5" y="108.1665">Administrator</text><ellipse cx="93.125" cy="18.75" fill="#FEFECE" filter="url(#f1nyqqalgkrs77)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M93.125,28.75 L93.125,62.5 M76.875,38.75 L109.375,38.75 M93.125,62.5 L76.875,81.25 M93.125,62.5 L109.375,81.25 " fill="none" filter="url(#f1nyqqalgkrs77)" style="stroke:#A80036;stroke-width:2.5;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="103.75" x="37.5" y="729.6704">Administrator</text><ellipse cx="93.125" cy="746.0156" fill="#FEFECE" filter="url(#f1nyqqalgkrs77)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M93.125,756.0156 L93.125,789.7656 M76.875,766.0156 L109.375,766.0156 M93.125,789.7656 L76.875,808.5156 M93.125,789.7656 L109.375,808.5156 " fill="none" filter="url(#f1nyqqalgkrs77)" style="stroke:#A80036;stroke-width:2.5;"/><rect fill="#FEFECE" filter="url(#f1nyqqalgkrs77)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="75" x="684.375" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="57.5" x="693.125" y="93.1665">System</text><rect fill="#FEFECE" filter="url(#f1nyqqalgkrs77)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="75" x="684.375" y="711.5039"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="57.5" x="693.125" y="738.4204">System</text><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="576.9922" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="86.875" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="152.4512"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="228.3301"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="304.209"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="69.6289" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="380.0879"/><rect fill="#FFFFFF" filter="url(#f1nyqqalgkrs77)" height="212.5977" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="718.125" y="487.6563"/><polygon fill="#A80036" points="703.125,147.4512,715.625,152.4512,703.125,157.4512,708.125,152.4512" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="99.375" x2="710.625" y1="152.4512" y2="152.4512"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="108.125" y="146.3806">1</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="247.5" x="121.875" y="146.3806">selects the option to send a report</text><polygon fill="#A80036" points="113.125,185.3906,100.625,190.3906,113.125,195.3906,108.125,190.3906" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="723.125" y1="190.3906" y2="190.3906"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="120.625" y="184.3201">2</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="132.5" x="134.375" y="184.3201">asks for two dates</text><polygon fill="#A80036" points="703.125,223.3301,715.625,228.3301,703.125,233.3301,708.125,228.3301" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="99.375" x2="710.625" y1="228.3301" y2="228.3301"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="108.125" y="222.2595">3</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="155" x="121.875" y="222.2595">choose the two dates</text><polygon fill="#A80036" points="113.125,261.2695,100.625,266.2695,113.125,271.2695,108.125,266.2695" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="723.125" y1="266.2695" y2="266.2695"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="120.625" y="260.199">4</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="176.25" x="134.375" y="260.199">asks for historical points</text><polygon fill="#A80036" points="703.125,299.209,715.625,304.209,703.125,309.209,708.125,304.209" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="99.375" x2="710.625" y1="304.209" y2="304.209"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="108.125" y="298.1384">5</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="198.75" x="121.875" y="298.1384">selects the historical points</text><polygon fill="#A80036" points="113.125,337.1484,100.625,342.1484,113.125,347.1484,108.125,342.1484" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="723.125" y1="342.1484" y2="342.1484"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="120.625" y="336.0779">6</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="338.75" x="134.375" y="336.0779">asks to select simple or multilinear Regression</text><polygon fill="#A80036" points="703.125,375.0879,715.625,380.0879,703.125,385.0879,708.125,380.0879" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="99.375" x2="710.625" y1="380.0879" y2="380.0879"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="108.125" y="374.0173">7</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="186.25" x="121.875" y="374.0173">choose one of the options</text><path d="M12.5,398.8379 L88.75,398.8379 L88.75,408.8379 L76.25,421.3379 L12.5,421.3379 L12.5,398.8379 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.25;"/><rect fill="none" height="292.666" style="stroke:#000000;stroke-width:2.5;" width="776.875" x="12.5" y="398.8379"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="20" x="31.25" y="416.9568">alt</text><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="356.25" x="107.5" y="415.6116">[if Administrator choose simple Linear Regression]</text><polygon fill="#A80036" points="113.125,444.7168,100.625,449.7168,113.125,454.7168,108.125,449.7168" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="723.125" y1="449.7168" y2="449.7168"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="120.625" y="443.6462">8</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="521.25" x="134.375" y="443.6462">asks to choose between positive tests or average age Linear Regression</text><polygon fill="#A80036" points="703.125,482.6563,715.625,487.6563,703.125,492.6563,708.125,487.6563" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="99.375" x2="710.625" y1="487.6563" y2="487.6563"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="108.125" y="481.5857">9</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="462.5" x="121.875" y="481.5857">choose between positive tests or average age Linear Regression</text><path d="M25,506.4063 L101.25,506.4063 L101.25,516.4063 L88.75,528.9063 L25,528.9063 L25,506.4063 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.25;"/><rect fill="none" height="118.6133" style="stroke:#000000;stroke-width:2.5;" width="751.875" x="25" y="506.4063"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="20" x="43.75" y="524.5251">alt</text><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="276.25" x="120" y="523.1799">[if Administrator choose Positive Tests]</text><polygon fill="#A80036" points="113.125,552.2852,100.625,557.2852,113.125,562.2852,108.125,557.2852" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="716.875" y1="557.2852" y2="557.2852"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="17.5" x="120.625" y="551.2146">10</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="443.75" x="143.125" y="551.2146">sends the report to NHS with positive tests Linear Regression</text><line style="stroke:#000000;stroke-width:1.25;stroke-dasharray:2.0,2.0;" x1="25" x2="776.875" y1="568.5352" y2="568.5352"/><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="266.25" x="31.25" y="582.8088">[if Administrator choose Average Age]</text><polygon fill="#A80036" points="113.125,610.0195,100.625,615.0195,113.125,620.0195,108.125,615.0195" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="716.875" y1="615.0195" y2="615.0195"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="17.5" x="120.625" y="608.949">11</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="435" x="143.125" y="608.949">sends the report to NHS with average age Linear Regression</text><line style="stroke:#000000;stroke-width:1.25;stroke-dasharray:2.0,2.0;" x1="12.5" x2="789.375" y1="635.0195" y2="635.0195"/><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="335" x="18.75" y="649.2932">[if Administrator choose multilinear Regression]</text><polygon fill="#A80036" points="113.125,676.5039,100.625,681.5039,113.125,686.5039,108.125,681.5039" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="105.625" x2="716.875" y1="681.5039" y2="681.5039"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="17.5" x="120.625" y="675.4333">12</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="566.25" x="143.125" y="675.4333">sends the report to NHS with average age and positive tests Linear Regression</text><!--MD5=[83fcc7993e634353528f7f4318ff0b09]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Administrator" as OE
+
+activate OE
+OE -> System : selects the option to send a report
+activate System
+System -> OE: asks for two dates
+deactivate System
+OE -> System : choose the two dates
+activate System
+System -> OE : asks for historical points
+deactivate System
+OE -> System : selects the historical points
+activate System
+System -> OE : asks to select simple or multilinear Regression
+deactivate System
+OE -> System : choose one of the options
+alt if Administrator choose simple Linear Regression
+activate System
+System -> OE : asks to choose between positive tests or average age Linear Regression
+deactivate System
+OE -> System : choose between positive tests or average age Linear Regression
+activate System
+alt if Administrator choose Positive Tests
+System -> OE : sends the report to NHS with positive tests Linear Regression
+else if Administrator choose Average Age
+System -> OE : sends the report to NHS with average age Linear Regression
+end
+activate System
+else if Administrator choose multilinear Regression
+System -> OE : sends the report to NHS with average age and positive tests Linear Regression
+end
+deactivate System
+
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor "Administrator" as OE
+
+activate OE
+OE -> System : selects the option to send a report
+activate System
+System -> OE: asks for two dates
+deactivate System
+OE -> System : choose the two dates
+activate System
+System -> OE : asks for historical points
+deactivate System
+OE -> System : selects the historical points
+activate System
+System -> OE : asks to select simple or multilinear Regression
+deactivate System
+OE -> System : choose one of the options
+alt if Administrator choose simple Linear Regression
+activate System
+System -> OE : asks to choose between positive tests or average age Linear Regression
+deactivate System
+OE -> System : choose between positive tests or average age Linear Regression
+activate System
+alt if Administrator choose Positive Tests
+System -> OE : sends the report to NHS with positive tests Linear Regression
+else if Administrator choose Average Age
+System -> OE : sends the report to NHS with average age Linear Regression
+end
+activate System
+else if Administrator choose multilinear Regression
+System -> OE : sends the report to NHS with average age and positive tests Linear Regression
+end
+deactivate System
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

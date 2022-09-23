@@ -1,0 +1,59 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":CreateParameterUI" as UI
+participant ":CreateParameterController" as CTRL
+participant ":Company" as Ltd
+participant ":Store=ParameterStore" as SPS
+participant ":cp : Parameter" as CP
+
+
+activate ADM
+ADM -> UI : starts the creation of a new parameter
+activate UI
+UI-> CTRL : getParameterCategoryList()
+activate CTRL
+CTRL -> Ltd: getParameterCategoryList()
+activate Ltd
+Deactivate Ltd
+deactivate CTRL
+
+UI --> ADM: show all existing categories and asks to choose on
+deactivate UI
+ADM --> UI: selects an parameter category
+Activate UI
+UI --> ADM: Requests data for a new parameter(code, short_name, description)
+Deactivate UI
+ADM --> UI: Types requested data
+Activate UI
+UI -> CTRL: CreateParameter(category, code, short_name, description)
+Deactivate UI
+Activate CTRL
+activate Ltd
+CTRL-> Ltd: :Store= getParameterStore()
+deactivate Ltd
+CTRL -> SPS : cp= createParameter(category, code, short_name, description)
+Activate SPS
+SPS -> CP : create(category, code, description, short_name)
+CTRL -> SPS : validateParameter(cp)
+deactivate CTRL
+Deactivate SPS
+UI --> ADM: Shows the data and requests a confirmation
+ADM -> UI: Data is approved
+activate UI
+UI -> CTRL: saveParameter()
+activate CTRL
+CTRL -> SPS: saveParameter(cp)
+activate SPS
+SPS -> SPS: validateParameter(cp)
+activate SPS
+deactivate SPS
+SPS -> SPS: addParameter(cp)
+activate SPS
+deactivate SPS
+Deactivate SPS
+deactivate CTRL
+UI --> ADM: informs operation success
+@enduml

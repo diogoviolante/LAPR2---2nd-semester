@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+
+
+class Client {
+  -long citizenNumber
+  -long phoneNumber
+  -int nhsNumber
+  -int taxNumber
+  -Date birthDate
+  -String role
+  -String gender
+  -String name
+  +Client(name, citizenNumber, nhsNumber, taxNumber, birthDate, phoneNumber, role, gender)
+}
+
+class clientStore {
+  -List clientList
+  +Client(name, citizenNumber, nhsNumber,\n taxNumber, birthDate, phoneNumber, role, gender)
+  +saveClient(Client)
+  +validateClient(Client)
+}
+
+class AuthFacade {
+  +existsUser(E-mail)
+  +addUser(name, e-mail, password)
+}
+
+class CreateUserController {
+  +creatClient(name, citizenNumber, nhsNumber,\n taxNumber, birthDate, phoneNumber, role, gender)
+  +saveClient()
+}
+
+class CreateUserUI {
+
+}
+
+CreateUserUI ..> CreateUserController
+CreateUserController ..> Company
+CreateUserController ..> clientStore
+CreateUserController ..> AuthFacade
+Company ..> clientStore
+Company ..> AuthFacade
+Company "1" --> "*" Client : kowns >
+clientStore "1" -> "1" Client : uses >
+
+
+@enduml

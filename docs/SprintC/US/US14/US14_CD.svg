@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="544px" preserveAspectRatio="none" style="width:287px;height:544px;" version="1.1" viewBox="0 0 287 544" width="287px" zoomAndPan="magnify"><defs><filter height="300%" id="fdcfc3e0ridnd" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[3e8e2d4c9cfdbc13abb0bf4c61f3ed8e]
+class DiagnosisUI--><rect codeLine="3" fill="#FEFECE" filter="url(#fdcfc3e0ridnd)" height="48" id="DiagnosisUI" style="stroke:#A80036;stroke-width:1.5;" width="101" x="151.5" y="7"/><ellipse cx="166.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M168.5,19.5 Q168.7031,19 168.9375,18.75 Q169.1719,18.5 169.4375,18.5 Q169.9063,18.5 170.2031,18.7813 Q170.5,19.0625 170.5,19.7188 L170.5,21.2813 Q170.5,21.9375 170.2188,22.2188 Q169.9375,22.5 169.5,22.5 Q169.1094,22.5 168.8594,22.3281 Q168.6094,22.1563 168.5,21.7031 Q168.4531,21.3906 168.2813,21.2188 Q167.9688,20.8906 167.4063,20.7031 Q166.8438,20.5 166.2813,20.5 Q165.5781,20.5 164.9844,20.7813 Q164.4063,21.0625 163.9531,21.6875 Q163.5,22.3125 163.5,23.1719 L163.5,24.0938 Q163.5,25.125 164.3438,25.8125 Q165.1875,26.5 166.6875,26.5 Q167.5781,26.5 168.2031,26.2969 Q168.5625,26.1875 168.9688,25.8281 Q169.2344,25.625 169.375,25.5625 Q169.5156,25.5 169.6875,25.5 Q170.0156,25.5 170.25,25.7656 Q170.5,26.0156 170.5,26.375 Q170.5,26.7188 170.1563,27.125 Q169.6563,27.7188 168.8594,28.0469 Q167.8125,28.5 166.5313,28.5 Q165.0313,28.5 163.8281,27.9063 Q162.8594,27.4375 162.1719,26.4219 Q161.5,25.4063 161.5,24.2031 L161.5,23.1094 Q161.5,21.8594 162.0938,20.7656 Q162.7031,19.6719 163.75,19.0938 Q164.8125,18.5 166,18.5 Q166.7188,18.5 167.3438,18.75 Q167.9688,19 168.5,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="180.5" y="27.9102">DiagnosisUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="152.5" x2="251.5" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="152.5" x2="251.5" y1="47" y2="47"/><!--MD5=[b7ecac6f19a81d2676e458ae3eca7034]
+class DiagnosisController--><rect codeLine="5" fill="#FEFECE" filter="url(#fdcfc3e0ridnd)" height="75.6719" id="DiagnosisController" style="stroke:#A80036;stroke-width:1.5;" width="143" x="130.5" y="116"/><ellipse cx="145.5" cy="132" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M147.5,128.5 Q147.7031,128 147.9375,127.75 Q148.1719,127.5 148.4375,127.5 Q148.9063,127.5 149.2031,127.7813 Q149.5,128.0625 149.5,128.7188 L149.5,130.2813 Q149.5,130.9375 149.2188,131.2188 Q148.9375,131.5 148.5,131.5 Q148.1094,131.5 147.8594,131.3281 Q147.6094,131.1563 147.5,130.7031 Q147.4531,130.3906 147.2813,130.2188 Q146.9688,129.8906 146.4063,129.7031 Q145.8438,129.5 145.2813,129.5 Q144.5781,129.5 143.9844,129.7813 Q143.4063,130.0625 142.9531,130.6875 Q142.5,131.3125 142.5,132.1719 L142.5,133.0938 Q142.5,134.125 143.3438,134.8125 Q144.1875,135.5 145.6875,135.5 Q146.5781,135.5 147.2031,135.2969 Q147.5625,135.1875 147.9688,134.8281 Q148.2344,134.625 148.375,134.5625 Q148.5156,134.5 148.6875,134.5 Q149.0156,134.5 149.25,134.7656 Q149.5,135.0156 149.5,135.375 Q149.5,135.7188 149.1563,136.125 Q148.6563,136.7188 147.8594,137.0469 Q146.8125,137.5 145.5313,137.5 Q144.0313,137.5 142.8281,136.9063 Q141.8594,136.4375 141.1719,135.4219 Q140.5,134.4063 140.5,133.2031 L140.5,132.1094 Q140.5,130.8594 141.0938,129.7656 Q141.7031,128.6719 142.75,128.0938 Q143.8125,127.5 145,127.5 Q145.7188,127.5 146.3438,127.75 Q146.9688,128 147.5,128.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="111" x="159.5" y="136.9102">DiagnosisController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="131.5" x2="272.5" y1="148" y2="148"/><line style="stroke:#A80036;stroke-width:1.5;" x1="131.5" x2="272.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="136.5" y="171.4189">getDiagnosis(report,date)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="136.5" y="185.2549">saveDiagnosis()</text><!--MD5=[91ae4ed7812c3b6eab8d6f2aa22cb9ac]
+class DiagnosisStore--><rect codeLine="10" fill="#FEFECE" filter="url(#fdcfc3e0ridnd)" height="89.5078" id="DiagnosisStore" style="stroke:#A80036;stroke-width:1.5;" width="178" x="7" y="253"/><ellipse cx="49" cy="269" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M51,265.5 Q51.2031,265 51.4375,264.75 Q51.6719,264.5 51.9375,264.5 Q52.4063,264.5 52.7031,264.7813 Q53,265.0625 53,265.7188 L53,267.2813 Q53,267.9375 52.7188,268.2188 Q52.4375,268.5 52,268.5 Q51.6094,268.5 51.3594,268.3281 Q51.1094,268.1563 51,267.7031 Q50.9531,267.3906 50.7813,267.2188 Q50.4688,266.8906 49.9063,266.7031 Q49.3438,266.5 48.7813,266.5 Q48.0781,266.5 47.4844,266.7813 Q46.9063,267.0625 46.4531,267.6875 Q46,268.3125 46,269.1719 L46,270.0938 Q46,271.125 46.8438,271.8125 Q47.6875,272.5 49.1875,272.5 Q50.0781,272.5 50.7031,272.2969 Q51.0625,272.1875 51.4688,271.8281 Q51.7344,271.625 51.875,271.5625 Q52.0156,271.5 52.1875,271.5 Q52.5156,271.5 52.75,271.7656 Q53,272.0156 53,272.375 Q53,272.7188 52.6563,273.125 Q52.1563,273.7188 51.3594,274.0469 Q50.3125,274.5 49.0313,274.5 Q47.5313,274.5 46.3281,273.9063 Q45.3594,273.4375 44.6719,272.4219 Q44,271.4063 44,270.2031 L44,269.1094 Q44,267.8594 44.5938,266.7656 Q45.2031,265.6719 46.25,265.0938 Q47.3125,264.5 48.5,264.5 Q49.2188,264.5 49.8438,264.75 Q50.4688,265 51,265.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="86" x="69" y="273.9102">DiagnosisStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="285" y2="285"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="293" y2="293"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="13" y="308.4189">createDiagnosis(report,date,code)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="13" y="322.2549">validateDiagnosis(diagnosis)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="13" y="336.0908">saveDiagnosis(diagnosis)</text><!--MD5=[10d06bcee75aaf74ab8f6040820ceef2]
+class Diagnosis--><rect codeLine="15" fill="#FEFECE" filter="url(#fdcfc3e0ridnd)" height="109.3438" id="Diagnosis" style="stroke:#A80036;stroke-width:1.5;" width="147" x="93.5" y="421"/><ellipse cx="134.6" cy="437" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M136.6,433.5 Q136.8031,433 137.0375,432.75 Q137.2719,432.5 137.5375,432.5 Q138.0063,432.5 138.3031,432.7813 Q138.6,433.0625 138.6,433.7188 L138.6,435.2813 Q138.6,435.9375 138.3188,436.2188 Q138.0375,436.5 137.6,436.5 Q137.2094,436.5 136.9594,436.3281 Q136.7094,436.1563 136.6,435.7031 Q136.5531,435.3906 136.3813,435.2188 Q136.0688,434.8906 135.5063,434.7031 Q134.9438,434.5 134.3813,434.5 Q133.6781,434.5 133.0844,434.7813 Q132.5063,435.0625 132.0531,435.6875 Q131.6,436.3125 131.6,437.1719 L131.6,438.0938 Q131.6,439.125 132.4438,439.8125 Q133.2875,440.5 134.7875,440.5 Q135.6781,440.5 136.3031,440.2969 Q136.6625,440.1875 137.0688,439.8281 Q137.3344,439.625 137.475,439.5625 Q137.6156,439.5 137.7875,439.5 Q138.1156,439.5 138.35,439.7656 Q138.6,440.0156 138.6,440.375 Q138.6,440.7188 138.2563,441.125 Q137.7563,441.7188 136.9594,442.0469 Q135.9125,442.5 134.6313,442.5 Q133.1313,442.5 131.9281,441.9063 Q130.9594,441.4375 130.2719,440.4219 Q129.6,439.4063 129.6,438.2031 L129.6,437.1094 Q129.6,435.8594 130.1938,434.7656 Q130.8031,433.6719 131.85,433.0938 Q132.9125,432.5 134.1,432.5 Q134.8188,432.5 135.4438,432.75 Q136.0688,433 136.6,433.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="154.4" y="441.9102">Diagnosis</text><line style="stroke:#A80036;stroke-width:1.5;" x1="94.5" x2="239.5" y1="453" y2="453"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="101.5" y="461"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="113.5" y="468.4189">report</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="101.5" y="474.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="113.5" y="482.2549">date</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="101.5" y="488.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="24" x="113.5" y="496.0908">code</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="99.5" y="523.9268">Diagnosis(report,date,code)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="94.5" x2="162" y1="507.5078" y2="507.5078"/><line style="stroke:#A80036;stroke-width:1.0;" x1="162" x2="172" y1="507.0078" y2="507.0078"/><line style="stroke:#A80036;stroke-width:1.0;" x1="172" x2="239.5" y1="507.5078" y2="507.5078"/><!--MD5=[06ef9f1de3407ad38970826ba2a0effd]
+link DiagnosisUI to DiagnosisController--><path codeLine="22" d="M202,55.04 C202,70.71 202,91.91 202,110.58 " fill="none" id="DiagnosisUI-to-DiagnosisController" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="202,115.77,206,106.77,202,110.77,198,106.77,202,115.77" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[09ce35d4f4b1af6b89eeb5c20f4bebd2]
+link DiagnosisController to DiagnosisStore--><path codeLine="23" d="M174.15,192.31 C161.26,209.57 145.79,230.3 132.03,248.74 " fill="none" id="DiagnosisController-to-DiagnosisStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="128.94,252.88,137.5207,248.0457,131.924,248.868,131.1016,243.2713,128.94,252.88" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[698907ea7cf60875665d4b3600e9858f]
+link DiagnosisController to Diagnosis--><path codeLine="24" d="M202.47,192.23 C202.68,210.53 202.9,232.92 203,253 C203.2,293 208.33,303.36 203,343 C199.75,367.21 193.27,393.27 186.69,415.75 " fill="none" id="DiagnosisController-to-Diagnosis" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="185.2,420.79,191.5867,413.2926,186.617,415.995,183.9147,411.0254,185.2,420.79" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fea4c9f448acd7603409a8cca109db3f]
+link DiagnosisStore to Diagnosis--><path codeLine="25" d="M113.92,343.29 C122.85,365.37 133.77,392.37 143.38,416.13 " fill="none" id="DiagnosisStore-to-Diagnosis" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="145.29,420.83,145.6248,410.9868,143.4158,416.1946,138.2081,413.9856,145.29,420.83" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="133" y="387.4951">adopts</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="108.8577" y="364.0027">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="137.1881" y="410.296">*</text><!--MD5=[b51fcda78848e5fd5c502b374debdc84]
+@startuml
+'https://plantuml.com/class-diagram
+
+class DiagnosisUI{
+}
+class DiagnosisController{
+getDiagnosis(report,date)
+saveDiagnosis()
+
+}
+class DiagnosisStore{
+createDiagnosis(report,date,code)
+validateDiagnosis(diagnosis)
+saveDiagnosis(diagnosis)
+}
+class Diagnosis{
+-report
+-date
+-code
+- - - - - - - -
+Diagnosis(report,date,code)
+}
+DiagnosisUI..>DiagnosisController
+DiagnosisController..>DiagnosisStore
+DiagnosisController..>Diagnosis
+DiagnosisStore"1" - -> "*" Diagnosis : adopts
+@enduml
+
+@startuml
+
+class DiagnosisUI{
+}
+class DiagnosisController{
+getDiagnosis(report,date)
+saveDiagnosis()
+
+}
+class DiagnosisStore{
+createDiagnosis(report,date,code)
+validateDiagnosis(diagnosis)
+saveDiagnosis(diagnosis)
+}
+class Diagnosis{
+-report
+-date
+-code
+- - - - - - - -
+Diagnosis(report,date,code)
+}
+DiagnosisUI..>DiagnosisController
+DiagnosisController..>DiagnosisStore
+DiagnosisController..>Diagnosis
+DiagnosisStore"1" - -> "*" Diagnosis : adopts
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 10:25:05 GMT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

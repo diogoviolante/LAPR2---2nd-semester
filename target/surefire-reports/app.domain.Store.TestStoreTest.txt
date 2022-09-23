@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: app.domain.Store.TestStoreTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in app.domain.Store.TestStoreTest

@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":CreateParameterCategoryUI" as UI
+participant ":CreateParameterCategoryController" as CTRL
+participant ":Company" as Ltd
+participant ":Store=ParameterCategoryStore" as SPS
+participant ":cp : ParameterCategory" as CP
+
+
+activate ADM
+ADM -> UI : starts new parameter category
+activate UI
+UI --> ADM: request data(code, description, nhsId)
+deactivate UI
+ADM --> UI: types requested data
+activate UI
+UI -> CTRL: createParameterCategory(code, description, nhsId)
+activate CTRL
+CTRL -> Ltd: store = getParameterCategoryStore()
+activate Ltd
+deactivate Ltd
+CTRL -> SPS: pc = createParameterCategory(code, description, nhsId)
+activate SPS
+SPS -> CP: create(code, description, nhsId)
+deactivate SPS
+CTRL -> SPS: validateParameterCategory(pc)
+activate SPS
+deactivate SPS
+deactivate CTRL
+UI --> ADM: shows the data and requests a confirmation
+deactivate UI
+ADM --> UI: confirms the data
+activate UI
+UI -> CTRL: saveParameterCategory()
+activate CTRL
+CTRL -> SPS : saveParameterCategory(pc)
+activate SPS
+SPS -> SPS: validateParameterCategory(pc)
+activate SPS
+deactivate SPS
+SPS -> SPS: addParameterCategory(pc)
+activate SPS
+deactivate SPS
+deactivate SPS
+deactivate CTRL
+UI --> ADM: informs operation success
+
+
+@enduml

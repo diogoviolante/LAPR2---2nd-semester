@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="478.75px" preserveAspectRatio="none" style="width:816px;height:478px;background:#FFFFFF;" version="1.1" viewBox="0 0 816 478" width="816.25px" zoomAndPan="magnify"><defs><filter height="300%" id="f1spy50ffxzlxi" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[98c05957f469fc04e8bd6e53319922c9]
+class ListOfTests--><rect codeLine="4" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="60" id="ListOfTests" style="stroke:#A80036;stroke-width:1.875;" width="115" x="684.375" y="188.125"/><ellipse cx="703.125" cy="208.125" fill="#B4A7E5" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M704.375,204.375 L704.375,211.875 L706.875,211.875 L707.4805,211.875 L708.125,212.6563 L708.125,213.125 L708.125,213.5938 L707.4805,214.375 L706.875,214.375 L699.375,214.375 L698.7695,214.375 L698.125,213.5938 L698.125,213.125 L698.125,212.6563 L698.7695,211.875 L699.375,211.875 L701.875,211.875 L701.875,204.375 L699.375,204.375 L698.7695,204.375 L698.125,203.5938 L698.125,203.125 L698.125,202.6563 L698.7695,201.875 L699.375,201.875 L706.875,201.875 L707.4805,201.875 L708.125,202.6563 L708.125,203.125 L708.125,203.5938 L707.4805,204.375 L706.875,204.375 L704.375,204.375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" font-style="italic" lengthAdjust="spacing" textLength="75" x="720.625" y="214.2627">ListOfTests</text><line style="stroke:#A80036;stroke-width:1.875;" x1="685.625" x2="798.125" y1="228.125" y2="228.125"/><line style="stroke:#A80036;stroke-width:1.875;" x1="685.625" x2="798.125" y1="238.125" y2="238.125"/><!--MD5=[fce3d33288f3decbcb1a05192f19f98a]
+class ListOfClients--><rect codeLine="5" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="60" id="ListOfClients" style="stroke:#A80036;stroke-width:1.875;" width="126.25" x="8.75" y="188.125"/><ellipse cx="27.5" cy="208.125" fill="#B4A7E5" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M28.75,204.375 L28.75,211.875 L31.25,211.875 L31.8555,211.875 L32.5,212.6563 L32.5,213.125 L32.5,213.5938 L31.8555,214.375 L31.25,214.375 L23.75,214.375 L23.1445,214.375 L22.5,213.5938 L22.5,213.125 L22.5,212.6563 L23.1445,211.875 L23.75,211.875 L26.25,211.875 L26.25,204.375 L23.75,204.375 L23.1445,204.375 L22.5,203.5938 L22.5,203.125 L22.5,202.6563 L23.1445,201.875 L23.75,201.875 L31.25,201.875 L31.8555,201.875 L32.5,202.6563 L32.5,203.125 L32.5,203.5938 L31.8555,204.375 L31.25,204.375 L28.75,204.375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" font-style="italic" lengthAdjust="spacing" textLength="86.25" x="45" y="214.2627">ListOfClients</text><line style="stroke:#A80036;stroke-width:1.875;" x1="10" x2="133.75" y1="228.125" y2="228.125"/><line style="stroke:#A80036;stroke-width:1.875;" x1="10" x2="133.75" y1="238.125" y2="238.125"/><!--MD5=[72b18e9bfc2a4f9b9171278f13c62223]
+class ReportUI--><rect codeLine="7" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="60" id="ReportUI" style="stroke:#A80036;stroke-width:1.875;" width="101.25" x="358.75" y="8.75"/><ellipse cx="377.5" cy="28.75" fill="#ADD1B2" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M380,24.375 Q380.2539,23.75 380.5469,23.4375 Q380.8398,23.125 381.1719,23.125 Q381.7578,23.125 382.1289,23.4766 Q382.5,23.8281 382.5,24.6484 L382.5,26.6016 Q382.5,27.4219 382.1484,27.7734 Q381.7969,28.125 381.25,28.125 Q380.7617,28.125 380.4492,27.9102 Q380.1367,27.6953 380,27.1289 Q379.9414,26.7383 379.7266,26.5234 Q379.3359,26.1133 378.6328,25.8789 Q377.9297,25.625 377.2266,25.625 Q376.3477,25.625 375.6055,25.9766 Q374.8828,26.3281 374.3164,27.1094 Q373.75,27.8906 373.75,28.9648 L373.75,30.1172 Q373.75,31.4063 374.8047,32.2656 Q375.8594,33.125 377.7344,33.125 Q378.8477,33.125 379.6289,32.8711 Q380.0781,32.7344 380.5859,32.2852 Q380.918,32.0313 381.0938,31.9531 Q381.2695,31.875 381.4844,31.875 Q381.8945,31.875 382.1875,32.207 Q382.5,32.5195 382.5,32.9688 Q382.5,33.3984 382.0703,33.9063 Q381.4453,34.6484 380.4492,35.0586 Q379.1406,35.625 377.5391,35.625 Q375.6641,35.625 374.1602,34.8828 Q372.9492,34.2969 372.0898,33.0273 Q371.25,31.7578 371.25,30.2539 L371.25,28.8867 Q371.25,27.3242 371.9922,25.957 Q372.7539,24.5898 374.0625,23.8672 Q375.3906,23.125 376.875,23.125 Q377.7734,23.125 378.5547,23.4375 Q379.3359,23.75 380,24.375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacing" textLength="61.25" x="395" y="34.8877">ReportUI</text><line style="stroke:#A80036;stroke-width:1.875;" x1="360" x2="458.75" y1="48.75" y2="48.75"/><line style="stroke:#A80036;stroke-width:1.875;" x1="360" x2="458.75" y1="58.75" y2="58.75"/><!--MD5=[21f4ec93ba84274457fc51ba6e7f8a05]
+class ReportController--><rect codeLine="11" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="146.4746" id="ReportController" style="stroke:#A80036;stroke-width:1.875;" width="257.5" x="280.625" y="145"/><ellipse cx="347.1875" cy="165" fill="#ADD1B2" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M349.6875,160.625 Q349.9414,160 350.2344,159.6875 Q350.5273,159.375 350.8594,159.375 Q351.4453,159.375 351.8164,159.7266 Q352.1875,160.0781 352.1875,160.8984 L352.1875,162.8516 Q352.1875,163.6719 351.8359,164.0234 Q351.4844,164.375 350.9375,164.375 Q350.4492,164.375 350.1367,164.1602 Q349.8242,163.9453 349.6875,163.3789 Q349.6289,162.9883 349.4141,162.7734 Q349.0234,162.3633 348.3203,162.1289 Q347.6172,161.875 346.9141,161.875 Q346.0352,161.875 345.293,162.2266 Q344.5703,162.5781 344.0039,163.3594 Q343.4375,164.1406 343.4375,165.2148 L343.4375,166.3672 Q343.4375,167.6563 344.4922,168.5156 Q345.5469,169.375 347.4219,169.375 Q348.5352,169.375 349.3164,169.1211 Q349.7656,168.9844 350.2734,168.5352 Q350.6055,168.2813 350.7813,168.2031 Q350.957,168.125 351.1719,168.125 Q351.582,168.125 351.875,168.457 Q352.1875,168.7695 352.1875,169.2188 Q352.1875,169.6484 351.7578,170.1563 Q351.1328,170.8984 350.1367,171.3086 Q348.8281,171.875 347.2266,171.875 Q345.3516,171.875 343.8477,171.1328 Q342.6367,170.5469 341.7773,169.2773 Q340.9375,168.0078 340.9375,166.5039 L340.9375,165.1367 Q340.9375,163.5742 341.6797,162.207 Q342.4414,160.8398 343.75,160.1172 Q345.0781,159.375 346.5625,159.375 Q347.4609,159.375 348.2422,159.6875 Q349.0234,160 349.6875,160.625 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacing" textLength="113.75" x="372.8125" y="171.1377">ReportController</text><line style="stroke:#A80036;stroke-width:1.875;" x1="281.875" x2="536.875" y1="185" y2="185"/><rect fill="none" height="7.5" style="stroke:#C82930;stroke-width:1.25;" width="7.5" x="290.625" y="195"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="33.75" x="305.625" y="204.2737">Tests</text><rect fill="none" height="7.5" style="stroke:#C82930;stroke-width:1.25;" width="7.5" x="290.625" y="212.2949"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="77.5" x="305.625" y="221.5686">AverageAge</text><line style="stroke:#A80036;stroke-width:1.875;" x1="281.875" x2="536.875" y1="229.5898" y2="229.5898"/><ellipse cx="294.375" cy="243.3398" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="181.25" x="305.625" y="248.8635">creatLinearRegressionTests()</text><ellipse cx="294.375" cy="260.6348" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="225" x="305.625" y="266.1584">creatLinearRegressionAverageAge()</text><ellipse cx="294.375" cy="277.9297" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="168.75" x="305.625" y="283.4534">creatMultilinearRegression()</text><!--MD5=[ef340af6512c03d5eeac92509be9c66b]
+class LinearRegression--><rect codeLine="22" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="94.5898" id="LinearRegression" style="stroke:#A80036;stroke-width:1.875;" width="257.5" x="144.375" y="367.5"/><ellipse cx="205.3125" cy="387.5" fill="#ADD1B2" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M207.8125,383.125 Q208.0664,382.5 208.3594,382.1875 Q208.6523,381.875 208.9844,381.875 Q209.5703,381.875 209.9414,382.2266 Q210.3125,382.5781 210.3125,383.3984 L210.3125,385.3516 Q210.3125,386.1719 209.9609,386.5234 Q209.6094,386.875 209.0625,386.875 Q208.5742,386.875 208.2617,386.6602 Q207.9492,386.4453 207.8125,385.8789 Q207.7539,385.4883 207.5391,385.2734 Q207.1484,384.8633 206.4453,384.6289 Q205.7422,384.375 205.0391,384.375 Q204.1602,384.375 203.418,384.7266 Q202.6953,385.0781 202.1289,385.8594 Q201.5625,386.6406 201.5625,387.7148 L201.5625,388.8672 Q201.5625,390.1563 202.6172,391.0156 Q203.6719,391.875 205.5469,391.875 Q206.6602,391.875 207.4414,391.6211 Q207.8906,391.4844 208.3984,391.0352 Q208.7305,390.7813 208.9063,390.7031 Q209.082,390.625 209.2969,390.625 Q209.707,390.625 210,390.957 Q210.3125,391.2695 210.3125,391.7188 Q210.3125,392.1484 209.8828,392.6563 Q209.2578,393.3984 208.2617,393.8086 Q206.9531,394.375 205.3516,394.375 Q203.4766,394.375 201.9727,393.6328 Q200.7617,393.0469 199.9023,391.7773 Q199.0625,390.5078 199.0625,389.0039 L199.0625,387.6367 Q199.0625,386.0742 199.8047,384.707 Q200.5664,383.3398 201.875,382.6172 Q203.2031,381.875 204.6875,381.875 Q205.5859,381.875 206.3672,382.1875 Q207.1484,382.5 207.8125,383.125 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacing" textLength="125" x="230.9375" y="393.6377">LinearRegression</text><line style="stroke:#A80036;stroke-width:1.875;" x1="145.625" x2="400.625" y1="407.5" y2="407.5"/><line style="stroke:#A80036;stroke-width:1.875;" x1="145.625" x2="400.625" y1="417.5" y2="417.5"/><ellipse cx="158.125" cy="431.25" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="181.25" x="169.375" y="436.7737">creatLinearRegressionTests()</text><ellipse cx="158.125" cy="448.5449" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="225" x="169.375" y="454.0686">creatLinearRegressionAverageAge()</text><!--MD5=[842aeb7b0194ed35319589902e598c6c]
+class MultilinearRegression--><rect codeLine="28" fill="#FEFECE" filter="url(#f1spy50ffxzlxi)" height="77.2949" id="MultilinearRegression" style="stroke:#A80036;stroke-width:1.875;" width="201.25" x="446.25" y="376.25"/><ellipse cx="469.5" cy="396.25" fill="#ADD1B2" rx="13.75" ry="13.75" style="stroke:#A80036;stroke-width:1.25;"/><path d="M472,391.875 Q472.2539,391.25 472.5469,390.9375 Q472.8398,390.625 473.1719,390.625 Q473.7578,390.625 474.1289,390.9766 Q474.5,391.3281 474.5,392.1484 L474.5,394.1016 Q474.5,394.9219 474.1484,395.2734 Q473.7969,395.625 473.25,395.625 Q472.7617,395.625 472.4492,395.4102 Q472.1367,395.1953 472,394.6289 Q471.9414,394.2383 471.7266,394.0234 Q471.3359,393.6133 470.6328,393.3789 Q469.9297,393.125 469.2266,393.125 Q468.3477,393.125 467.6055,393.4766 Q466.8828,393.8281 466.3164,394.6094 Q465.75,395.3906 465.75,396.4648 L465.75,397.6172 Q465.75,398.9063 466.8047,399.7656 Q467.8594,400.625 469.7344,400.625 Q470.8477,400.625 471.6289,400.3711 Q472.0781,400.2344 472.5859,399.7852 Q472.918,399.5313 473.0938,399.4531 Q473.2695,399.375 473.4844,399.375 Q473.8945,399.375 474.1875,399.707 Q474.5,400.0195 474.5,400.4688 Q474.5,400.8984 474.0703,401.4063 Q473.4453,402.1484 472.4492,402.5586 Q471.1406,403.125 469.5391,403.125 Q467.6641,403.125 466.1602,402.3828 Q464.9492,401.7969 464.0898,400.5273 Q463.25,399.2578 463.25,397.7539 L463.25,396.3867 Q463.25,394.8242 463.9922,393.457 Q464.7539,392.0898 466.0625,391.3672 Q467.3906,390.625 468.875,390.625 Q469.7734,390.625 470.5547,390.9375 Q471.3359,391.25 472,391.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacing" textLength="151.25" x="488" y="402.3877">MultilinearRegression</text><line style="stroke:#A80036;stroke-width:1.875;" x1="447.5" x2="646.25" y1="416.25" y2="416.25"/><line style="stroke:#A80036;stroke-width:1.875;" x1="447.5" x2="646.25" y1="426.25" y2="426.25"/><ellipse cx="460" cy="440" fill="#84BE84" rx="3.75" ry="3.75" style="stroke:#038048;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacing" textLength="168.75" x="471.25" y="445.5237">creatMultilinearRegression()</text><!--MD5=[377911caed16a8d98aac25669b241462]
+link ReportUI to ReportController--><path codeLine="32" d="M409.375,68.8125 C409.375,87.85 409.375,113.8 409.375,138.65 " fill="none" id="ReportUI-to-ReportController" style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="409.375,144.9375,414.375,133.6875,409.375,138.6875,404.375,133.6875,409.375,144.9375" style="stroke:#A80036;stroke-width:1.25;"/><!--MD5=[352be51cd19c5d636a9772ce2a04dc04]
+link ReportController to LinearRegression--><path codeLine="33" d="M358.6375,291.75 C342.325,315.0375 324.575,340.3625 309.5,361.8625 " fill="none" id="ReportController-to-LinearRegression" style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="305.725,367.25,316.2741,360.9034,309.3103,362.1306,308.0831,355.1669,305.725,367.25" style="stroke:#A80036;stroke-width:1.25;"/><!--MD5=[e13b2e060079a6ddd659caa98c2ff5a1]
+link ReportController to MultilinearRegression--><path codeLine="34" d="M460.575,291.75 C479.4625,318.45 500.2375,347.8125 516.6625,371.05 " fill="none" id="ReportController-to-MultilinearRegression" style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="520.3125,376.2125,517.9063,364.1389,516.7068,371.1074,509.7382,369.9079,520.3125,376.2125" style="stroke:#A80036;stroke-width:1.25;"/><!--MD5=[17bd5861238da112f42f5f51a898f370]
+link ReportController to ListOfTests--><path codeLine="35" d="M538.4,218.125 C586.0375,218.125 637.95,218.125 677.425,218.125 " fill="none" id="ReportController-to-ListOfTests" style="stroke:#A80036;stroke-width:1.25;"/><polygon fill="#A80036" points="684.15,218.125,672.9,213.125,677.9,218.125,672.9,223.125,684.15,218.125" style="stroke:#A80036;stroke-width:1.25;"/><polygon fill="#000000" points="572.5,203.3447,561.1936,199.6711,561.1936,207.0184,572.5,203.3447" style="stroke:#000000;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="83.75" x="577.5" y="209.9939">implements</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="8.75" x="548.1966" y="214.2674">1</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="8.75" x="665.5028" y="213.4352">1</text><!--MD5=[8c6d90c5ccf8b37d2f5fc0a347d55ede]
+reverse link ListOfClients to ReportController--><path codeLine="36" d="M141.6875,218.125 C181.75,218.125 233.3125,218.125 280.475,218.125 " fill="none" id="ListOfClients-backto-ReportController" style="stroke:#A80036;stroke-width:1.25;"/><polygon fill="#A80036" points="135.35,218.125,146.6,223.125,141.6,218.125,146.6,213.125,135.35,218.125" style="stroke:#A80036;stroke-width:1.25;"/><polygon fill="#000000" points="156.5625,203.3447,167.8689,207.0184,167.8689,199.6711,156.5625,203.3447" style="stroke:#000000;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="83.75" x="174.0625" y="209.9939">implements</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="8.75" x="144.8914" y="213.6185">1</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="8.75" x="261.9376" y="214.2674">1</text><!--MD5=[f7477b761f9d01ea45807b320cb419b3]
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface ListOfTests
+interface ListOfClients
+
+class ReportUI {
+}
+
+
+class ReportController {
+-Tests
+-AverageAge
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
++creatMultilinearRegression()
+}
+
+
+
+
+class LinearRegression {
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
+}
+
+
+class MultilinearRegression {
++creatMultilinearRegression()
+}
+
+ReportUI ..> ReportController
+ReportController  ..>  LinearRegression
+ReportController  ..>  MultilinearRegression
+ReportController "1" -> "1" ListOfTests : implements >
+ReportController "1" -left-> "1" ListOfClients : implements >
+
+
+@enduml
+
+@startuml
+
+
+interface ListOfTests
+interface ListOfClients
+
+class ReportUI {
+}
+
+
+class ReportController {
+-Tests
+-AverageAge
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
++creatMultilinearRegression()
+}
+
+
+
+
+class LinearRegression {
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
+}
+
+
+class MultilinearRegression {
++creatMultilinearRegression()
+}
+
+ReportUI ..> ReportController
+ReportController  ..>  LinearRegression
+ReportController  ..>  MultilinearRegression
+ReportController "1" -> "1" ListOfTests : implements >
+ReportController "1" -left-> "1" ListOfClients : implements >
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

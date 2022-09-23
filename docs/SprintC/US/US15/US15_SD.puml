@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor LabCoordinator as LabCoordinator
+Activate LabCoordinator
+participant ": LabValidationUI" as coordUI
+participant ": LabCoordinatorController" as LabCoordCntrl
+participant ": Company" as Company
+participant "Store: AvailableTestStore" as storeCAL
+participant "val: validationCoordinator" as validationCoordinator
+participant "dto: validationCoordinatorDto" as dto
+
+
+
+LabCoordinator -> coordUI: Wants to start validating tests
+Activate coordUI
+coordUI -> LabCoordCntrl: getTestList()
+Deactivate coordUI
+Activate LabCoordCntrl
+LabCoordCntrl -> Company: store=getAvailableTestStore()
+LabCoordCntrl -> storeCAL: at= getAvailableTests()
+Deactivate LabCoordCntrl
+loop
+coordUI -> LabCoordinator: presents all the tests and asks to choose one or more or exit
+Deactivate coordUI
+LabCoordinator -> coordUI: selects one or more
+end
+
+coordUI ->LabCoordCntrl: validationCoordinator(dto)
+Activate coordUI
+Activate LabCoordCntrl
+LabCoordCntrl -> Company: store=getAvailableTestStore(dto)
+LabCoordCntrl -> storeCAL: val= validationCoordinator(dto)
+Activate storeCAL
+storeCAL --> validationCoordinator **: validationCoordinator(TestStore test)
+Deactivate storeCAL
+Activate validationCoordinator
+validationCoordinator -> dto:validationCoordinatorDto (TestStore test)
+Activate dto
+Deactivate dto
+Deactivate validationCoordinator
+LabCoordCntrl -> storeCAL: ValidateSelection(val)
+Activate storeCAL
+Deactivate storeCAL
+Deactivate LabCoordCntrl
+coordUI --> LabCoordinator:shows data and asks for more validation
+Deactivate coordUI
+LabCoordinator -> coordUI: ends validation Coordinator
+Activate coordUI
+coordUI -> LabCoordCntrl: saveValidationCoordinator()
+Deactivate coordUI
+Activate LabCoordCntrl
+LabCoordCntrl -> storeCAL: saveValidatedTests(val)
+
+@endum

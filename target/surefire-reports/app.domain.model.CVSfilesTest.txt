@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: app.domain.model.CVSfilesTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 196.374 s <<< FAILURE! - in app.domain.model.CVSfilesTest
+addTest1_1(app.domain.model.CVSfilesTest)  Time elapsed: 41.745 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3849>
+	at app.domain.model.CVSfilesTest.addTest1_1(CVSfilesTest.java:129)
+
+addTest1_2(app.domain.model.CVSfilesTest)  Time elapsed: 27.462 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3019>
+	at app.domain.model.CVSfilesTest.addTest1_2(CVSfilesTest.java:141)
+
+addTest1_3(app.domain.model.CVSfilesTest)  Time elapsed: 27.314 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at app.domain.model.CVSfilesTest.addTest1_3(CVSfilesTest.java:158)
+
+addTest2_1(app.domain.model.CVSfilesTest)  Time elapsed: 14.225 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3849>
+	at app.domain.model.CVSfilesTest.addTest2_1(CVSfilesTest.java:174)
+
+addTest2_2(app.domain.model.CVSfilesTest)  Time elapsed: 15.233 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3062>
+	at app.domain.model.CVSfilesTest.addTest2_2(CVSfilesTest.java:187)
+
+addTest2_3(app.domain.model.CVSfilesTest)  Time elapsed: 15.601 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at app.domain.model.CVSfilesTest.addTest2_3(CVSfilesTest.java:204)
+
+addTest3_1(app.domain.model.CVSfilesTest)  Time elapsed: 14.52 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3849>
+	at app.domain.model.CVSfilesTest.addTest3_1(CVSfilesTest.java:220)
+
+addTest3_2(app.domain.model.CVSfilesTest)  Time elapsed: 14.013 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3849>
+	at app.domain.model.CVSfilesTest.addTest3_2(CVSfilesTest.java:232)
+
+addTest3_3(app.domain.model.CVSfilesTest)  Time elapsed: 14.233 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at app.domain.model.CVSfilesTest.addTest3_3(CVSfilesTest.java:249)
+

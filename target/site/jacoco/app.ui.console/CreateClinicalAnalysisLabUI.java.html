@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreateClinicalAnalysisLabUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">CreateClinicalAnalysisLabUI.java</span></div><h1>CreateClinicalAnalysisLabUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.CreateClinicalAnalysisLabController;
+import app.controller.NewTestController;
+import app.domain.model.ClinicalAnalysisLaboratory.ClinicalAnalysisLaboratory;
+import app.domain.model.Company;
+import app.domain.model.TesteType;
+import app.domain.model.ParameterCategory;
+import app.domain.shared.ClinicalAnalysisLaboratories;
+import app.domain.shared.ListOfTypes;
+import app.dto.CreateAnalysisClinicalLabDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+<span class="nc" id="L17">public class CreateClinicalAnalysisLabUI implements Runnable, ListOfTypes {</span>
+<span class="nc" id="L18">    static Scanner ler = new Scanner(System.in);</span>
+<span class="nc" id="L19">    private Company company= new Company(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L20">    private CreateClinicalAnalysisLabController controller= new CreateClinicalAnalysisLabController();</span>
+    private CreateAnalysisClinicalLabDTO dto;
+<span class="nc" id="L22">    private List&lt;TesteType&gt; NewTestContainer= company.getNewTestContainer();</span>
+<span class="nc" id="L23">    NewTestController newTestController= new NewTestController(company);</span>
+    int index;
+<span class="nc" id="L25">    boolean checkerInvalid = true;</span>
+
+
+
+    @Override
+    public void run(){
+<span class="nc" id="L31">        company = new Company(&quot;Many Labs&quot;);</span>
+<span class="nc" id="L32">        controller = new CreateClinicalAnalysisLabController(company);</span>
+        do {
+<span class="nc" id="L34">            System.out.println(&quot;Laboratory ID: &quot;);</span>
+<span class="nc" id="L35">            String laboratoryID = ler.nextLine();</span>
+<span class="nc" id="L36">            System.out.println(&quot;Laboratory name: &quot;);</span>
+<span class="nc" id="L37">            String name = ler.nextLine();</span>
+<span class="nc" id="L38">            System.out.println(&quot;Laboratory address: &quot;);</span>
+<span class="nc" id="L39">            String address = ler.nextLine();</span>
+<span class="nc" id="L40">            System.out.println(&quot;Laboratory phone number: &quot;);</span>
+<span class="nc" id="L41">            String phone_Number = ler.nextLine();</span>
+<span class="nc" id="L42">            System.out.println(&quot;Laboratory TIN Number: &quot;);</span>
+<span class="nc" id="L43">            String tin_Number = ler.nextLine();</span>
+           //
+<span class="nc" id="L45">            int[] array = new int[10];</span>
+            do {
+
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                for (TesteType yau: listTypes){</span>
+<span class="nc" id="L49">                    System.out.println(yau);</span>
+<span class="nc" id="L50">                }</span>
+<span class="nc" id="L51">                index = ler.nextInt();</span>
+<span class="nc" id="L52">                ler.nextLine();</span>
+<span class="nc" id="L53">                System.out.println(&quot;0 - If you want to exit!&quot;);</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                if (index!=0) {</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                    if (array[index] == 1) {</span>
+
+<span class="nc bnc" id="L57" title="All 2 branches missed.">                        while(array[index]==1){</span>
+<span class="nc" id="L58">                            System.out.println(&quot;This test type has been already added&quot;);</span>
+<span class="nc" id="L59">                            System.out.println(&quot;Please type another test&quot;);</span>
+<span class="nc" id="L60">                            index = ler.nextInt();</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                            if (index==-1)break;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">                        } while (array[index]==1);</span>
+<span class="nc" id="L63">                        array[index] = 1;</span>
+<span class="nc" id="L64">                    }array[index] = 1;</span>
+                }
+<span class="nc" id="L66">                System.out.println();</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">            } while (index != 0);</span>
+            try {
+<span class="nc" id="L69">                dto = new CreateAnalysisClinicalLabDTO(laboratoryID, name, address, phone_Number, tin_Number, company.getNewTestContainer());</span>
+<span class="nc" id="L70">                controller.createClinicalAnalysisLab(dto);</span>
+<span class="nc" id="L71">                checkerInvalid = false;</span>
+<span class="nc" id="L72">            } catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L73">                System.out.println(e.getMessage());</span>
+<span class="nc" id="L74">            }</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">        }while (checkerInvalid);</span>
+
+<span class="nc" id="L77">        System.out.printf(&quot;Are you sure that you added all %s required tests?(Yes/No)&quot;, company.getDesignation());</span>
+<span class="nc" id="L78">        String resposta= ler.next();</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">        if (resposta.equals(&quot;Yes&quot;)){</span>
+<span class="nc" id="L80">            controller.saveClinicalAnalysisLab();</span>
+<span class="nc" id="L81">            System.out.println(&quot;You have successfully added a new Clinical Analysis Laboratory&quot;);</span>
+        }else{
+<span class="nc" id="L83">            System.out.println(&quot;Operation failed&quot;);</span>
+        }
+<span class="nc" id="L85">    }</span>
+
+
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="487.5px" preserveAspectRatio="none" style="width:852px;height:487px;background:#FFFFFF;" version="1.1" viewBox="0 0 852 487" width="852.5px" zoomAndPan="magnify"><defs><filter height="300%" id="f1d8073h4xp47x" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1d8073h4xp47x)" height="245.7422" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="23.125" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f1d8073h4xp47x)" height="234.4922" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="235.625" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f1d8073h4xp47x)" height="151.1133" style="stroke:#000000;stroke-width:2.5;" width="646.25" x="189.375" y="171.2012"/><rect fill="#FFFFFF" height="73.9844" style="stroke:none;stroke-width:1.25;" width="646.25" x="189.375" y="248.3301"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="28.75" x2="28.75" y1="112.0117" y2="381.5039"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="241.875" x2="241.875" y1="112.0117" y2="381.5039"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="38.75" x="6.25" y="108.1665">Time</text><ellipse cx="29.375" cy="18.75" fill="#FEFECE" filter="url(#f1d8073h4xp47x)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M29.375,28.75 L29.375,62.5 M13.125,38.75 L45.625,38.75 M29.375,62.5 L13.125,81.25 M29.375,62.5 L45.625,81.25 " fill="none" filter="url(#f1d8073h4xp47x)" style="stroke:#A80036;stroke-width:2.5;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="38.75" x="6.25" y="398.4204">Time</text><ellipse cx="29.375" cy="414.7656" fill="#FEFECE" filter="url(#f1d8073h4xp47x)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M29.375,424.7656 L29.375,458.5156 M13.125,434.7656 L45.625,434.7656 M29.375,458.5156 L13.125,477.2656 M29.375,458.5156 L45.625,477.2656 " fill="none" filter="url(#f1d8073h4xp47x)" style="stroke:#A80036;stroke-width:2.5;"/><rect fill="#FEFECE" filter="url(#f1d8073h4xp47x)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="75" x="201.875" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="57.5" x="210.625" y="93.1665">System</text><rect fill="#FEFECE" filter="url(#f1d8073h4xp47x)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="75" x="201.875" y="380.2539"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="57.5" x="210.625" y="407.1704">System</text><rect fill="#FFFFFF" filter="url(#f1d8073h4xp47x)" height="245.7422" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="23.125" y="124.5117"/><rect fill="#FFFFFF" filter="url(#f1d8073h4xp47x)" height="234.4922" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="235.625" y="124.5117"/><polygon fill="#A80036" points="220.625,147.4512,233.125,152.4512,220.625,157.4512,225.625,152.4512" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="35.625" x2="228.125" y1="152.4512" y2="152.4512"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="44.375" y="146.3806">1</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="113.75" x="58.125" y="146.3806">Time = 6:00 am</text><path d="M189.375,171.2012 L265.625,171.2012 L265.625,181.2012 L253.125,193.7012 L189.375,193.7012 L189.375,171.2012 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.25;"/><rect fill="none" height="151.1133" style="stroke:#000000;stroke-width:2.5;" width="646.25" x="189.375" y="171.2012"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="20" x="208.125" y="189.3201">alt</text><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="355" x="284.375" y="187.9749">[if Configuration File has simple Linear Regression]</text><line style="stroke:#A80036;stroke-width:1.25;" x1="248.125" x2="300.625" y1="222.0801" y2="222.0801"/><line style="stroke:#A80036;stroke-width:1.25;" x1="300.625" x2="300.625" y1="222.0801" y2="238.3301"/><line style="stroke:#A80036;stroke-width:1.25;" x1="249.375" x2="300.625" y1="238.3301" y2="238.3301"/><polygon fill="#A80036" points="261.875,233.3301,249.375,238.3301,261.875,243.3301,256.875,238.3301" style="stroke:#A80036;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="256.875" y="216.0095">2</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="550" x="270.625" y="216.0095">make the report to NHS with average age or positive tests Linear Regression</text><line style="stroke:#000000;stroke-width:1.25;stroke-dasharray:2.0,2.0;" x1="189.375" x2="835.625" y1="249.5801" y2="249.5801"/><text fill="#000000" font-family="sans-serif" font-size="13.75" font-weight="bold" lengthAdjust="spacing" textLength="333.75" x="195.625" y="263.8538">[if Configuration File has multilinear Regression]</text><line style="stroke:#A80036;stroke-width:1.25;" x1="248.125" x2="300.625" y1="296.0645" y2="296.0645"/><line style="stroke:#A80036;stroke-width:1.25;" x1="300.625" x2="300.625" y1="296.0645" y2="312.3145"/><line style="stroke:#A80036;stroke-width:1.25;" x1="249.375" x2="300.625" y1="312.3145" y2="312.3145"/><polygon fill="#A80036" points="261.875,307.3145,249.375,312.3145,261.875,317.3145,256.875,312.3145" style="stroke:#A80036;stroke-width:1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="256.875" y="289.9939">3</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="505" x="270.625" y="289.9939">make the report with average age and positive tests Linear Regression</text><polygon fill="#A80036" points="49.375,354.0039,36.875,359.0039,49.375,364.0039,44.375,359.0039" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="41.875" x2="240.625" y1="359.0039" y2="359.0039"/><text fill="#000000" font-family="sans-serif" font-size="16.25" font-weight="bold" lengthAdjust="spacing" textLength="8.75" x="56.875" y="352.9333">4</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="156.25" x="70.625" y="352.9333">Sends Report to NHS</text><!--MD5=[4b440a13f2f8b716ccafd0ed782bf6d0]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Time" as OE
+
+activate OE
+activate System
+OE -> System : Time = 6:00 am
+alt if Configuration File has simple Linear Regression
+System -> System : make the report to NHS with average age or positive tests Linear Regression
+else if Configuration File has multilinear Regression
+System -> System : make the report with average age and positive tests Linear Regression
+end
+activate System
+System -> OE: Sends Report to NHS
+deactivate System
+
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor "Time" as OE
+
+activate OE
+activate System
+OE -> System : Time = 6:00 am
+alt if Configuration File has simple Linear Regression
+System -> System : make the report to NHS with average age or positive tests Linear Regression
+else if Configuration File has multilinear Regression
+System -> System : make the report with average age and positive tests Linear Regression
+end
+activate System
+System -> OE: Sends Report to NHS
+deactivate System
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

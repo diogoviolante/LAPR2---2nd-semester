@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LabValidationUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">LabValidationUI.java</span></div><h1>LabValidationUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.LabCoordinatorController;
+
+import app.controller.RegisterResultController;
+import app.domain.model.Results;
+import app.domain.Store.DiagnosisStore;
+import app.domain.model.*;
+import app.domain.shared.*;
+import app.dto.validationCoordinatorDto;
+import app.ui.console.utils.Utils;
+import auth.domain.model.Email;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+<span class="nc" id="L23">public class LabValidationUI implements Runnable, ListDates, validTests, ListofTests,PastTests {</span>
+
+<span class="nc" id="L25">    private Scanner ler = new Scanner(System.in);</span>
+    private boolean check;
+<span class="nc" id="L27">    private DiagnosisStore d = new DiagnosisStore();</span>
+    private Results r;
+    private Long testCode;
+    private String index_list;
+    private Company company;
+    private int index_int;
+<span class="nc" id="L33">    private LabCoordinatorController controller= new LabCoordinatorController();</span>
+    private int count;
+    private String code;
+<span class="nc" id="L36">    private RegisterResultController contr = new RegisterResultController();</span>
+    private Email email;
+    private Test test;
+
+
+    @Override
+    public void run() {
+       try {
+
+<span class="nc" id="L45">           company = new Company(&quot;ManyLabs&quot;);</span>
+            /*
+            lista.add(&quot;yau&quot;);
+            param.add(&quot;parametros&quot;);
+
+            Client client= new Client(&quot;Rodrigo&quot;,1234567891234567L,12345678911L,1234567891L,1234567891L,new Date(&quot;27/05/2002&quot;),&quot;Client&quot;, new Email(&quot;123@yau.com&quot;));
+            TesteType tt= new TesteType(&quot;cenas&quot;,&quot;blood&quot;,&quot;swab&quot;,12345,lista);
+            Client client2= new Client(&quot;yau&quot;,1234567891234568L,12345678912L,1234567891L,1234567892L,new Date(&quot;23/02/1997&quot;),&quot;Client&quot;, new Email(&quot;123@yauyau.com&quot;));
+            Test test= new Test(client,123456789111L, &quot;123456789111&quot;, &quot;cenas&quot;, lista, param, 12425, new Date());
+*/
+
+<span class="nc" id="L56">            System.out.println(&quot;Please insert the code of the test.&quot;);</span>
+<span class="nc" id="L57">            code = ler.next();</span>
+
+<span class="nc bnc" id="L59" title="All 2 branches missed.">            for (AllDates dates1: datesList) {</span>
+<span class="nc" id="L60">                System.out.println(dates1);</span>
+<span class="nc" id="L61">            }</span>
+
+<span class="nc" id="L63">            count = 0;</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            for (AllDates dates: datesList) {</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">                if (dates.getCode().equals(code)){</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">                    if (dates.getDate() != null)</span>
+<span class="nc" id="L67">                        count++;</span>
+                }
+<span class="nc" id="L69">            }</span>
+
+<span class="nc bnc" id="L71" title="All 2 branches missed.">            for (Test yau: listOfTests){</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">                if (yau.getCode().equals(code)){</span>
+<span class="nc" id="L73">                    test=yau;</span>
+<span class="nc" id="L74">                    email=yau.getClient().getEmail();</span>
+                }
+<span class="nc" id="L76">            }</span>
+
+
+<span class="nc bnc" id="L79" title="All 2 branches missed.">            if (count != 4) {</span>
+<span class="nc" id="L80">                System.out.println(&quot;There aren't enough dates to continue.&quot;);</span>
+
+            } else {
+<span class="nc" id="L83">                validTests.add(test);</span>
+<span class="nc" id="L84">                    System.out.println();</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">                    for (Test validtestes: validTests )</span>
+<span class="nc" id="L86">                        System.out.println(&quot;Do you want to validate this test?&quot;);</span>
+<span class="nc" id="L87">                        System.out.println(&quot;\n1. Yes \n2. No&quot;);</span>
+<span class="nc" id="L88">                        String input = ler.next();</span>
+
+<span class="nc bnc" id="L90" title="All 2 branches missed.">                        if (input.equals((&quot;1&quot;))) {</span>
+<span class="nc" id="L91">                            controller.AddValidationCoordinator(test);</span>
+
+<span class="nc" id="L93">                            System.out.println(&quot;Operation successful&quot;);</span>
+<span class="nc" id="L94">                            File log = new File(&quot;C:\\Users\\Carrusca\\Documents\\lei-21-s2-1df-g25\\files\\files&quot;+code+&quot;.txt&quot;);</span>
+                            try {
+<span class="nc bnc" id="L96" title="All 2 branches missed.">                                if (!log.exists()) {</span>
+<span class="nc" id="L97">                                    System.out.println(&quot;We had to make a new file.&quot;);</span>
+<span class="nc" id="L98">                                    log.createNewFile();</span>
+                                }
+<span class="nc" id="L100">                                PrintWriter out = new PrintWriter(new FileWriter(log, true));</span>
+<span class="nc" id="L101">                                out.append(&quot;\n Email : &quot; + email + &quot;\n Your test : &quot; + code + &quot; is now available for you to check!\n&quot;);</span>
+<span class="nc" id="L102">                                out.close();</span>
+<span class="nc" id="L103">                            } catch (IOException e) {</span>
+<span class="nc" id="L104">                                System.out.println(&quot;COULD NOT LOG!!&quot;);</span>
+<span class="nc" id="L105">                            }</span>
+<span class="nc" id="L106">                        } else {</span>
+<span class="nc" id="L107">                            System.out.println(&quot;Operation cancelled&quot;);</span>
+                        }
+                    }
+<span class="nc" id="L110">                    count = 0;</span>
+<span class="nc" id="L111">            }catch(Exception e){</span>
+<span class="nc" id="L112">            System.out.println(e);</span>
+<span class="nc" id="L113">           }</span>
+<span class="nc" id="L114">        }</span>
+    }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

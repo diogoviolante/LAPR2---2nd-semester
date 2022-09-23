@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewTestController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.controller</a> &gt; <span class="el_source">NewTestController.java</span></div><h1>NewTestController.java</h1><pre class="source lang-java linenums">package app.controller;
+import app.domain.Store.ParameterStore;
+import app.domain.model.Company;
+
+import app.domain.model.Parameter;
+import app.domain.model.ParameterCategory;
+import app.domain.model.TesteType;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NewTestController {
+<span class="fc" id="L13">    private final ParameterStore store= new ParameterStore();</span>
+    private TesteType newTest;
+    private Company company;
+
+
+    //List&lt;ParameterCategory&gt; listacategorias = new ArrayList&lt;ParameterCategory&gt;();
+
+    public NewTestController() {
+<span class="fc" id="L21">        this(App.getInstance().getCompany());</span>
+<span class="fc" id="L22">    }</span>
+
+    /**
+     * calls company method to add a new test
+     *
+     * @return test if sucessfuly validated
+     */
+
+<span class="fc" id="L30">    public NewTestController(Company company) {</span>
+<span class="fc" id="L31">        this.company = company;</span>
+<span class="fc" id="L32">        this.newTest = null;</span>
+<span class="fc" id="L33">    }</span>
+
+    public TesteType addNewTest(String name, String descriptionTest, String collectingMethods, String code, List&lt;ParameterCategory&gt; parameterCategoryList) {
+<span class="nc" id="L36">        return this.company.addNewTest(name, descriptionTest,collectingMethods, code, parameterCategoryList);</span>
+    }
+
+    public boolean saveNewTest(TesteType newTest) {
+<span class="nc" id="L40">        return this.company.saveNewTest(newTest);</span>
+    }
+
+
+
+
+    /**
+     * calls company method to save a test
+     */
+
+
+    public List&lt;TesteType&gt; getNewTestContainer() {
+<span class="nc" id="L52">        return company.getNewTestContainer();</span>
+    }
+    public List&lt;ParameterCategory&gt; getCategoryList(){
+<span class="nc" id="L55">        return company.getParameterCategoryList();</span>
+    }
+
+    /*public boolean associateCategory(ParameterCategory category){
+        return TestType.associateNewCategory(category);
+    }
+
+     */
+
+    public ParameterCategory getCategoryByCode(String name){
+<span class="nc" id="L65">        return company.getParameterCategoryByName(name);</span>
+    }
+public boolean associateParameter(Parameter parameter){
+<span class="nc" id="L68">        return newTest.associateNewParameter(parameter);</span>
+
+}
+public Parameter getParameterByCode(String paramtercode){
+<span class="nc" id="L72">        return store.getParameterByCode(paramtercode);</span>
+}
+
+public List&lt;Parameter&gt; getParamterList() {
+<span class="nc" id="L76">    return store.getParamterList();</span>
+}
+}
+
+
+
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

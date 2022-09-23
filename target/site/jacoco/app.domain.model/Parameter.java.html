@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Parameter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Parameter.java</span></div><h1>Parameter.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Objects;
+
+public class Parameter implements Serializable {
+    /**
+     * Code of the parameter.
+     */
+    private String parameterCode;
+    /**
+     * Name of the parameter.
+     */
+    private String shortName;
+    /**
+     * Description of the parameter.
+     */
+    private String description;
+    /**
+     * Category of the parameter.
+     */
+    private String category;
+private List&lt;Parameter&gt; parameterList;
+    /**
+     * Paramter Constructor.
+     * @param parameterCode parameter code
+     * @param shortName
+     * @param description
+     * @param category
+     */
+<span class="fc" id="L34">    public Parameter(String parameterCode,String shortName, String description, String category){</span>
+<span class="fc" id="L35">        validateDescription(description);</span>
+<span class="fc" id="L36">        validateParameterCode(parameterCode);</span>
+<span class="fc" id="L37">        validateShortName(shortName);</span>
+<span class="fc" id="L38">        validateCategory(category);</span>
+<span class="fc" id="L39">    }</span>
+
+    public String getParameterCode() {
+<span class="fc" id="L42">        return parameterCode;</span>
+    }
+
+    public String getShortName() {
+<span class="fc" id="L46">        return shortName;</span>
+    }
+
+    public String getDescription() {
+<span class="fc" id="L50">        return description;</span>
+    }
+
+    public String getCategory() {
+<span class="nc" id="L54">        return category;</span>
+    }
+
+
+    /**
+     * Method that validates the cod of the parameter.
+     * @param parameterCode code of the parameter.
+     */
+    public final void validateParameterCode(String parameterCode){
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if(parameterCode.length() != 5){</span>
+<span class="fc" id="L64">            throw new IllegalArgumentException(&quot;Invalid code, please insert a code with 5 numbers&quot;);</span>
+        }
+<span class="fc" id="L66">        this.parameterCode=parameterCode;</span>
+<span class="fc" id="L67">    }</span>
+    /**
+     * Method that validates the name of the parameter.
+     * @param shortName name of the parameter.
+     */
+    public final void validateShortName(String shortName){
+<span class="pc bpc" id="L73" title="2 of 6 branches missed.">        if(StringUtils.isBlank(shortName)||shortName.trim().isEmpty()||shortName.trim().length()&gt;8){</span>
+<span class="fc" id="L74">            throw new IllegalArgumentException((&quot;Invalid short name, please insert a short name with 8 characters or less&quot;));</span>
+        }
+<span class="fc" id="L76">        this.shortName=shortName;</span>
+<span class="fc" id="L77">    }</span>
+
+    /**
+     * Method that validates the name of the parameter.
+     * @param description description of the parameter.
+     */
+    public final void validateDescription( String description){
+<span class="pc bpc" id="L84" title="2 of 6 branches missed.">        if(StringUtils.isBlank(description)|| description.trim().isEmpty()||description.length()&gt;20){</span>
+<span class="fc" id="L85">            throw new IllegalArgumentException(&quot;Invalid description, please insert a description with 20 characters or less&quot;);</span>
+        }
+
+<span class="fc" id="L88">        this.description=description;</span>
+<span class="fc" id="L89">    }</span>
+
+    /**
+     * Method that validates the category of the parameter.
+     * @param category category of the parameter.
+     */
+    public final void validateCategory(String category) {
+<span class="pc bpc" id="L96" title="4 of 8 branches missed.">        if (StringUtils.isBlank(category) || category.trim().isEmpty() || category.trim().length() &gt; 8 || category.trim().length() &lt; 4 ) {</span>
+<span class="nc" id="L97">            throw new IllegalArgumentException(&quot;Invalid category!&quot;);</span>
+        }
+<span class="fc" id="L99">        this.category = category;</span>
+<span class="fc" id="L100">    }</span>
+
+    /**
+     * Method that turns the parameter created into a String.
+     * @return parameter in String.
+     */
+    @Override
+    public String toString(){
+<span class="nc" id="L108">        return String.format(&quot;%s-shortname, %s -code, %s -description, %s -category&quot;, shortName,parameterCode,description, category);</span>
+    }
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L112" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L113" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L114">        Parameter parameter = (Parameter) o;</span>
+<span class="nc bnc" id="L115" title="All 6 branches missed.">        return Objects.equals(parameterCode, parameter.parameterCode) &amp;&amp; Objects.equals(shortName, parameter.shortName) &amp;&amp; Objects.equals(description, parameter.description);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L120">        return Objects.hash(parameterCode, shortName, description);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

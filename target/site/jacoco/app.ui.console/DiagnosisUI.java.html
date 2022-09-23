@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DiagnosisUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">DiagnosisUI.java</span></div><h1>DiagnosisUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.DiagnosisController;
+import app.domain.model.Company;
+import app.domain.model.Test;
+import app.domain.shared.ListofTests;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class DiagnosisUI implements Runnable, ListofTests {
+<span class="nc" id="L12">    Scanner ler = new Scanner(System.in);</span>
+<span class="nc" id="L13">    Company company = new Company(&quot;Many labs&quot;);</span>
+    private final DiagnosisController diagnosisController;
+<span class="nc" id="L15">    private Date date = new Date();</span>
+<span class="nc" id="L16">    public DiagnosisUI() {</span>
+<span class="nc" id="L17">        this.diagnosisController = new DiagnosisController();</span>
+<span class="nc" id="L18">    }</span>
+    private String code;
+
+    @Override
+    public void run() {
+        try {
+<span class="nc" id="L24">            System.out.println(diagnosisController.getDiagnosisList());</span>
+<span class="nc" id="L25">            int size = diagnosisController.getDiagnosisList().size();</span>
+            //meter aqui a lista de testes do violante para escolher o teste para dar report
+<span class="nc" id="L27">            int boolea =0;</span>
+            do {
+<span class="nc" id="L29">                System.out.println(&quot;Insert Tax Identification number.&quot;);</span>
+<span class="nc" id="L30">            Long tin = ler.nextLong();</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">            for (Test listTest : listOfTests) {</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">               if (tin.equals(listTest.getClient().getTaxNumber())) {</span>
+<span class="nc" id="L33">                   code = listTest.getCode();</span>
+                }
+<span class="nc" id="L35">            }</span>
+
+
+
+                try{
+<span class="nc bnc" id="L40" title="All 2 branches missed.">                    if (code==null){</span>
+<span class="nc" id="L41">                        throw new IllegalArgumentException();</span>
+                    }
+<span class="nc" id="L43">                    boolea =1;</span>
+<span class="nc" id="L44">                }catch (IllegalArgumentException i){</span>
+<span class="nc" id="L45">                    System.out.println(&quot;The given code does not match any client's test.&quot;);</span>
+<span class="nc" id="L46">                }</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            }while(boolea==0);</span>
+
+<span class="nc" id="L49">            System.out.println(&quot;Insert the report text&quot;);</span>
+<span class="nc" id="L50">            String report = ler.nextLine();</span>
+<span class="nc" id="L51">            String report1 = ler.nextLine();</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            if (this.diagnosisController.getDiagnosis(report1,date, code)) {</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">                if (this.diagnosisController.saveDiagnosis(code)) {</span>
+<span class="nc" id="L54">                    System.out.println(&quot;The report was saved sucessfully&quot;);</span>
+                } else {
+<span class="nc" id="L56">                    System.out.println(&quot;The report wasn't saved&quot;);</span>
+                }
+
+            } else {
+<span class="nc" id="L60">                System.out.println(&quot;The report wasn't saved&quot;);</span>
+            }
+<span class="nc bnc" id="L62" title="All 2 branches missed.">            if (diagnosisController.getDiagnosisList().size() == size) {</span>
+<span class="nc" id="L63">                System.out.println(&quot;Error, it wasn't added any report to the test&quot;);</span>
+            }
+
+<span class="nc" id="L66">        } catch (IllegalArgumentException iaex) {</span>
+<span class="nc" id="L67">            System.out.println(iaex.getMessage());</span>
+<span class="nc" id="L68">        } catch (NullPointerException nullPointerException) {</span>
+<span class="nc" id="L69">            System.out.println(&quot;Invalid data(NULL)!&quot;);</span>
+<span class="nc" id="L70">        }</span>
+
+<span class="nc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="432.5px" preserveAspectRatio="none" style="width:1107px;height:432px;background:#FFFFFF;" version="1.1" viewBox="0 0 1107 432" width="1107.5px" zoomAndPan="magnify"><defs><filter height="300%" id="faxgme305x5wo" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="190.5078" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="23.125" y="124.5117"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="515.625" y="152.4512"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.5" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="515.625" y="266.2695"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="753.125" y="190.3906"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="86.6895" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="990.625" y="228.3301"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="28.75" x2="28.75" y1="112.0117" y2="326.2695"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="521.25" x2="521.25" y1="112.0117" y2="326.2695"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="758.75" x2="758.75" y1="112.0117" y2="326.2695"/><line style="stroke:#A80036;stroke-width:1.25;stroke-dasharray:5.0,5.0;" x1="996.875" x2="996.875" y1="112.0117" y2="326.2695"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="38.75" x="6.25" y="108.1665">Time</text><ellipse cx="29.375" cy="18.75" fill="#FEFECE" filter="url(#faxgme305x5wo)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M29.375,28.75 L29.375,62.5 M13.125,38.75 L45.625,38.75 M29.375,62.5 L13.125,81.25 M29.375,62.5 L45.625,81.25 " fill="none" filter="url(#faxgme305x5wo)" style="stroke:#A80036;stroke-width:2.5;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="38.75" x="6.25" y="343.186">Time</text><ellipse cx="29.375" cy="359.5313" fill="#FEFECE" filter="url(#faxgme305x5wo)" rx="10" ry="10" style="stroke:#A80036;stroke-width:2.5;"/><path d="M29.375,369.5313 L29.375,403.2813 M13.125,379.5313 L45.625,379.5313 M29.375,403.2813 L13.125,422.0313 M29.375,403.2813 L45.625,422.0313 " fill="none" filter="url(#faxgme305x5wo)" style="stroke:#A80036;stroke-width:2.5;"/><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="168.75" x="435" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="151.25" x="443.75" y="93.1665">:AutomaticReportUI</text><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="168.75" x="435" y="325.0195"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="151.25" x="443.75" y="351.936">:AutomaticReportUI</text><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="231.25" x="641.25" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="213.75" x="650" y="93.1665">:AutomaticReportController</text><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="231.25" x="641.25" y="325.0195"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="213.75" x="650" y="351.936">:AutomaticReportController</text><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="192.5" x="898.125" y="66.25"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="175" x="906.875" y="93.1665">:MultilinearRegression</text><rect fill="#FEFECE" filter="url(#faxgme305x5wo)" height="39.5117" style="stroke:#A80036;stroke-width:1.875;" width="192.5" x="898.125" y="325.0195"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacing" textLength="175" x="906.875" y="351.936">:MultilinearRegression</text><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="190.5078" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="23.125" y="124.5117"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="515.625" y="152.4512"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.5" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="515.625" y="266.2695"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="37.9395" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="753.125" y="190.3906"/><rect fill="#FFFFFF" filter="url(#faxgme305x5wo)" height="86.6895" style="stroke:#A80036;stroke-width:1.25;" width="12.5" x="990.625" y="228.3301"/><polygon fill="#A80036" points="500.625,147.4512,513.125,152.4512,500.625,157.4512,505.625,152.4512" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="35.625" x2="508.125" y1="152.4512" y2="152.4512"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="456.25" x="44.375" y="146.3806">(Time = 6:00 am) starts the process to send the Report to NHS</text><polygon fill="#A80036" points="738.125,185.3906,750.625,190.3906,738.125,195.3906,743.125,190.3906" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="521.875" x2="745.625" y1="190.3906" y2="190.3906"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="201.25" x="530.625" y="184.3201">creatMultilinearRegression()</text><polygon fill="#A80036" points="975.625,223.3301,988.125,228.3301,975.625,233.3301,980.625,228.3301" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="759.375" x2="983.125" y1="228.3301" y2="228.3301"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="201.25" x="768.125" y="222.2595">creatMultilinearRegression()</text><polygon fill="#A80036" points="49.375,261.2695,36.875,266.2695,49.375,271.2695,44.375,266.2695" style="stroke:#A80036;stroke-width:1.25;"/><line style="stroke:#A80036;stroke-width:1.25;" x1="41.875" x2="514.375" y1="266.2695" y2="266.2695"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacing" textLength="153.75" x="56.875" y="260.199">sends Report to NHS</text><!--MD5=[decefaa10f7e4d1313991c6b5dff67d6]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor "Time" as ADM
+
+
+participant ":AutomaticReportUI" as UI
+participant ":AutomaticReportController" as CTRL
+participant ":MultilinearRegression" as MUL
+
+
+
+activate ADM
+ADM -> UI: (Time = 6:00 am) starts the process to send the Report to NHS
+activate UI
+UI -> CTRL: creatMultilinearRegression()
+deactivate UI
+activate CTRL
+CTRL -> MUL : creatMultilinearRegression()
+deactivate CTRL
+activate MUL
+deactivate MUL
+UI-> ADM : sends Report to NHS
+activate UI
+deactivate CTRL
+deactivate UI
+
+
+@enduml
+
+@startuml
+
+actor "Time" as ADM
+
+
+participant ":AutomaticReportUI" as UI
+participant ":AutomaticReportController" as CTRL
+participant ":MultilinearRegression" as MUL
+
+
+
+activate ADM
+ADM -> UI: (Time = 6:00 am) starts the process to send the Report to NHS
+activate UI
+UI -> CTRL: creatMultilinearRegression()
+deactivate UI
+activate CTRL
+CTRL -> MUL : creatMultilinearRegression()
+deactivate CTRL
+activate MUL
+deactivate MUL
+UI-> ADM : sends Report to NHS
+activate UI
+deactivate CTRL
+deactivate UI
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: Dynamic Code Evolution 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

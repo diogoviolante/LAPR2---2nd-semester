@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreateParameterCategoryUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.ui.console</a> &gt; <span class="el_source">CreateParameterCategoryUI.java</span></div><h1>CreateParameterCategoryUI.java</h1><pre class="source lang-java linenums">package app.ui.console;
+
+import app.controller.ParameterCategoryController;
+import app.domain.model.Company;
+
+import java.util.Scanner;
+
+<span class="nc" id="L8">public class CreateParameterCategoryUI implements Runnable {</span>
+<span class="nc" id="L9">    private Scanner ler = new Scanner(System.in);</span>
+    private String code;
+    private String name;
+    private Company company;
+    private String checker;
+
+
+    public void run() {
+<span class="nc" id="L17">        company = new Company(&quot;Many labs&quot;);</span>
+<span class="nc" id="L18">        ParameterCategoryController controller= new ParameterCategoryController(company);</span>
+        do {
+<span class="nc" id="L20">        System.out.println(&quot;Code: &quot;);</span>
+<span class="nc" id="L21">        code = ler.nextLine();</span>
+<span class="nc" id="L22">        System.out.println(&quot;Name: &quot;);</span>
+<span class="nc" id="L23">        name = ler.nextLine();</span>
+
+
+
+<span class="nc" id="L27">            System.out.println(&quot;Do you confirm this data?&quot;);</span>
+<span class="nc" id="L28">            System.out.println(&quot;Parameter Category: Code= &quot; + code + &quot; &quot; + &quot;Name= &quot; + name);</span>
+<span class="nc" id="L29">            System.out.println(&quot;1- Yes&quot;);</span>
+<span class="nc" id="L30">            System.out.println(&quot;2- No&quot;);</span>
+<span class="nc" id="L31">            checker=ler.nextLine();</span>
+<span class="nc bnc" id="L32" title="All 4 branches missed.">        } while (!((checker.equals(&quot;1&quot;) || (checker.equals(&quot;2&quot;)))));</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">            if (checker.equals(&quot;1&quot;)) {</span>
+<span class="nc" id="L34">                controller.createParameterCategory(code, name);</span>
+<span class="nc" id="L35">                System.out.println(&quot;New Parameter Category created successfully!&quot;);</span>
+<span class="nc" id="L36">                controller.saveParameterCategory();</span>
+<span class="nc" id="L37">                System.out.println(&quot;New Parameter Category saved successfully!&quot;);</span>
+<span class="nc" id="L38">                System.out.println(&quot;Operation successfull&quot;);</span>
+<span class="nc" id="L39">            } else System.out.println(&quot;Operation Uncessful&quot;);</span>
+<span class="nc" id="L40">        System.out.println(company.getParameterCategoryList());</span>
+<span class="nc" id="L41">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

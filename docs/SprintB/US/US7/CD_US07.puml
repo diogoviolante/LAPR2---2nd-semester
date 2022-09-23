@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class RegisterEmployeeUI{}
+
+hide RegisterEmployeeUI members
+
+
+class RegisterEmployeeUIController {
+creatEmployee(id, name, address, phoneNumber, email, SOC)
+creatSpecialistDoctor(id, name, address, phoneNumber, email, SOC, indexNumber)
+saveEmployee()
+}
+
+
+class Company {
+emp = creatEmployee(id, name, address, phoneNumber, email, SOC)
+emp = creatSpecialistDoctor(id, name, address, phoneNumber, email, SOC, indexNumber)
+saveEmployee(emp)
+validateEmployee(emp)
+addEmployee(emp)
+}
+
+
+class Employee {
+creatEmployee(id, name, address, phoneNumber, email, SOC)
+creatSpecialistDoctor(id, name, address, phoneNumber, email, SOC, indexNumber)
+}
+
+
+RegisterEmployeeUI ..> RegisterEmployeeUIController
+RegisterEmployeeUIController ..> Company
+Company ..> Employee
+
+
+@enduml
+

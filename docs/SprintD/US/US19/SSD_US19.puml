@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Time" as OE
+
+activate OE
+activate System
+OE -> System : Time = 6:00 am
+alt if Configuration File has simple Linear Regression
+System -> System : make the report to NHS with average age or positive tests Linear Regression
+else if Configuration File has multilinear Regression
+System -> System : make the report with average age and positive tests Linear Regression
+end
+activate System
+System -> OE: Sends Report to NHS
+deactivate System
+
+
+@enduml

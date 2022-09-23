@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.loginScenes.LogInUI">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: C3FFC4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="DARKEN" fitHeight="250.0" fitWidth="320.0" layoutX="15.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ImageOne.jpeg" />
+               </image>
+            </ImageView>
+            <Text layoutX="128.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Many Labs">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="415.0" style="-fx-background-color: FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textField" layoutX="100.0" layoutY="224.0" promptText="Email" style="-fx-border-color: C3FFC4; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="textField2" layoutX="100.0" layoutY="280.0" promptText="Password" style="-fx-border-color: C3FFC4; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="105.0" layoutY="91.0" prefHeight="90.0" prefWidth="136.0" text="LOGIN MENU">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="149.0" layoutY="338.0" mnemonicParsing="false" onAction="#loginButton" style="-fx-background-color: FFFFFF; -fx-border-color: C3FFC4;" text="Login" />
+            <Button layoutX="324.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitWindow" text="X" fx:id="xButton" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

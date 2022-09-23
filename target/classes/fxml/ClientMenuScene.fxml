@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.clienteScenes.ClientMenuSceneUI">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="TOP_RIGHT" layoutX="574.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitWindow" text="X" fx:id="xButton" />
+            <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" layoutX="199.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ImageOne.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="236.0" layoutY="43.0" text="CLIENT MENU">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: C3FFC4;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="resultButton" layoutX="247.0" layoutY="60.0" mnemonicParsing="false" onAction="#checkResult" style="-fx-background-color: BCBCBC; -fx-border-color: FFFFFF;" text="Check my results" />
+            <Button fx:id="updateButton" layoutX="225.0" layoutY="100.0" mnemonicParsing="false" onAction="#updateData" style="-fx-background-color: BCBCBC; -fx-border-color: FFFFFF;" text="Update my personal data" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

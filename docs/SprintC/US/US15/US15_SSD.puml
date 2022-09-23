@@ -1,0 +1,17 @@
+@startuml
+autonumber
+actor "Administrator" as OE
+
+activate OE
+OE -> ":System" : want to validate chemical test and respective diagnosis
+activate ":System"
+":System" --> OE : presents the list of tests that are available to be validate
+deactivate ":System"
+OE -> ":System" : chooses the test he wants to validate from the list
+activate ":System"
+":System" --> OE : informs the validation of the test
+deactivate ":System"
+
+deactivate OE
+
+@enduml

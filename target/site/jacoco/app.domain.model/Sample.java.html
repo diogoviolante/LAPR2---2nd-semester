@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Sample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Sample.java</span></div><h1>Sample.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+import app.domain.shared.ListDates;
+import net.sourceforge.barbecue.Barcode;
+import net.sourceforge.barbecue.BarcodeFactory;
+import net.sourceforge.barbecue.BarcodeImageHandler;
+import java.io.File;
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
+
+
+public class Sample implements ListDates, Serializable {
+
+
+    /**
+     * Calendar instance
+     */
+    Calendar calendar;
+
+
+    /**
+     * Date of the sample
+     */
+    private Date dateSamplesCollected;
+
+
+    /**
+     * code of the test.
+     */
+    private String code;
+
+
+    /**
+     * Creates sample
+     *
+     * @throws Exception exception
+     */
+<span class="fc" id="L39">    public Sample(String code) throws Exception {</span>
+<span class="fc" id="L40">        this.calendar = Calendar.getInstance();</span>
+<span class="fc" id="L41">        this.dateSamplesCollected = calendar.getTime();</span>
+<span class="fc" id="L42">        this.code = code;</span>
+<span class="fc" id="L43">        generateEAN13BarcodeImage(String.valueOf(code));</span>
+<span class="fc" id="L44">    }</span>
+
+
+    /**
+     * Generates barcode
+     *
+     * @param barcodeText the barcode text
+     */
+    public void generateEAN13BarcodeImage(String barcodeText) throws Exception {
+<span class="fc" id="L53">        Barcode barcode = BarcodeFactory.createEAN13(barcodeText);</span>
+<span class="fc" id="L54">        barcode.setPreferredBarHeight(100);</span>
+<span class="fc" id="L55">        BarcodeImageHandler.saveJPEG(barcode, new File(&quot;Barcodes/Barcode_&quot; + barcodeText + &quot;.jpeg&quot;));</span>
+<span class="fc" id="L56">    }</span>
+
+
+
+
+    /**
+     * Date of the sample
+     *
+     * @return date
+     */
+    public Date getDateSamplesCollected() {
+<span class="fc" id="L67">        return dateSamplesCollected;</span>
+    }
+
+
+
+    /**
+     * Textual description of sample
+     *
+     * @return string of sample
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L79">        return &quot;Sample{&quot; +</span>
+                &quot;date=&quot; + dateSamplesCollected +
+                &quot;, barcodeText='&quot; + code + '\'' +
+                '}';
+    }
+
+
+
+    /**
+     * Returns string with barcode
+     *
+     * @return barcode
+     */
+    public String getCode() {
+<span class="fc" id="L93">        return code;</span>
+    }
+
+
+
+    public void setCode(String code) {
+<span class="fc" id="L99">        this.code = code;</span>
+<span class="fc" id="L100">    }</span>
+
+
+
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

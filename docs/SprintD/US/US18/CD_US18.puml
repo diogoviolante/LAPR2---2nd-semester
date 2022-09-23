@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface ListOfTests
+interface ListOfClients
+
+class ReportUI {
+}
+
+
+class ReportController {
+-Tests
+-AverageAge
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
++creatMultilinearRegression()
+}
+
+
+
+
+class LinearRegression {
++creatLinearRegressionTests()
++creatLinearRegressionAverageAge()
+}
+
+
+class MultilinearRegression {
++creatMultilinearRegression()
+}
+
+ReportUI ..> ReportController
+ReportController  ..>  LinearRegression
+ReportController  ..>  MultilinearRegression
+ReportController "1" -> "1" ListOfTests : implements >
+ReportController "1" -left-> "1" ListOfClients : implements >
+
+
+@enduml

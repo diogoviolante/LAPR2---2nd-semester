@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Company.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.domain.model</a> &gt; <span class="el_source">Company.java</span></div><h1>Company.java</h1><pre class="source lang-java linenums">package app.domain.model;
+
+
+import app.controller.RegisterResultController;
+import app.domain.Store.AvailableTestStore;
+import app.domain.Store.ClientStore;
+import app.domain.Store.ClinicalAnalysisLabStore;
+import app.domain.Store.TestStore;
+import app.domain.shared.*;
+import auth.AuthFacade;
+import auth.domain.model.Email;
+import auth.domain.model.Password;
+import com.example3.CovidReferenceValues1API;
+import com.example1.ExternalModule3API;
+import org.apache.commons.lang3.StringUtils;
+import java.io.*;
+import java.util.Date;
+import java.util.List;
+
+
+/**
+ *
+ * @author Paulo Maio &lt;pam@isep.ipp.pt&gt;
+ */
+public class Company implements ListofTests, ListOfSamples, ListDates, ListOfResults, ListaCategorias, ListOfParameters, ListOfTypes, ListOfEmployees, PastTests,ListOfClients  {
+
+    private Date date;
+    private Client client;
+    private String designation;
+    private AuthFacade authFacade;
+    private List&lt;Test&gt; testList;
+    private List&lt;Sample&gt; sampleList;
+    private List&lt;Test&gt; testWithoutSampleList;
+    private TestStore testStore;
+    private AvailableTestStore availableTestStore;
+    private long testCodeToGenerate;
+    private Sample BarcodeGenerator;
+
+    /**
+     * Auxiliar variable
+     */
+<span class="fc" id="L42">    private int counter = 0;</span>
+
+
+<span class="fc" id="L45">    public Company(String designation) {</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (StringUtils.isBlank(designation))</span>
+<span class="nc" id="L47">            throw new IllegalArgumentException(&quot;Designation cannot be blank.&quot;);</span>
+
+<span class="fc" id="L49">        this.designation = designation;</span>
+<span class="fc" id="L50">        this.authFacade = new AuthFacade();</span>
+<span class="fc" id="L51">        this.testStore = new TestStore();</span>
+<span class="fc" id="L52">        this.availableTestStore = new AvailableTestStore();</span>
+<span class="fc" id="L53">    }</span>
+
+    public String getDesignation() {
+<span class="fc" id="L56">        return designation;</span>
+    }
+
+    public AuthFacade getAuthFacade() {
+<span class="fc" id="L60">        return authFacade;</span>
+    }
+
+    public TesteType addNewTest(String name, String description, String collectingMethods, String code, List&lt;ParameterCategory&gt; parameterCategoryList) {
+<span class="fc" id="L64">        return new TesteType(name, description, collectingMethods, code, parameterCategoryList);</span>
+    }
+
+    public boolean validateNewTest(TesteType newTest) {
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (newTest == null) {</span>
+<span class="fc" id="L69">            return false;</span>
+        }
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        return !this.listTypes.contains(newTest);</span>
+    }
+
+
+    public boolean saveNewTest(TesteType newTest) {
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (!validateNewTest(newTest))</span>
+<span class="nc" id="L77">            return false;</span>
+        /*List&lt;String&gt; cat = new ArrayList&lt;&gt;();
+        cat.add(&quot;bloodcells&quot;);
+        List&lt;String&gt; cat1 = new ArrayList&lt;&gt;();
+        cat1.add(&quot;antibodies&quot;);
+*/
+        /*this.newTestContainer.add(new TesteType(&quot;CVD1&quot;, &quot;covid test&quot;, &quot;swab&quot;, 12345, cat1));
+        this.newTestContainer.add(new TesteType(&quot;BL1&quot;, &quot;blood test&quot;, &quot;blood sample&quot;, 54321, cat));
+
+
+         */
+<span class="fc" id="L88">        return this.listTypes.add(newTest);</span>
+    }
+
+
+
+//-----------------------------Creat a new Employee--------------------------------------------------
+
+    /**
+     * @param role the role of the new employee
+     * @param employeeID the id
+     * @param name the name of the new employee
+     * @param address the address
+     * @param email the email
+     * @param phone_Number the phone number
+     * @param soc the soc number
+     * @return a new Employee
+     */
+    public Employee creatEmployee(String role, String employeeID, String name, String address, Email email, String phone_Number, Long soc) {
+<span class="fc" id="L106">        return new Employee(role, employeeID, name, address, email, phone_Number, soc);</span>
+    }
+
+
+    /**
+     * @param role the role of the new employee
+     * @param employeeID the id
+     * @param name the name of the new employee
+     * @param address the address
+     * @param email the email
+     * @param phone_Number the phone number
+     * @param soc the soc number
+     * @param indexNumber the doctor's number
+     * @return a new Specialist Doctor
+     */
+    public Employee creatSpecialistDoctor(String role, String employeeID, String name, String address, Email email, String phone_Number, Long soc, Long indexNumber) throws Exception {
+<span class="fc" id="L122">        return new Employee(role, employeeID, name, address, email, phone_Number, soc, indexNumber);</span>
+    }
+
+
+    /**
+     * @param employee the employee
+     * @return if a employee already exists
+     */
+    public boolean validateEmployee(Employee employee) {
+<span class="fc bfc" id="L131" title="All 2 branches covered.">        if (employee == null) {</span>
+<span class="fc" id="L132">            return false;</span>
+        } else {
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">            for (Employee employee1 : employeesList) {</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">                if (employee.getName().equalsIgnoreCase(employee1.getName())) {</span>
+<span class="nc" id="L136">                    return false;</span>
+                }
+<span class="nc" id="L138">            }</span>
+<span class="pc bpc" id="L139" title="1 of 2 branches missed.">            return !this.employeesList.contains(employee);</span>
+        }
+    }
+
+
+    /**
+     *  generate login data to the employee
+     *
+     * @param email email of the new employee
+     * @param name name of the new employee
+     * @throws IOException exception ro generate password.
+     */
+    public void generatePass (Email email, String name, String role) throws IOException {
+
+<span class="fc" id="L153">        String pass = Password.generatePW(10);</span>
+<span class="fc" id="L154">        getAuthFacade().addUserWithRole(name, String.valueOf(email), pass, role);</span>
+
+<span class="fc" id="L156">        File file = new File(&quot;Employees\\emailAndSMSMessages.txt&quot;);</span>
+<span class="fc" id="L157">        PrintWriter print = new PrintWriter(new FileWriter(file));</span>
+
+<span class="fc" id="L159">        print.append(&quot;Employee: &quot;).append(name);</span>
+<span class="fc" id="L160">        print.append(&quot;\nEmail: &quot;).append(String.valueOf(email));</span>
+<span class="fc" id="L161">        print.append(&quot;\n Password: &quot;).append(pass);</span>
+<span class="fc" id="L162">        print.close();</span>
+<span class="fc" id="L163">    }</span>
+
+
+
+
+    /**
+     * @param employee to save the employee
+     */
+    public void saveEmployee(Employee employee) {
+<span class="fc bfc" id="L172" title="All 2 branches covered.">        if (validateEmployee(employee)) {</span>
+<span class="fc" id="L173">            this.employeesList.add(employee);</span>
+            try {
+<span class="fc" id="L175">                this.generatePass(employee.getEmail(), employee.getName(), employee.getRole());</span>
+<span class="nc" id="L176">            } catch (IOException e) {</span>
+<span class="nc" id="L177">                e.printStackTrace();</span>
+<span class="fc" id="L178">            }</span>
+        }
+
+<span class="fc" id="L181">    }</span>
+
+//------------------------------------------------------------------------------------
+
+
+
+    /**
+     * @param newTest to save the test
+     */
+
+
+
+    /**
+     * returns the store
+     */
+    public ClinicalAnalysisLabStore getStore() {
+<span class="fc" id="L197">        return new ClinicalAnalysisLabStore(this);</span>
+    }
+
+
+    public ParameterCategory createParameterCategory(String code, String name) {
+<span class="fc" id="L202">        return new ParameterCategory(code, name);</span>
+    }
+
+    /**
+     * @param pc the parameter category
+     * @return false if it's null
+     */
+    public boolean validateParameterCategory(ParameterCategory pc) {
+<span class="pc bpc" id="L210" title="1 of 2 branches missed.">        if (pc == null) {</span>
+<span class="nc" id="L211">            return false;</span>
+        } else {
+<span class="fc bfc" id="L213" title="All 2 branches covered.">            for (ParameterCategory parameterCategory : listacategorias) {</span>
+<span class="pc bpc" id="L214" title="1 of 2 branches missed.">                if (parameterCategory.getCode().equalsIgnoreCase(pc.getCode())) {</span>
+<span class="fc" id="L215">                    return false;</span>
+                }
+<span class="nc" id="L217">            }</span>
+<span class="pc bpc" id="L218" title="1 of 2 branches missed.">            return !this.listacategorias.contains(pc);</span>
+        }
+    }
+
+    /**
+     * @param pc the parameter category
+     * @return false if isn't validated or true if it's added
+     */
+    public boolean saveParameterCategory(ParameterCategory pc) {
+<span class="pc bpc" id="L227" title="1 of 2 branches missed.">        if (!validateParameterCategory(pc))</span>
+<span class="nc" id="L228">            return false;</span>
+<span class="fc" id="L229">        return this.listacategorias.add(pc);</span>
+    }
+
+    public ParameterCategory getParameterCategoryByName(String name) {
+<span class="fc" id="L233">        ParameterCategory parameterCategory = null;</span>
+<span class="pc bpc" id="L234" title="1 of 2 branches missed.">        for (ParameterCategory parameterCategory1 : listacategorias) {</span>
+<span class="pc bpc" id="L235" title="1 of 2 branches missed.">            if (name.equals(parameterCategory1.getName())) {</span>
+<span class="fc" id="L236">                parameterCategory = parameterCategory1;</span>
+
+<span class="fc" id="L238">                return parameterCategory;</span>
+            }
+
+<span class="nc" id="L241">        }</span>
+<span class="nc" id="L242">        return parameterCategory;</span>
+    }
+/*public Parameter getParameterByCode(int paramterCode){
+        for(Parameter parameter : parameterList) {
+            if((parameter.getParameterCode())==paramterCode){
+                return parameter;
+            }
+    }
+return null;
+    }*/
+
+
+
+//------------------------------Collects a Sample------------------------------------------------
+
+    /**
+     * Returns specific test
+     *
+     * @param code code of the test
+     * @return test
+     */
+    public Test getTestByCode(String code) {
+<span class="pc bpc" id="L264" title="1 of 2 branches missed.">        for (Test t : listOfTests) {</span>
+<span class="nc bnc" id="L265" title="All 2 branches missed.">            if (t.getCode().equals(code)) {</span>
+<span class="nc" id="L266">                return t;</span>
+            }
+<span class="nc" id="L268">        }</span>
+<span class="fc" id="L269">        return null;</span>
+    }
+
+
+
+    /**
+     * @return sample list
+     */
+    public List&lt;Sample&gt; getSampleList() {
+<span class="fc" id="L278">        return sampleList;</span>
+    }
+
+
+
+    /**
+     * Registers new sample associated with the test
+     *
+     * @return new sample
+     */
+    public Sample registSample(String code) throws Exception {
+<span class="fc" id="L289">        Sample sample1 = new Sample(code);</span>
+<span class="fc" id="L290">        sample1.generateEAN13BarcodeImage(sample1.getCode());</span>
+<span class="fc" id="L291">        counter++;</span>
+<span class="fc" id="L292">        return sample1;</span>
+    }
+
+
+
+    /**
+     * @param sample the sample
+     * @return false if it's null
+     */
+    public boolean validateSample(Sample sample) {
+<span class="fc bfc" id="L302" title="All 2 branches covered.">        if (sample == null) {</span>
+<span class="fc" id="L303">            return false;</span>
+        } else {
+<span class="fc" id="L305">            String code = sample.getCode();</span>
+<span class="fc" id="L306">            datesList.add(new AllDates(code, new Date(), &quot;Sample&quot;));</span>
+<span class="fc" id="L307">            return true;</span>
+        }
+    }
+
+
+
+    /**
+     * @param sample the sample
+     * @return false if isn't validated or true if it's added
+     */
+    public boolean saveSample(Sample sample) {
+<span class="fc bfc" id="L318" title="All 2 branches covered.">        if (!validateSample(sample)) {</span>
+<span class="fc" id="L319">            return false;</span>
+        }
+<span class="fc" id="L321">        return addSample(sample);</span>
+    }
+
+
+
+    /**
+     * @param sample the sample
+     * @return add sample
+     */
+    public boolean addSample(Sample sample) {
+<span class="fc" id="L331">        return samplesList.add(sample);</span>
+    }
+
+//----------------------------------------------------------------------------------------------
+
+
+
+
+//---------------------------Register test Result----------------------------------------------------
+
+
+
+    /**
+     * choses the test type from a list
+     */
+    public TesteType getTestType(String barCodeString) {
+<span class="pc bpc" id="L347" title="1 of 2 branches missed.">        for (Test t : listOfTests) {</span>
+<span class="nc bnc" id="L348" title="All 2 branches missed.">            for (Sample s : samplesList) {</span>
+<span class="nc bnc" id="L349" title="All 2 branches missed.">                if (s.getCode().equals(barCodeString)) {</span>
+<span class="nc" id="L350">                    return t.getType();</span>
+                }
+<span class="nc" id="L352">            }</span>
+<span class="nc" id="L353">        }</span>
+<span class="fc" id="L354">        return null;</span>
+    }
+
+
+
+    public Test getTestWithBarcode(String barCodeString) {
+<span class="pc bpc" id="L360" title="1 of 2 branches missed.">        for (Test t : listOfTests) {</span>
+<span class="nc bnc" id="L361" title="All 2 branches missed.">            for (Sample s : samplesList) {</span>
+<span class="nc bnc" id="L362" title="All 2 branches missed.">                if (s.getCode().equals(barCodeString)) {</span>
+<span class="nc" id="L363">                    return t;</span>
+                }
+<span class="nc" id="L365">            }</span>
+<span class="nc" id="L366">        }</span>
+<span class="fc" id="L367">        return null;</span>
+    }
+
+    public Test getTestFromBarcode(String barcodeString){
+<span class="pc bpc" id="L371" title="1 of 2 branches missed.">        for (Test list: pastTests){</span>
+<span class="nc bnc" id="L372" title="All 2 branches missed.">            if (list.getCode().equals(barcodeString)){</span>
+<span class="nc" id="L373">                return list;</span>
+            }
+<span class="nc" id="L375">        }</span>
+<span class="fc" id="L376">        return null;</span>
+    }
+
+
+
+    public void addToList(Test t) {
+<span class="fc" id="L382">        datesList.add(new AllDates(t.getCode(), new Date(), &quot;Result&quot;));</span>
+<span class="fc" id="L383">    }</span>
+
+    /**
+     *
+     * @param barcodeString the barcode
+     * @return if its validated
+     */
+    public boolean validateBarcodeString(String barcodeString) {
+<span class="pc bpc" id="L391" title="1 of 2 branches missed.">        if (barcodeString.length() == 12) {</span>
+<span class="fc" id="L392">            return true;</span>
+        } else {
+<span class="nc" id="L394">            return false;</span>
+        }
+    }
+
+    /**
+     *
+     * @param parameter parameter value
+     * @param accessKey access only to authorized employees
+     * @param parameterID covid values
+     * @return result
+     */
+    public String covidAPI1(double parameter, int accessKey, String parameterID) {
+<span class="fc" id="L406">        CovidReferenceValues1API covid = new CovidReferenceValues1API();</span>
+<span class="fc" id="L407">        System.out.println(&quot;Your value:&quot; + parameter);</span>
+<span class="fc" id="L408">        System.out.println(&quot;Metrics:&quot; + covid.usedMetric(parameterID, accessKey));</span>
+<span class="fc" id="L409">        String metrics = covid.usedMetric(parameterID, accessKey);</span>
+        String resultboolean;
+<span class="pc bpc" id="L411" title="1 of 2 branches missed.">        if (parameter &gt;= covid.getMaxReferenceValue(parameterID, accessKey)) {</span>
+<span class="fc" id="L412">            System.out.println(&quot;Tested positive for Covid-19.&quot;);</span>
+<span class="fc" id="L413">            resultboolean = &quot;Positive&quot;;</span>
+        } else {
+<span class="nc" id="L415">            System.out.println(&quot;Tested negative for Covid-19.&quot;);</span>
+<span class="nc" id="L416">            resultboolean = &quot;Negative&quot;;</span>
+        }
+
+<span class="fc" id="L419">        return resultboolean;</span>
+    }
+
+    public String covidAPI11(double parameter, int accessKey, String parameterID) {
+<span class="fc" id="L423">        CovidReferenceValues1API covid = new CovidReferenceValues1API();</span>
+
+<span class="fc" id="L425">        String metrics = covid.usedMetric(parameterID, accessKey);</span>
+        String resultboolean;
+<span class="pc bpc" id="L427" title="1 of 2 branches missed.">        if (parameter &gt;= covid.getMaxReferenceValue(parameterID, accessKey)) {</span>
+<span class="fc" id="L428">            resultboolean = &quot;Positive&quot;;</span>
+        } else {
+<span class="nc" id="L430">            resultboolean = &quot;Negative&quot;;</span>
+        }
+
+<span class="fc" id="L433">        return resultboolean;</span>
+    }
+
+
+    /**
+     *
+     * @param parameter parameter value
+     * @param parameters parameter evaluated
+     * @param accessKey access only to authorized employees
+     * @return result
+     */
+    public String bloodAPI3(double parameter, String parameters, int accessKey) {
+<span class="fc" id="L445">        ExternalModule3API externalModule3API = new ExternalModule3API();</span>
+<span class="fc" id="L446">        String metrics = externalModule3API.usedMetric(parameters, accessKey);</span>
+<span class="fc" id="L447">        System.out.println(&quot;Your value:&quot; + parameter);</span>
+<span class="fc" id="L448">        System.out.println(&quot;Metrics:&quot; + metrics);</span>
+        String resultBoolean;
+<span class="pc bpc" id="L450" title="1 of 2 branches missed.">        if (parameter &gt;= externalModule3API.getMinReferenceValue(parameters, accessKey)</span>
+<span class="pc bpc" id="L451" title="1 of 2 branches missed.">                &amp;&amp; parameter &lt;= externalModule3API.getMaxReferenceValue(parameters, accessKey)) {</span>
+<span class="nc" id="L452">            System.out.println(&quot;The values are normal\n&quot;);</span>
+<span class="nc" id="L453">            resultBoolean = &quot;The values are normal&quot;;</span>
+<span class="pc bpc" id="L454" title="1 of 2 branches missed.">        } else if (parameter &lt; externalModule3API.getMinReferenceValue(parameters, accessKey)) {</span>
+<span class="nc" id="L455">            System.out.println(&quot;The value is less than normal\n&quot;);</span>
+<span class="nc" id="L456">            resultBoolean = &quot;The value is less than normal&quot;;</span>
+<span class="pc bpc" id="L457" title="1 of 2 branches missed.">        } else if (parameter &gt; externalModule3API.getMaxReferenceValue(parameters, accessKey)) {</span>
+<span class="fc" id="L458">            System.out.println(&quot;The value is higher than normal\n&quot;);</span>
+<span class="fc" id="L459">            resultBoolean = &quot;The value is higher than normal&quot;;</span>
+        } else {
+<span class="nc" id="L461">            System.out.println(&quot;The number is not normal\n&quot;);</span>
+<span class="nc" id="L462">            resultBoolean = &quot;The number is not normal&quot;;</span>
+        }
+<span class="fc" id="L464">        return resultBoolean;</span>
+    }
+
+    public String bloodAPI31(double parameter, String parameters, int accessKey) {
+<span class="fc" id="L468">        ExternalModule3API externalModule3API = new ExternalModule3API();</span>
+<span class="fc" id="L469">        String metrics = externalModule3API.usedMetric(parameters, accessKey);</span>
+        String resultBoolean;
+<span class="pc bpc" id="L471" title="1 of 2 branches missed.">        if (parameter &gt;= externalModule3API.getMinReferenceValue(parameters, accessKey)</span>
+<span class="pc bpc" id="L472" title="1 of 2 branches missed.">                &amp;&amp; parameter &lt;= externalModule3API.getMaxReferenceValue(parameters, accessKey)) {</span>
+<span class="nc" id="L473">            resultBoolean = &quot;The values are normal&quot;;</span>
+<span class="pc bpc" id="L474" title="1 of 2 branches missed.">        } else if (parameter &lt; externalModule3API.getMinReferenceValue(parameters, accessKey)) {</span>
+<span class="nc" id="L475">            resultBoolean = &quot;The value is less than normal&quot;;</span>
+<span class="pc bpc" id="L476" title="1 of 2 branches missed.">        } else if (parameter &gt; externalModule3API.getMaxReferenceValue(parameters, accessKey)) {</span>
+<span class="fc" id="L477">            resultBoolean = &quot;The value is higher than normal&quot;;</span>
+        } else {
+<span class="nc" id="L479">            resultBoolean = &quot;The number is not normal&quot;;</span>
+        }
+<span class="fc" id="L481">        return resultBoolean;</span>
+    }
+
+
+
+
+//-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+//public TesteType choseTest(){
+    //     Scanner ler=new Scanner(System.in);
+    //    int code2 =ler.nextInt();
+    //  this.newTestContainer=newTestContainer;
+    //for(TesteType clientTest:newTestContainer){
+    // if (code2==clientTest.getCode()){
+    //return clientTest;
+    //}
+    //}
+
+    //return null;
+//}
+
+
+//------------------------------Register Test---------------------------------------------
+    /**
+     * return client
+     */
+    public Client getClient(Long taxNumber) {
+<span class="fc" id="L513">        return ClientStore.getClient(taxNumber);</span>
+    }
+
+    /**
+     * return test type container
+     */
+    public List&lt;TesteType&gt; getNewTestContainer() {
+<span class="fc" id="L520">        return listTypes;</span>
+    }
+    /**
+     * return ParameterCategoryList
+     */
+    public List&lt;ParameterCategory&gt; getParameterCategoryList() {
+<span class="fc" id="L526">        return listacategorias;</span>
+    }
+    /**
+     * return ParameterList
+     */
+    public List&lt;Parameter&gt; getParametersList() {
+<span class="fc" id="L532">        return parameterList;</span>
+    }
+    /**
+     * return test store
+     */
+    public TestStore getTestStore() {
+<span class="fc" id="L538">        return testStore;</span>
+    }
+    /**
+     * return test list
+     */
+    public List&lt;Test&gt; getTestList() {
+<span class="fc" id="L544">        return this.testStore.getTestList();</span>
+    }
+
+    public List&lt;Client&gt; getClientList(){
+<span class="fc" id="L548">        return clientList;</span>
+    }
+
+    //----------------------------------------------------------------------------------------
+    /**
+     * return validation coordinator list
+     */
+    public List &lt;ValidationCoordinator&gt; getValidationCoordinatorList() throws Exception {
+<span class="nc" id="L556">        return getValidationCoordinatorList();</span>
+    }
+
+    public AvailableTestStore getAvailableTestStore() {
+<span class="fc" id="L560">        return availableTestStore;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,50 @@
+@startuml
+autonumber
+actor "Recpcionist" as OE
+
+activate OE
+OE -> ":System" : asks to register a new test
+activate ":System"
+":System" --> OE : requests data(TIN number)
+deactivate ":System"
+
+
+OE -> ":System" : types requested data
+activate ":System"
+":System" --> OE : shows test type list
+deactivate ":System"
+
+
+OE -> ":System" : chooses test type
+activate ":System"
+loop while scanner!= 0
+":System" --> OE : shows category list
+deactivate ":System"
+
+
+OE -> ":System" : chooses category
+activate ":System"
+end
+loop while scanner!= 0
+":System" --> OE : shows paremeter list
+deactivate ":System"
+
+OE -> ":System" : chooses parameter
+activate ":System"
+end
+":System" --> OE : requestes data (nhs code)
+deactivate ":System"
+
+OE -> ":System" : types requested data
+activate ":System"
+":System" -> OE : requestes data(labID)
+deactivate ":System"
+
+OE -> ":System" : types requested data
+activate ":System"
+":System" --> OE : informs operation success
+deactivate ":System"
+
+deactivate OE
+
+@enduml

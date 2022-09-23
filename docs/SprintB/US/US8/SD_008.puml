@@ -1,0 +1,83 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Administrator as Administrator
+Activate Administrator
+participant ": CreateClinicalAnalysisLabUI" as CreateClinicAnalysisLabUI
+participant ": CreateClinicalAnalysisLabController" as CreateClinicAnalysisLabController
+participant ": Company" as Company
+participant "Store: ClinicalAnalysisLabStore" as storeCAL
+participant "Cal: ClinicalAnalysisLaboratory" as CAL
+participant "Store: TypeOfTestStore" as storeTest
+participant "dto: CreateClinicalAnalysisLabDto" as dto
+
+Administrator -> CreateClinicAnalysisLabUI: Starts the creation of a laboratory
+Activate CreateClinicAnalysisLabUI
+CreateClinicAnalysisLabUI --> Administrator: Requests all data needed
+Deactivate CreateClinicAnalysisLabUI
+Administrator -> CreateClinicAnalysisLabUI: Types all data needed
+
+Activate CreateClinicAnalysisLabUI
+CreateClinicAnalysisLabUI -> CreateClinicAnalysisLabController: getTestTypes()
+Activate CreateClinicAnalysisLabController
+CreateClinicAnalysisLabController ->Company:store= getTypeOfTestStore()
+CreateClinicAnalysisLabController ->storeTest: tot= getTestTypes()
+Deactivate CreateClinicAnalysisLabController
+CreateClinicAnalysisLabUI -> Administrator: presents the existing tests and resquest the selection of one or more
+Deactivate CreateClinicAnalysisLabUI
+Administrator -> CreateClinicAnalysisLabUI: types the requested data
+Activate CreateClinicAnalysisLabUI
+CreateClinicAnalysisLabUI -> CreateClinicAnalysisLabController: createClinicalAnalysisLab(dto)
+Activate CreateClinicAnalysisLabController
+CreateClinicAnalysisLabController -> Company: store=getClinicalAnalysisLabStore(dto)
+CreateClinicAnalysisLabController -> storeCAL : Cal=createClinicalAnalysisLab(dto)
+Deactivate Company
+Activate storeCAL
+storeCAL --> CAL **: create(dto)
+Activate CAL
+Deactivate storeCAL
+CAL -> dto : laboratoryID=getLaboratoryID()
+Activate dto
+Deactivate dto
+CAL -> dto : name=getName()
+Activate dto
+Deactivate dto
+CAL -> dto : address=getAdress()
+Activate dto
+Deactivate dto
+CAL -> dto : phone_Number=getPhone_Number()
+Activate dto
+Deactivate dto
+CAL -> dto : tin_Number=getTin_Number()
+Activate dto
+Deactivate dto
+Deactivate CAL
+CreateClinicAnalysisLabController -> storeCAL: ValidateClinicalAnalysisLab(Cal)
+Activate storeCAL
+Deactivate CreateClinicAnalysisLabController
+Deactivate storeCAL
+Administrator <-- CreateClinicAnalysisLabUI: shows the data and requets confirmation
+Deactivate CreateClinicAnalysisLabUI
+Administrator -> CreateClinicAnalysisLabUI:confirms the data
+Activate CreateClinicAnalysisLabUI
+CreateClinicAnalysisLabUI -> CreateClinicAnalysisLabController:saveClinicalAnalysisLab()
+Activate CreateClinicAnalysisLabController
+CreateClinicAnalysisLabController -> storeCAL: saveClinicalAnalysisLab(Cal)
+Activate storeCAL
+storeCAL ->storeCAL: validateClinicalAnalysislab(Cal)
+Deactivate CreateClinicAnalysisLabController
+Activate storeCAL
+Deactivate storeCAL
+storeCAL ->storeCAL: addClinicalAnalysislab(Cal)
+Activate storeCAL
+Deactivate storeCAL
+CreateClinicAnalysisLabUI --> Administrator: informs operation success
+Deactivate CreateClinicAnalysisLabUI
+Deactivate Administrator
+
+
+
+
+
+@enduml

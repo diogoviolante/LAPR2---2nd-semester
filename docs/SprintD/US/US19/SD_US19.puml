@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor "Time" as ADM
+
+
+participant ":AutomaticReportUI" as UI
+participant ":AutomaticReportController" as CTRL
+participant ":MultilinearRegression" as MUL
+
+
+
+activate ADM
+ADM -> UI: (Time = 6:00 am) starts the process to send the Report to NHS
+activate UI
+UI -> CTRL: creatMultilinearRegression()
+deactivate UI
+activate CTRL
+CTRL -> MUL : creatMultilinearRegression()
+deactivate CTRL
+activate MUL
+deactivate MUL
+UI-> ADM : sends Report to NHS
+activate UI
+deactivate CTRL
+deactivate UI
+
+
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+autonumber
+'hide footbox
+actor "Medical Lab Technician" as ADM
+
+participant ":RegisterSampleUI" as UI
+participant ":RegisterSampleController" as CTRL
+participant ":Company" as Ltd
+participant "Sample" as Emp
+
+
+
+activate ADM
+ADM -> UI : starts registering a new sample
+activate UI
+UI->CTRL : getFullListOfTest()
+activate CTRL
+CTRL-> Ltd : getFullListOfTest()
+activate Ltd
+deactivate Ltd
+deactivate CTRL
+UI->ADM : show list of tests available
+deactivate UI
+ADM -> UI : selects the test intended and the number of samples
+
+loop number of samples
+activate UI
+UI-> CTRL : creatSample(test)
+activate CTRL
+CTRL -> Ltd: creatSample(Test, Sample)
+activate Ltd
+deactivate CTRL
+Ltd -> Emp: creat Sample
+activate Emp
+deactivate Emp
+deactivate Ltd
+UI -> CTRL: saveSample(sample)
+activate CTRL
+CTRL -> Ltd: saveSample(sample)
+deactivate CTRL
+activate Ltd
+Ltd -> Ltd: validateSample(sample)
+activate Ltd
+deactivate Ltd
+Ltd -> Ltd: addSample(sample)
+activate Ltd
+deactivate Ltd
+end
+UI --> ADM: generate barcode / informs operation success
+deactivate UI
+
+@enduml

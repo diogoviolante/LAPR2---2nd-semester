@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: C3FFC4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.initialScene.InitialSceneUI">
+    <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@ImageOne.jpeg" />
+    </ImageView>
+    <Button fx:id="button1" layoutX="246.0" layoutY="254.0" mnemonicParsing="false" onAction="#logIn" style="-fx-border-color: FFFFFF; -fx-background-color: BCBCBC;" text="Login in the App" />
+    <Button fx:id="button2" layoutX="224.0" layoutY="295.0" mnemonicParsing="false" onAction="#showDevelopmentTeam" style="-fx-border-color: FFFFFF; -fx-background-color: BCBCBC;" text="Know development team" />
+    <Label layoutX="246.0" layoutY="43.0" text="MANY LABS">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+   <Button layoutX="574.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitWindow" text="X" fx:id="xButton" />
+</AnchorPane>

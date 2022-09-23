@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface PastTests
+interface ListOfClients
+interface ListOfResults
+interface ListaCategorias
+interface ListofTests
+
+
+
+class ConsultHistoryUI implements PastTests, ListOfClients{
+-ConsultHistoryController controller= new ConsultHistoryController()
+-Long TinNumber
+-String code
+-int index
+-Algoritmo1 algoritmo1
+-Algoritmo2 algoritmo2
+-Company company
++controller.getAlgoritmo2()
++controller.getAlgoritmo1()
++controller.chooseTest()
+
+}
+
+class HistoryStore implements PastTests,ListOfClients,ListOfResults,ListaCategorias,ListofTests{
+-CLient client
+-InputStream input
+-Company company = App.getInstance().getCompany();
+-Long TinNumber
+-String code
+-Results results
+-Long lim1
+-Long lim2
+-int count
+-int count1
++checkAlgorithm1()
++getAlgoritmo1()
++checkAlgorithm2()
++getAlgoritmo2()
++chooseTest()
+}
+
+class ConsultHistoryController{
+-HistoryStore store= new HistoryStore()
+-Algoritmo1 algoritmo1=new Algoritmo1()
+-Algoritmo2 algoritmo2=new Algoritmo2()
++getAlgoritmo1()
++getAlgoritmo2()
++chooseTest()
++checkAlgorithm1()
++checkAlgorithm2()
+}
+
+class Algoritmo2{
+-Test test
++showNameList1(List<Client> clientList)
++showTinList1(List<Client> clientList)
+}
+
+class Algoritmo1{
++showNameList(List<CLient> clientList)
++showTinList(List<Client> clientList)
+}
+
+ConsultHistoryUI ..> ConsultHistoryController
+ConsultHistoryController ..> HistoryStore
+HistoryStore ..> Algoritmo1
+HistoryStore ..> Algoritmo2
+@enduml

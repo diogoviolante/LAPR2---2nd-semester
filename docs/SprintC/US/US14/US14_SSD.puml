@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor " Specialist doctor" as OE
+activate OE
+
+OE -> ":System" : asks to insert the report
+activate ":System"
+":System" --> OE : request data
+deactivate ":System"
+OE --> ":System" :insert requested data
+activate ":System"
+":System"->OE :show the report
+deactivate OE
+deactivate ":System"
+@enduml

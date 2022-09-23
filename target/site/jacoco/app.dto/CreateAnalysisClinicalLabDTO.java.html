@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreateAnalysisClinicalLabDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.dto</a> &gt; <span class="el_source">CreateAnalysisClinicalLabDTO.java</span></div><h1>CreateAnalysisClinicalLabDTO.java</h1><pre class="source lang-java linenums">package app.dto;
+
+import app.domain.model.TesteType;
+
+import java.util.List;
+
+public class CreateAnalysisClinicalLabDTO {
+    private String laboratoryID;
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private String tinNumber;
+    private TesteType newTestContainer;
+
+    /**
+     * DTo were data is preserved
+     * @param laboratoryID
+     * @param name
+     * @param address
+     * @param phoneNumber
+     * @param tinNumber
+     * @param newTestContainer
+     */
+<span class="fc" id="L24">    public CreateAnalysisClinicalLabDTO(String laboratoryID, String name, String address, String phoneNumber, String tinNumber, List&lt;TesteType&gt; newTestContainer) {</span>
+<span class="fc" id="L25">        this.laboratoryID = laboratoryID;</span>
+<span class="fc" id="L26">        this.name = name;</span>
+<span class="fc" id="L27">        this.address = address;</span>
+<span class="fc" id="L28">        this.phoneNumber = phoneNumber;</span>
+<span class="fc" id="L29">        this.tinNumber = tinNumber;</span>
+<span class="fc" id="L30">        this.newTestContainer = null;</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * getter of laboatory ID
+     * @return
+     */
+    public String getLaboratoryID() {
+<span class="fc" id="L38">        return laboratoryID;</span>
+    }
+
+    /**
+     * setter of laboratory ID
+     * @param laboratoryID
+     */
+    public void setLaboratoryID(String laboratoryID) {
+<span class="fc" id="L46">        this.laboratoryID = laboratoryID;</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * getter of name
+     * @return
+     */
+    public String getName() {
+<span class="fc" id="L54">        return name;</span>
+    }
+
+    /**
+     * setter of name
+     * @param name
+     */
+    public void setName(String name) {
+<span class="fc" id="L62">        this.name = name;</span>
+<span class="fc" id="L63">    }</span>
+
+    /**
+     * getter of address
+     * @return
+     */
+    public String getAddress() {
+<span class="fc" id="L70">        return address;</span>
+    }
+
+    /**
+     * setter of address
+     * @param address
+     */
+    public void setAddress(String address) {
+<span class="fc" id="L78">        this.address = address;</span>
+<span class="fc" id="L79">    }</span>
+
+    /**
+     * getter of Phone Number
+     * @return
+     */
+    public String getPhoneNumber() {
+<span class="fc" id="L86">        return phoneNumber;</span>
+    }
+
+    /**
+     * setter of Phone Number
+     * @param phoneNumber
+     */
+    public void setPhoneNumber(String phoneNumber) {
+<span class="fc" id="L94">        this.phoneNumber = phoneNumber;</span>
+<span class="fc" id="L95">    }</span>
+
+    /**
+     * getter of tinNumber
+     * @return
+     */
+    public String getTinNumber() {
+<span class="fc" id="L102">        return tinNumber;</span>
+    }
+
+    /**
+     * setter of tinNumber
+     * @param tinNumber
+     */
+    public void setTinNumber(String tinNumber) {
+<span class="fc" id="L110">        this.tinNumber = tinNumber;</span>
+<span class="fc" id="L111">    }</span>
+
+    /**
+     * getter of the list with the tests
+     * @return
+     */
+    public TesteType getNewTestContainer() {
+<span class="nc" id="L118">        return newTestContainer;</span>
+    }
+
+    /**
+     * setter of the list with the tests
+     * @param NewTestContainer
+     */
+    public void setNewTestContainer(TesteType NewTestContainer) {
+<span class="nc" id="L126">        this.newTestContainer = NewTestContainer;</span>
+<span class="nc" id="L127">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

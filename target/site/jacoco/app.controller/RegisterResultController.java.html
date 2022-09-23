@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterResultController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.controller</a> &gt; <span class="el_source">RegisterResultController.java</span></div><h1>RegisterResultController.java</h1><pre class="source lang-java linenums">package app.controller;
+
+import app.domain.model.Company;
+import app.domain.model.Results;
+import app.domain.model.Test;
+import app.domain.model.TesteType;
+import app.domain.shared.ListDates;
+
+import java.util.Date;
+import java.util.List;
+
+<span class="fc" id="L12">public class RegisterResultController implements ListDates {</span>
+
+    /**
+     * Initializes Company
+     */
+<span class="fc" id="L17">    private Company company=App.getInstance().getCompany();</span>
+
+
+
+    public List&lt;Test&gt; getTestTypeList() {
+<span class="nc" id="L22">        return this.company.getTestList();</span>
+    }
+
+    public TesteType getTestType(String barcodeString) {
+<span class="nc" id="L26">        return this.company.getTestType(barcodeString);</span>
+    }
+
+
+
+    public Test getTest(String barcodeString) {
+<span class="nc" id="L32">        return this.company.getTestWithBarcode(barcodeString);</span>
+    }
+
+    public boolean validateBarcodeString(String barcodeString) {
+<span class="nc" id="L36">        return this.company.validateBarcodeString(barcodeString);</span>
+    }
+
+    public String bloodAPI3(double valueParameter, String parameters, int accessKey) {
+<span class="nc" id="L40">        return this.company.bloodAPI3(valueParameter, parameters, accessKey);</span>
+    }
+
+    public String bloodAPI31(double valueParameter, String parameters, int accessKey) {
+<span class="nc" id="L44">        return this.company.bloodAPI31(valueParameter, parameters, accessKey);</span>
+    }
+
+    public String covidAPI1(double valueParameter, int accessKey, String igGAN) {
+<span class="nc" id="L48">        return this.company.covidAPI1(valueParameter, accessKey, igGAN);</span>
+    }
+
+    public String covidAPI11(double valueParameter, int accessKey, String igGAN) {
+<span class="nc" id="L52">        return this.company.covidAPI11(valueParameter, accessKey, igGAN);</span>
+    }
+
+
+    public Results createResult(String testeType, String parameter, String code, String result, double value) {
+<span class="nc" id="L57">        return new Results(testeType, parameter, code, result, value);</span>
+    }
+
+
+    public void setDateResultToTest(Test t) {
+<span class="nc" id="L62">        this.company.addToList(t);</span>
+<span class="nc" id="L63">    }</span>
+
+
+
+    public Date setDate(Date date) {
+<span class="nc" id="L68">        return date;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

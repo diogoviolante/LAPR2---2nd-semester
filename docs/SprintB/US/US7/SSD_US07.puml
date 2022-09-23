@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Administrator" as OE
+activate OE
+
+OE -> ":System" : starts to register a new employee
+activate ":System"
+":System" --> OE : shows user role and asks to select one
+deactivate ":System"
+
+OE -> ":System" : selects a user role
+activate ":System"
+":System" --> OE : requests data (organization role, name, adress, phone number, email, SOC)
+deactivate ":System"
+
+OE -> ":System" : types requested data
+activate ":System"
+":System" --> OE : shows if all data is correct and unique to that employee
+deactivate ":System"
+
+OE -> ":System" : confirms the data
+activate ":System"
+":System" --> OE :  informs operation sucess
+deactivate ":System"
+
+deactivate OE
+
+@enduml

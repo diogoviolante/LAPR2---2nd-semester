@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.console.administratorScenes.AdministratorMenuUI">
+   <children>
+      <ImageView fitHeight="370.0" fitWidth="530.0" layoutX="36.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.1;">
+         <image>
+            <Image url="@ImageOne.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="214.0" prefHeight="40.0" prefWidth="180.0" text="Administrator Menu">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <BorderPane layoutY="278.0" prefHeight="145.0" prefWidth="604.0" style="-fx-background-color: C3FFC4; -fx-opacity: 0.8;">
+         <center>
+          <Button fx:id="goToReportSceneButton" mnemonicParsing="false" onAction="#switchToReport" prefHeight="25.0" prefWidth="150.0" style="-fx-border-color: FFFFFF; -fx-background-color: BCBCBC;" text="Send Report to NHS" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </center>
+      </BorderPane>
+      <Button fx:id="outButton" layoutX="573.0" layoutY="7.0" mnemonicParsing="false" onAction="#exitWindow" prefHeight="23.0" prefWidth="26.0" text="X">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

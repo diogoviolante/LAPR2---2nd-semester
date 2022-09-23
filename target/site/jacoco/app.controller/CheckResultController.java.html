@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckResultController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sem2App</a> &gt; <a href="index.source.html" class="el_package">app.controller</a> &gt; <span class="el_source">CheckResultController.java</span></div><h1>CheckResultController.java</h1><pre class="source lang-java linenums">package app.controller;
+
+import app.domain.Store.CheckResultStore;
+import app.domain.Store.ClientStore;
+import app.domain.Store.DiagnosisStore;
+import app.domain.Store.TestStore;
+import app.domain.model.*;
+import app.domain.shared.ListOfResults;
+import auth.domain.model.Email;
+
+import java.util.Comparator;
+import java.util.List;
+
+public class CheckResultController implements ListOfResults {
+    private Company company;
+<span class="nc" id="L16">    private TestStore testStore = new TestStore();</span>
+<span class="nc" id="L17">    private ClientStore clientStore = new ClientStore();</span>
+<span class="nc" id="L18">    private DiagnosisStore diagnosisStore = new DiagnosisStore();</span>
+<span class="nc" id="L19">    private CheckResultStore store = new CheckResultStore();</span>
+
+<span class="nc" id="L21">    public CheckResultController() {</span>
+<span class="nc" id="L22">        this.company = App.getInstance().getCompany();</span>
+<span class="nc" id="L23">    }</span>
+
+<span class="nc" id="L25">    public CheckResultController(Company company){</span>
+<span class="nc" id="L26">        this.company = company;</span>
+<span class="nc" id="L27">    }</span>
+
+    /**
+     * method to get the client.
+      * @param email client's email
+     * @return client
+     */
+    public Client getClient(Email email){
+<span class="nc" id="L35">        return this.store.getClient(email, this.clientStore.getClientList());</span>
+    }
+
+    public List&lt;AllDates&gt; getListOrdered(Client client, List&lt;AllDates&gt; datesResult){
+<span class="nc" id="L39">        return this.store.getListOrdered(client, datesResult, getTestList(), getAllDatesList());</span>
+    }
+
+    /**
+     * method to get the list of clients.
+     * @return clientList
+     */
+    public List&lt;Test&gt; getTestList() {
+<span class="nc" id="L47">        return this.company.getTestList();</span>
+    }
+
+    public List&lt;Results&gt; getResultList(){
+<span class="nc" id="L51">        return resultsList;</span>
+    }
+
+    public List&lt;AllDates&gt; getAllDatesList(){
+<span class="nc" id="L55">        return this.testStore.getDates();</span>
+    }
+
+    public List&lt;Diagnosis&gt; getDiagnosisList(){
+<span class="nc" id="L59">        return this.diagnosisStore.getDiagnosisList();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,30 @@
+@startuml
+autonumber
+actor "Lab Coordinator" as OE
+
+activate OE
+OE -> ":System" : asks to iniciate a new analyses to the companies performance.
+activate ":System"
+loop while Coordinator wants to view several dates
+":System" --> OE : requests date of start and end
+deactivate ":System"
+
+OE -> ":System" : types requested data
+activate ":System"
+
+":System" --> OE : shows performance graphics
+loop while Coordinator wants to try different algorythms
+":System" --> OE : requestes the algorithm to be used
+deactivate ":System"
+
+
+OE -> ":System" : chooses option
+activate ":System"
+
+":System" --> OE : shows contiguous subsequence with maximum sum
+end
+end
+deactivate ":System"
+deactivate OE
+
+@enduml

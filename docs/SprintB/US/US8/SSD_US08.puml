@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Administrator as Administrator
+Activate Administrator
+Administrator -> Company: stars the creation of a new clinical analysis laboratory
+Activate Company
+Company-> Administrator: requests data of the new laboratory (Laboratory id, Name, Adress, TIN Number, Phone Number)
+Deactivate Company
+Administrator -> Company: types data for the new laboratory
+Activate Company
+Company -> Administrator: shows data and waits for a confirmation
+Deactivate Company
+Administrator -> Company: confirms all data
+Activate Company
+Company -> Administrator: let administrator to know that operation was
+Deactivate Company
+Deactivate Administrator
+
+
+
+@enduml
